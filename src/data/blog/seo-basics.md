@@ -1,6 +1,6 @@
 ---
 author: Admin
-pubDatetime: 2026-04-28T10:00:00Z
+pubDatetime: 2025-04-28T10:00:00Z
 title: SEO基础知识完全指南
 slug: seo-basics-guide
 featured: true
