@@ -1,6 +1,7 @@
 ---
 import type { HTMLAttributes } from "astro/types";
 import Socials from "./Socials.astro";
+import { SITE } from "@/config";
 
 const currentYear = new Date().getFullYear();
 
@@ -12,21 +13,117 @@ const { noMarginTop = false, class: className, ...attrs } = Astro.props;
 ---
 
 <footer
-  class:list={["app-layout", { "mt-auto": !noMarginTop }, className]}
+  class:list={[className]}
   {...attrs}
 >
-  <div
-    class:list={[
-      "py-6 sm:py-4",
-      "border-t border-border",
-      "flex flex-col items-center justify-between sm:flex-row-reverse",
-    ]}
-  >
-    <Socials />
-    <div class="my-2 flex flex-col items-center whitespace-nowrap sm:flex-row">
-      <span>Copyright &#169; {currentYear}</span>
-      <span class="hidden sm:inline">&nbsp;|&nbsp;</span>
-      <span>All rights reserved.</span>
+  <!-- Main Footer -->
+  <div class="bg-accent-dark py-12">
+    <div class="mx-auto w-full max-w-5xl px-4">
+      <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+        <!-- Brand -->
+        <div>
+          <a href="/" class="text-xl font-bold text-white">
+            Contractor<span class="text-accent">Reviews</span>
+          </a>
+          <p class="mt-4 text-sm text-gray-400">
+            Independent reviews of contractor software. 
+            Written by contractors, for contractors.
+          </p>
+        </div>
+        
+        <!-- Quick Links -->
+        <div>
+          <h4 class="mb-4 font-semibold text-white">Quick Links</h4>
+          <ul class="space-y-2">
+            <li>
+              <a href="/posts" class="text-sm text-gray-400 hover:text-accent transition-colors">
+                All Reviews
+              </a>
+            </li>
+            <li>
+              <a href="/tags" class="text-sm text-gray-400 hover:text-accent transition-colors">
+                Categories
+              </a>
+            </li>
+            <li>
+              <a href="/about" class="text-sm text-gray-400 hover:text-accent transition-colors">
+                About Us
+              </a>
+            </li>
+            <li>
+              <a href="/archives" class="text-sm text-gray-400 hover:text-accent transition-colors">
+                Archives
+              </a>
+            </li>
+          </ul>
+        </div>
+        
+        <!-- Resources -->
+        <div>
+          <h4 class="mb-4 font-semibold text-white">Resources</h4>
+          <ul class="space-y-2">
+            <li>
+              <a href="#" class="text-sm text-gray-400 hover:text-accent transition-colors">
+                Best Practices
+              </a>
+            </li>
+            <li>
+              <a href="#" class="text-sm text-gray-400 hover:text-accent transition-colors">
+                Comparison Guides
+              </a>
+            </li>
+            <li>
+              <a href="#" class="text-sm text-gray-400 hover:text-accent transition-colors">
+                How to Choose
+              </a>
+            </li>
+            <li>
+              <a href="#" class="text-sm text-gray-400 hover:text-accent transition-colors">
+                Industry News
+              </a>
+            </li>
+          </ul>
+        </div>
+        
+        <!-- Contact -->
+        <div>
+          <h4 class="mb-4 font-semibold text-white">Contact</h4>
+          <ul class="space-y-2">
+            <li>
+              <a href="#" class="text-sm text-gray-400 hover:text-accent transition-colors">
+                Submit Review
+              </a>
+            </li>
+            <li>
+              <a href="#" class="text-sm text-gray-400 hover:text-accent transition-colors">
+                Advertise
+              </a>
+            </li>
+            <li>
+              <a href="#" class="text-sm text-gray-400 hover:text-accent transition-colors">
+                Press Kit
+              </a>
+            </li>
+            <li>
+              <a href="#" class="text-sm text-gray-400 hover:text-accent transition-colors">
+                Privacy Policy
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Copyright -->
+  <div class="bg-background border-t border-border py-4">
+    <div class="mx-auto flex w-full max-w-5xl items-center justify-between px-4">
+      <div class="text-sm text-muted-foreground">
+        Copyright &#169; {currentYear} {SITE.title}. All rights reserved.
+      </div>
+      <div class="flex items-center gap-4">
+        <Socials />
+      </div>
     </div>
   </div>
 </footer>

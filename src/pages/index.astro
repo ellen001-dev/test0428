@@ -3,14 +3,8 @@ import { getCollection } from "astro:content";
 import Layout from "@/layouts/Layout.astro";
 import Header from "@/components/Header.astro";
 import Footer from "@/components/Footer.astro";
-import Socials from "@/components/Socials.astro";
-import LinkButton from "@/components/LinkButton.astro";
-import Card from "@/components/Card.astro";
 import getSortedPosts from "@/utils/getSortedPosts";
-import IconRss from "@/assets/icons/IconRss.svg";
 import IconArrowRight from "@/assets/icons/IconArrowRight.svg";
-import { SITE } from "@/config";
-import { SOCIALS } from "@/constants";
 
 const posts = await getCollection("blog");
 
@@ -21,92 +15,186 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
 
 <Layout>
   <Header />
-  <main id="main-content" data-layout="index" class="app-layout">
-    <section id="hero" class:list={["pt-8 pb-6", "border-b border-border"]}>
-      <h1 class="my-4 inline-block text-4xl font-bold sm:my-8 sm:text-5xl">
-        Mingalaba
+  
+  <!-- Hero Section -->
+  <section class="bg-accent-dark text-white">
+    <div class="mx-auto w-full max-w-5xl px-4 py-16 sm:py-24">
+      <h1 class="text-4xl font-bold leading-tight sm:text-5xl md:text-6xl">
+        Most contractor software reviews are useless.<br />
+        <span class="text-accent">These aren't.</span>
       </h1>
-      <a
-        target="_blank"
-        href="/rss.xml"
-        class="inline-block"
-        aria-label="rss feed"
-        title="RSS Feed"
-      >
-        <IconRss
-          width={20}
-          height={20}
-          class="scale-125 stroke-accent stroke-3 rtl:-rotate-90"
-        />
-        <span class="sr-only">RSS Feed</span>
-      </a>
-
-      <p>
-        AstroPaper is a minimal, responsive, accessible and SEO-friendly Astro
-        blog theme. This theme follows best practices and provides accessibility
-        out of the box. Light and dark mode are supported by default. Moreover,
-        additional color schemes can also be configured.
+      <p class="mt-6 max-w-2xl text-lg text-gray-300">
+        We've spent years in the field testing software. We know what works, what doesn't, 
+        and what actually helps contractors run their businesses more efficiently.
       </p>
-      <p class="mt-2">
-        Read the blog posts or check
-        <LinkButton
-          class="underline decoration-dashed underline-offset-4 hover:text-accent"
-          href="https://github.com/satnaing/astro-paper#readme"
+      
+      <!-- CTA Button -->
+      <div class="mt-8 flex flex-col gap-4 sm:flex-row">
+        <a 
+          href="/posts" 
+          class="inline-flex items-center justify-center gap-2 bg-accent px-8 py-4 font-semibold text-white hover:bg-accent-light transition-colors"
         >
-          README
-        </LinkButton> for more info.
-      </p>
-      {
-        // only display if at least one social link is enabled
-        SOCIALS.length > 0 && (
-          <div class="mt-4 flex max-sm:flex-col sm:items-center">
-            <div class="me-2 mb-1 whitespace-nowrap sm:mb-0">Social Links:</div>
-            <Socials />
-          </div>
-        )
-      }
-    </section>
+          Browse All Reviews
+          <IconArrowRight width={20} height={20} />
+        </a>
+        <a 
+          href="/about" 
+          class="inline-flex items-center justify-center gap-2 border-2 border-white/30 px-8 py-4 font-semibold text-white hover:bg-white/10 transition-colors"
+        >
+          Learn More
+        </a>
+      </div>
 
+      <!-- Quick Stats Cards -->
+      <div class="mt-12 grid grid-cols-2 gap-4 sm:grid-cols-4">
+        <div class="bg-white/10 p-4 backdrop-blur-sm">
+          <div class="text-3xl font-bold text-accent">50+</div>
+          <div class="text-sm text-gray-300">Reviews</div>
+        </div>
+        <div class="bg-white/10 p-4 backdrop-blur-sm">
+          <div class="text-3xl font-bold text-accent">10+</div>
+          <div class="text-sm text-gray-300">Categories</div>
+        </div>
+        <div class="bg-white/10 p-4 backdrop-blur-sm">
+          <div class="text-3xl font-bold text-accent">50K+</div>
+          <div class="text-sm text-gray-300">Monthly Visitors</div>
+        </div>
+        <div class="bg-white/10 p-4 backdrop-blur-sm">
+          <div class="text-3xl font-bold text-accent">95%</div>
+          <div class="text-sm text-gray-300">User Satisfaction</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Posts Section -->
+  <main id="main-content" data-layout="index" class="bg-background">
     {
       featuredPosts.length > 0 && (
-        <section
-          id="featured"
-          class:list={[
-            "pt-12 pb-6",
-            { "border-b border-border": recentPosts.length > 0 },
-          ]}
-        >
-          <h2 class="text-2xl font-semibold tracking-wide">Featured</h2>
-          <ul>
+        <section class="mx-auto w-full max-w-5xl px-4 py-12">
+          <div class="mb-8 flex items-center justify-between">
+            <h2 class="text-2xl font-bold text-foreground">Featured Reviews</h2>
+            <a href="/posts" class="text-accent hover:underline">View All</a>
+          </div>
+          
+          <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {featuredPosts.map(data => (
-              <Card variant="h3" {...data} />
+              <article class="group overflow-hidden rounded-lg border border-border bg-card-bg p-6 shadow-sm transition-all hover:shadow-lg">
+                <div class="mb-4 flex items-center gap-2 list-none">
+                  {data.data.tags.map(tag => (
+                    <span 
+                      class="rounded-full bg-accent/10 px-3 py-1 text-xs font-medium text-accent"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+                <h3 class="mb-2 text-xl font-bold text-foreground group-hover:text-accent transition-colors">
+                  {data.data.title}
+                </h3>
+                <p class="mb-4 text-sm text-muted-foreground line-clamp-2">
+                  {data.data.description}
+                </p>
+                <a 
+                  href={`/posts/${data.id}`} 
+                  class="inline-flex items-center gap-2 text-accent hover:gap-3 transition-all"
+                >
+                  Read Review
+                  <IconArrowRight width={16} height={16} />
+                </a>
+              </article>
             ))}
-          </ul>
+          </div>
         </section>
       )
     }
 
+    <!-- Recent Posts Section -->
     {
       recentPosts.length > 0 && (
-        <section id="recent-posts" class="pt-12 pb-6">
-          <h2 class="text-2xl font-semibold tracking-wide">Recent Posts</h2>
-          <ul>
-            {recentPosts.map(
-              (data, index) =>
-                index < SITE.postPerIndex && <Card variant="h3" {...data} />
-            )}
-          </ul>
+        <section class="bg-muted/50 py-12">
+          <div class="mx-auto w-full max-w-5xl px-4">
+            <div class="mb-8 flex items-center justify-between">
+              <h2 class="text-2xl font-bold text-foreground">Recent Posts</h2>
+              <a href="/posts" class="text-accent hover:underline">View All</a>
+            </div>
+            
+            <div class="grid gap-4 sm:grid-cols-2">
+              {recentPosts.slice(0, 4).map(data => (
+                <article class="flex gap-4 rounded-lg border border-border bg-card-bg p-4 hover:border-accent/50 transition-colors">
+                  <div class="flex-1">
+                    <h3 class="mb-1 text-lg font-semibold text-foreground hover:text-accent transition-colors">
+                      {data.data.title}
+                    </h3>
+                    <p class="text-sm text-muted-foreground line-clamp-2">
+                      {data.data.description}
+                    </p>
+                  </div>
+                  <div class="flex flex-col items-end justify-between">
+                    <span class="rounded-full bg-accent/10 px-2 py-1 text-xs font-medium text-accent">
+                      {data.data.tags[0] || "Other"}
+                    </span>
+                    <time class="text-xs text-muted-foreground">
+                      {new Date(data.data.pubDatetime).toLocaleDateString("zh-CN")}
+                    </time>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </div>
         </section>
       )
     }
 
-    <div class="my-8 text-center">
-      <LinkButton href="/posts/">
-        All Posts
-        <IconArrowRight class="inline-block rtl:-rotate-180" />
-      </LinkButton>
-    </div>
+    <!-- Categories Section -->
+    <section class="mx-auto w-full max-w-5xl px-4 py-12">
+      <h2 class="mb-8 text-2xl font-bold text-foreground">Popular Categories</h2>
+      
+      <div class="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-6">
+        {["项目管理", "会计软件", "现场服务", "CRM", "估算工具", "调度系统"].map((category, index) => (
+          <a 
+            href={`/tags/${category}`}
+            class="group flex flex-col items-center justify-center rounded-lg border border-border bg-card-bg p-6 text-center transition-all hover:border-accent hover:shadow-md"
+          >
+            <div class="mb-3 flex h-12 w-12 items-center justify-center rounded-full bg-accent/10 text-2xl font-bold text-accent">
+              {index + 1}
+            </div>
+            <span class="font-medium text-foreground group-hover:text-accent transition-colors">
+              {category}
+            </span>
+          </a>
+        ))}
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="bg-accent-dark py-16">
+      <div class="mx-auto max-w-3xl text-center">
+        <h2 class="text-3xl font-bold text-white sm:text-4xl">
+          The Work Behind the Call
+        </h2>
+        <p class="mt-4 text-gray-300">
+          Every review is written by a contractor, for contractors. We don't accept 
+          advertising or sponsored content - our opinions are 100% independent.
+        </p>
+        <div class="mt-8 flex flex-col gap-4 sm:flex-row justify-center">
+          <a 
+            href="/posts" 
+            class="inline-flex items-center justify-center gap-2 bg-accent px-6 py-3 font-semibold text-white hover:bg-accent-light transition-colors"
+          >
+            Start Exploring
+          </a>
+          <a 
+            href="/about" 
+            class="inline-flex items-center justify-center gap-2 border-2 border-white/30 px-6 py-3 font-semibold text-white hover:bg-white/10 transition-colors"
+          >
+            About Us
+          </a>
+        </div>
+      </div>
+    </section>
   </main>
+  
   <Footer />
 </Layout>
 
