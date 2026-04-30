@@ -5,6 +5,7 @@ import Header from "@/components/Header.astro";
 import Footer from "@/components/Footer.astro";
 import getSortedPosts from "@/utils/getSortedPosts";
 import IconArrowRight from "@/assets/icons/IconArrowRight.svg";
+import { getPath } from "@/utils/getPath";
 
 const posts = await getCollection("blog");
 
@@ -96,7 +97,7 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
                   {data.data.description}
                 </p>
                 <a 
-                  href={`/posts/${data.id}`} 
+                  href={getPath(data.id, data.filePath, true, data.data.category)} 
                   class="inline-flex items-center gap-2 text-accent hover:gap-3 transition-all"
                 >
                   Read Review
