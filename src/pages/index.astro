@@ -3,7 +3,6 @@ import { getCollection } from "astro:content";
 import Layout from "@/layouts/Layout.astro";
 import Header from "@/components/Header.astro";
 import Footer from "@/components/Footer.astro";
-import Card from "@/components/Card.astro";
 import IconArrowRight from "@/assets/icons/IconArrowRight.svg";
 import { getPath } from "@/utils/getPath";
 
@@ -11,8 +10,19 @@ const posts = await getCollection("blog", ({ data }) => !data.draft);
 
 const reviewPosts = posts.filter(({ data }) => data.category === "reviews");
 const comparePosts = posts.filter(({ data }) => data.category === "compare");
-const hubPosts = posts.filter(({ data }) => data.category === "hub");
-const pricingPosts = posts.filter(({ data }) => data.category === "pricing");
+
+// 获取所有标签并统计使用次数
+const allTags = posts.flatMap(post => post.data.tags || []);
+const tagCountMap = allTags.reduce((acc, tag) => {
+  acc[tag] = (acc[tag] || 0) + 1;
+  return acc;
+}, {} as Record<string, number>);
+
+// 按使用次数排序，取前6个
+const popularTags = Object.entries(tagCountMap)
+  .sort((a, b) => b[1] - a[1])
+  .slice(0, 6)
+  .map(([tag]) => tag);
 ---
 
 <Layout>
@@ -58,12 +68,12 @@ const pricingPosts = posts.filter(({ data }) => data.category === "pricing");
           <div class="text-sm text-gray-300">Comparisons</div>
         </div>
         <div class="bg-white/10 p-4 backdrop-blur-sm">
-          <div class="text-3xl font-bold text-accent">{hubPosts.length}</div>
-          <div class="text-sm text-gray-300">Guides</div>
+          <div class="text-3xl font-bold text-accent">{allTags.length}</div>
+          <div class="text-sm text-gray-300">Topics</div>
         </div>
         <div class="bg-white/10 p-4 backdrop-blur-sm">
-          <div class="text-3xl font-bold text-accent">{pricingPosts.length}</div>
-          <div class="text-sm text-gray-300">Pricing</div>
+          <div class="text-3xl font-bold text-accent">{posts.length}</div>
+          <div class="text-sm text-gray-300">Articles</div>
         </div>
       </div>
     </div>
@@ -111,71 +121,25 @@ const pricingPosts = posts.filter(({ data }) => data.category === "pricing");
       )
     }
 
-    <!-- Categories Section -->
+    <!-- Popular Tags Section -->
     <section class="bg-muted/50 py-12">
       <div class="mx-auto w-full max-w-5xl px-4">
-        <h2 class="mb-8 text-2xl font-bold text-foreground">Explore Categories</h2>
+        <h2 class="mb-8 text-2xl font-bold text-foreground">Popular Tags</h2>
         
-        <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          <a 
-            href="/reviews"
-            class="group flex flex-col items-center justify-center rounded-lg border border-border bg-card-bg p-6 text-center transition-all hover:border-accent hover:shadow-md"
-          >
-            <div class="mb-3 flex h-12 w-12 items-center justify-center rounded-full bg-accent/10 text-2xl font-bold text-accent">
-              📊
-            </div>
-            <span class="font-medium text-foreground group-hover:text-accent transition-colors">
-              深度评测
-            </span>
-            <span class="mt-1 text-xs text-muted-foreground">
-              {reviewPosts.length} 篇文章
-            </span>
-          </a>
-          
-          <a 
-            href="/compare"
-            class="group flex flex-col items-center justify-center rounded-lg border border-border bg-card-bg p-6 text-center transition-all hover:border-accent hover:shadow-md"
-          >
-            <div class="mb-3 flex h-12 w-12 items-center justify-center rounded-full bg-accent/10 text-2xl font-bold text-accent">
-              ⚖️
-            </div>
-            <span class="font-medium text-foreground group-hover:text-accent transition-colors">
-              竞品对比
-            </span>
-            <span class="mt-1 text-xs text-muted-foreground">
-              {comparePosts.length} 篇文章
-            </span>
-          </a>
-          
-          <a 
-            href="/hvac-software"
-            class="group flex flex-col items-center justify-center rounded-lg border border-border bg-card-bg p-6 text-center transition-all hover:border-accent hover:shadow-md"
-          >
-            <div class="mb-3 flex h-12 w-12 items-center justify-center rounded-full bg-accent/10 text-2xl font-bold text-accent">
-              🔧
-            </div>
-            <span class="font-medium text-foreground group-hover:text-accent transition-colors">
-              工种指南
-            </span>
-            <span class="mt-1 text-xs text-muted-foreground">
-              {hubPosts.length} 篇文章
-            </span>
-          </a>
-          
-          <a 
-            href="/housecall-pro-pricing"
-            class="group flex flex-col items-center justify-center rounded-lg border border-border bg-card-bg p-6 text-center transition-all hover:border-accent hover:shadow-md"
-          >
-            <div class="mb-3 flex h-12 w-12 items-center justify-center rounded-full bg-accent/10 text-2xl font-bold text-accent">
-              💰
-            </div>
-            <span class="font-medium text-foreground group-hover:text-accent transition-colors">
-              定价分析
-            </span>
-            <span class="mt-1 text-xs text-muted-foreground">
-              {pricingPosts.length} 篇文章
-            </span>
-          </a>
+        <div class="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-6">
+          {popularTags.map((tag, index) => (
+            <a 
+              href={`/tags/${tag}`}
+              class="group flex flex-col items-center justify-center rounded-lg border border-border bg-card-bg p-6 text-center transition-all hover:border-accent hover:shadow-md"
+            >
+              <div class="mb-3 flex h-12 w-12 items-center justify-center rounded-full bg-accent/10 text-2xl font-bold text-accent">
+                {index + 1}
+              </div>
+              <span class="font-medium text-foreground group-hover:text-accent transition-colors">
+                {tag}
+              </span>
+            </a>
+          ))}
         </div>
       </div>
     </section>
