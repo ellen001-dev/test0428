@@ -9,13 +9,13 @@ const posts = await getCollection("blog", ({ data }) => !data.draft);
 const pricingPosts = posts.filter(({ data }) => data.category === "pricing");
 ---
 
-<Layout title="定价透明分析 | ServiceToolBase Reviews">
+<Layout title="Pricing Breakdown | ServiceToolBase">
   <Header />
   
   <main id="main-content" class="mx-auto w-full max-w-5xl px-4 py-8">
     <div class="mb-8">
-      <h1 class="text-3xl font-bold sm:text-4xl">定价透明分析</h1>
-      <p class="mt-2 text-gray-500">揭秘软件定价策略，帮你避免隐藏费用和陷阱</p>
+      <h1 class="text-3xl font-bold sm:text-4xl">Pricing Breakdown</h1>
+      <p class="mt-2 text-gray-500">Uncover pricing strategies and avoid hidden fees and traps</p>
     </div>
     
     {pricingPosts.length > 0 ? (
@@ -26,7 +26,7 @@ const pricingPosts = posts.filter(({ data }) => data.category === "pricing");
       </ul>
     ) : (
       <div class="text-center py-16">
-        <p class="text-gray-500">暂无定价分析文章，敬请期待！</p>
+        <p class="text-gray-500">No pricing analysis articles yet. Stay tuned!</p>
       </div>
     )}
   </main>

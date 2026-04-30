@@ -9,13 +9,13 @@ const posts = await getCollection("blog", ({ data }) => !data.draft);
 const comparePosts = posts.filter(({ data }) => data.category === "compare");
 ---
 
-<Layout title="竞品对比 | ServiceToolBase Reviews">
+<Layout title="Comparisons | ServiceToolBase">
   <Header />
   
   <main id="main-content" class="mx-auto w-full max-w-5xl px-4 py-8">
     <div class="mb-8">
-      <h1 class="text-3xl font-bold sm:text-4xl">竞品对比</h1>
-      <p class="mt-2 text-gray-500">横向对比同类软件，帮您做出明智的选择</p>
+      <h1 class="text-3xl font-bold sm:text-4xl">Comparisons</h1>
+      <p class="mt-2 text-gray-500">Side-by-side comparisons to help you make smart choices</p>
     </div>
     
     {comparePosts.length > 0 ? (
@@ -26,7 +26,7 @@ const comparePosts = posts.filter(({ data }) => data.category === "compare");
       </ul>
     ) : (
       <div class="text-center py-16">
-        <p class="text-gray-500">暂无竞品对比文章，敬请期待！</p>
+        <p class="text-gray-500">No comparison articles yet. Stay tuned!</p>
       </div>
     )}
   </main>

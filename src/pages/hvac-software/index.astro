@@ -9,13 +9,13 @@ const posts = await getCollection("blog", ({ data }) => !data.draft);
 const hubPosts = posts.filter(({ data }) => data.category === "hub");
 ---
 
-<Layout title="工种指南Hub | ServiceToolBase Reviews">
+<Layout title="Trade Guides | ServiceToolBase">
   <Header />
   
   <main id="main-content" class="mx-auto w-full max-w-5xl px-4 py-8">
     <div class="mb-8">
-      <h1 class="text-3xl font-bold sm:text-4xl">工种指南Hub</h1>
-      <p class="mt-2 text-gray-500">针对不同工种（HVAC、管道、电气等）的专属软件指南</p>
+      <h1 class="text-3xl font-bold sm:text-4xl">Trade Guides</h1>
+      <p class="mt-2 text-gray-500">Specialized software guides for HVAC, plumbing, electrical, and more</p>
     </div>
     
     {hubPosts.length > 0 ? (
@@ -26,7 +26,7 @@ const hubPosts = posts.filter(({ data }) => data.category === "hub");
       </ul>
     ) : (
       <div class="text-center py-16">
-        <p class="text-gray-500">暂无工种指南文章，敬请期待！</p>
+        <p class="text-gray-500">No trade guide articles yet. Stay tuned!</p>
       </div>
     )}
   </main>
