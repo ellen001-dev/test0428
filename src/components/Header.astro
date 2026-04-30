@@ -3,6 +3,7 @@ import IconX from "@/assets/icons/IconX.svg";
 import IconSearch from "@/assets/icons/IconSearch.svg";
 import IconMenuDeep from "@/assets/icons/IconMenuDeep.svg";
 import LinkButton from "./LinkButton.astro";
+import LogoImage from "@/assets/images/Logo.png";
 
 const { pathname } = Astro.url;
 
@@ -34,9 +35,13 @@ const isActive = (path: string) => {
   >
     <a
       href="/"
-      class="text-xl font-bold text-white sm:text-2xl"
+      class="flex items-center gap-2"
     >
-      ServiceToolBase <span class="text-accent">Reviews</span>
+      <img 
+        src={LogoImage} 
+        alt="ServiceToolBase Logo" 
+        class="h-10 sm:h-12 w-auto"
+      />
     </a>
     <nav
       id="nav-menu"
