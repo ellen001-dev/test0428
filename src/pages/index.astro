@@ -5,6 +5,7 @@ import Header from "@/components/Header.astro";
 import Footer from "@/components/Footer.astro";
 import IconArrowRight from "@/assets/icons/IconArrowRight.svg";
 import { getPath } from "@/utils/getPath";
+import { slugifyStr } from "@/utils/slugify";
 
 const posts = await getCollection("blog", ({ data }) => !data.draft);
 
@@ -129,7 +130,7 @@ const popularTags = Object.entries(tagCountMap)
         <div class="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-6">
           {popularTags.map((tag, index) => (
             <a 
-              href={`/tags/${tag}`}
+              href={`/tags/${slugifyStr(tag)}`}
               class="group flex flex-col items-center justify-center rounded-lg border border-border bg-card-bg p-6 text-center transition-all hover:border-accent hover:shadow-md"
             >
               <div class="mb-3 flex h-12 w-12 items-center justify-center rounded-full bg-accent/10 text-2xl font-bold text-accent">
