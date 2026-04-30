@@ -1,0 +1,41 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Header from "@/components/Header.astro";
+import Footer from "@/components/Footer.astro";
+import Card from "@/components/Card.astro";
+import { getCollection } from "astro:content";
+
+const posts = await getCollection("blog");
+const hubPosts = posts.filter(({ data }) => data.category === "hub");
+---
+
+<Layout title="工种指南Hub | ServiceToolBase Reviews">
+  <Header />
+  
+  <main id="main-content" class="mx-auto w-full max-w-5xl px-4 py-8">
+    <div class="mb-8">
+      <h1 class="text-3xl font-bold sm:text-4xl">工种指南Hub</h1>
+      <p class="mt-2 text-gray-500">针对不同工种（HVAC、管道、电气等）的专属软件指南</p>
+    </div>
+    
+    {hubPosts.length > 0 ? (
+      <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        {hubPosts.map((post) => (
+          <Card
+            href={`/posts/${post.slug}`}
+            title={post.data.title}
+            datetime={post.data.pubDatetime}
+            description={post.data.description}
+            tags={post.data.tags}
+          />
+        ))}
+      </div>
+    ) : (
+      <div class="text-center py-16">
+        <p class="text-gray-500">暂无工种指南文章，敬请期待！</p>
+      </div>
+    )}
+  </main>
+  
+  <Footer />
+</Layout>
