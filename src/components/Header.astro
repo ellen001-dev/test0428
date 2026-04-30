@@ -1,14 +1,11 @@
 ---
 import IconX from "@/assets/icons/IconX.svg";
 import IconSearch from "@/assets/icons/IconSearch.svg";
-import IconArchive from "@/assets/icons/IconArchive.svg";
 import IconMenuDeep from "@/assets/icons/IconMenuDeep.svg";
 import LinkButton from "./LinkButton.astro";
-import { SITE } from "@/config";
 
 const { pathname } = Astro.url;
 
-// Remove trailing slash from current pathname if exists
 const currentPath =
   pathname.endsWith("/") && pathname !== "/" ? pathname.slice(0, -1) : pathname;
 
@@ -60,8 +57,8 @@ const isActive = (path: string) => {
         class="hidden items-center gap-2 sm:flex sm:gap-4"
       >
         <li>
-          <a 
-            href="/reviews" 
+          <a
+            href="/reviews"
             class:list={[
               "px-3 py-2 font-medium text-white hover:text-accent transition-colors",
               { "text-accent": isActive("/reviews") }
@@ -71,8 +68,8 @@ const isActive = (path: string) => {
           </a>
         </li>
         <li>
-          <a 
-            href="/compare" 
+          <a
+            href="/compare"
             class:list={[
               "px-3 py-2 font-medium text-white hover:text-accent transition-colors",
               { "text-accent": isActive("/compare") }
@@ -82,8 +79,8 @@ const isActive = (path: string) => {
           </a>
         </li>
         <li>
-          <a 
-            href="/hvac-software" 
+          <a
+            href="/hvac-software"
             class:list={[
               "px-3 py-2 font-medium text-white hover:text-accent transition-colors",
               { "text-accent": isActive("/hvac-software") }
@@ -93,8 +90,8 @@ const isActive = (path: string) => {
           </a>
         </li>
         <li>
-          <a 
-            href="/housecall-pro-pricing" 
+          <a
+            href="/housecall-pro-pricing"
             class:list={[
               "px-3 py-2 font-medium text-white hover:text-accent transition-colors",
               { "text-accent": isActive("/housecall-pro-pricing") }
@@ -103,9 +100,6 @@ const isActive = (path: string) => {
             定价分析
           </a>
         </li>
-        {
-          )
-        }
         <li>
           <LinkButton
             href="/search"
@@ -119,48 +113,48 @@ const isActive = (path: string) => {
       </ul>
     </nav>
   </div>
-  
+
   <!-- Mobile Menu -->
-  <div 
+  <div
     id="mobile-menu"
     class="hidden bg-accent-dark p-4 sm:hidden"
   >
     <ul class="flex flex-col gap-2">
       <li>
-        <a 
-          href="/reviews" 
+        <a
+          href="/reviews"
           class="block px-4 py-3 font-medium text-white hover:bg-accent/10 rounded-lg"
         >
           深度评测
         </a>
       </li>
       <li>
-        <a 
-          href="/compare" 
+        <a
+          href="/compare"
           class="block px-4 py-3 font-medium text-white hover:bg-accent/10 rounded-lg"
         >
           竞品对比
         </a>
       </li>
       <li>
-        <a 
-          href="/hvac-software" 
+        <a
+          href="/hvac-software"
           class="block px-4 py-3 font-medium text-white hover:bg-accent/10 rounded-lg"
         >
           工种指南
         </a>
       </li>
       <li>
-        <a 
-          href="/housecall-pro-pricing" 
+        <a
+          href="/housecall-pro-pricing"
           class="block px-4 py-3 font-medium text-white hover:bg-accent/10 rounded-lg"
         >
           定价分析
         </a>
       </li>
       <li>
-        <a 
-          href="/about" 
+        <a
+          href="/about"
           class="block px-4 py-3 font-medium text-white hover:bg-accent/10 rounded-lg"
         >
           关于
@@ -195,6 +189,5 @@ const isActive = (path: string) => {
 
   toggleNav();
 
-  // Runs on view transitions navigation
   document.addEventListener("astro:after-swap", toggleNav);
 </script>
