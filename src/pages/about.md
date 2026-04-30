@@ -3,6 +3,8 @@ layout: ../layouts/AboutLayout.astro
 title: "About ServiceToolBase"
 ---
 
+![Mechanic on phone in garage](/mechanic_phone_garage.webp)
+
 **Most contractor software reviews are useless.**
 
 Not because the writers are lazy — but because the incentive structure is broken. The sites that rank for "best HVAC software" are either written by people who have never run a service business, or they're effectively vendor content: carefully worded to avoid saying anything negative about a product that might be paying an affiliate commission. You read four comparison articles, and the only thing you know for certain is that every single one of them recommends the same six tools.
