@@ -13,7 +13,7 @@ export async function getStaticPaths() {
     const category = post.data.category || "posts";
     const slug = post.id.split("/").pop() || post.id;
     return {
-      params: { category, slug: [slug] },
+      params: { category, slug },
       props: { post },
     };
   });
