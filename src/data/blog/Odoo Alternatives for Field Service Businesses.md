@@ -5,9 +5,9 @@ category: compare
 tags:
   - Odoo
   - ServiceTitan
-  - 竞品对比
-  - 现场服务
-description: "深入分析为什么现场服务企业会放弃 Odoo，以及他们转向的专业替代方案"
+  - Software Comparisons
+  - Field Service
+description: "An in-depth look at why field service businesses leave Odoo — and the purpose-built alternatives they switch to"
 ---
 
 # Odoo Alternatives for Field Service Businesses: Why Contractors Leave (And Where They Go)

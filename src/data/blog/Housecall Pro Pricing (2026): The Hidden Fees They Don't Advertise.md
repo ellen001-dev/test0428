@@ -4,10 +4,10 @@ pubDatetime: 2026-04-30T20:00:00Z
 category: pricing
 tags:
   - Housecall Pro
-  - 定价分析
-  - 隐藏费用
-  - 现场服务
-description: "深入揭示 Housecall Pro 的隐藏费用，包括附加功能收费、QuickBooks集成限制、支付处理费等"
+  - Pricing Breakdown
+  - Hidden Fees
+  - Field Service
+description: "An in-depth look at Housecall Pro's hidden costs — including add-on charges, QuickBooks integration limits, and payment processing fees"
 ---
 
 # Housecall Pro Pricing (2026): The Hidden Fees They Don't Advertise

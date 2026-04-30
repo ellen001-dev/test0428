@@ -4,10 +4,10 @@ pubDatetime: 2026-04-30T17:00:00Z
 category: reviews
 tags:
   - Workiz
-  - 定价分析
-  - 现场服务
-  - 软件评测
-description: "深入分析 Workiz 的定价方案，评估其是否适合 3 人团队使用，揭示隐藏成本和真实月费"
+  - Pricing Analysis
+  - Field Service
+  - Software Reviews
+description: "An in-depth analysis of Workiz pricing — evaluating whether it's worth it for a 3-man crew, with hidden costs and real monthly fees revealed"
 ---
 
 # Workiz Pricing Review: Is It Worth It for a 3-Man Crew? (2026)
