@@ -1,12 +1,13 @@
 ---
 title: "How to Block Off World Cup Days in Housecall Pro Without Losing Jobs"
-pubDatetime: 2026-04-30T15:00:00Z
+pubDatetime: 2026-05-01T15:00:00Z
 category: hub
 tags:
   - Housecall Pro
   - Trade Guides
   - Field Service
   - Scheduling
+  - World Cup Days
 description: "A practical guide to blocking off World Cup match days in Housecall Pro using Events and Online Booking features, so contractors can watch the game without losing jobs"
 ---
 # How to Block Off World Cup Days in Housecall Pro Without Losing Jobs
