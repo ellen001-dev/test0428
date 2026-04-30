@@ -5,7 +5,7 @@ import Footer from "@/components/Footer.astro";
 import Card from "@/components/Card.astro";
 import { getCollection } from "astro:content";
 
-const posts = await getCollection("blog");
+const posts = await getCollection("blog", ({ data }) => !data.draft);
 const reviewPosts = posts.filter(({ data }) => data.category === "reviews");
 ---
 
@@ -19,17 +19,11 @@ const reviewPosts = posts.filter(({ data }) => data.category === "reviews");
     </div>
     
     {reviewPosts.length > 0 ? (
-      <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <ul>
         {reviewPosts.map((post) => (
-          <Card
-            href={`/posts/${post.slug}`}
-            title={post.data.title}
-            datetime={post.data.pubDatetime}
-            description={post.data.description}
-            tags={post.data.tags}
-          />
+          <Card {...post} />
         ))}
-      </div>
+      </ul>
     ) : (
       <div class="text-center py-16">
         <p class="text-gray-500">暂无品牌评测文章，敬请期待！</p>
