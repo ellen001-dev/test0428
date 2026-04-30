@@ -1,7 +1,7 @@
 ---
 title: "Housecall Pro Pricing (2026): The Hidden Fees They Don't Advertise"
 pubDatetime: 2026-04-30T20:00:00Z
-category: housecall-pro-pricing
+category: pricing
 tags:
   - Housecall Pro
   - 定价分析
