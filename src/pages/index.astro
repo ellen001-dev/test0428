@@ -3,15 +3,16 @@ import { getCollection } from "astro:content";
 import Layout from "@/layouts/Layout.astro";
 import Header from "@/components/Header.astro";
 import Footer from "@/components/Footer.astro";
-import getSortedPosts from "@/utils/getSortedPosts";
+import Card from "@/components/Card.astro";
 import IconArrowRight from "@/assets/icons/IconArrowRight.svg";
 import { getPath } from "@/utils/getPath";
 
-const posts = await getCollection("blog");
+const posts = await getCollection("blog", ({ data }) => !data.draft);
 
-const sortedPosts = getSortedPosts(posts);
-const featuredPosts = sortedPosts.filter(({ data }) => data.featured);
-const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
+const reviewPosts = posts.filter(({ data }) => data.category === "reviews");
+const comparePosts = posts.filter(({ data }) => data.category === "compare");
+const hubPosts = posts.filter(({ data }) => data.category === "hub");
+const pricingPosts = posts.filter(({ data }) => data.category === "pricing");
 ---
 
 <Layout>
@@ -32,7 +33,7 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
       <!-- CTA Button -->
       <div class="mt-8 flex flex-col gap-4 sm:flex-row">
         <a 
-          href="/posts" 
+          href="/reviews" 
           class="inline-flex items-center justify-center gap-2 bg-accent px-8 py-4 font-semibold text-white hover:bg-accent-light transition-colors"
         >
           Browse All Reviews
@@ -49,40 +50,40 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
       <!-- Quick Stats Cards -->
       <div class="mt-12 grid grid-cols-2 gap-4 sm:grid-cols-4">
         <div class="bg-white/10 p-4 backdrop-blur-sm">
-          <div class="text-3xl font-bold text-accent">50+</div>
+          <div class="text-3xl font-bold text-accent">{reviewPosts.length}</div>
           <div class="text-sm text-gray-300">Reviews</div>
         </div>
         <div class="bg-white/10 p-4 backdrop-blur-sm">
-          <div class="text-3xl font-bold text-accent">10+</div>
-          <div class="text-sm text-gray-300">Categories</div>
+          <div class="text-3xl font-bold text-accent">{comparePosts.length}</div>
+          <div class="text-sm text-gray-300">Comparisons</div>
         </div>
         <div class="bg-white/10 p-4 backdrop-blur-sm">
-          <div class="text-3xl font-bold text-accent">50K+</div>
-          <div class="text-sm text-gray-300">Monthly Visitors</div>
+          <div class="text-3xl font-bold text-accent">{hubPosts.length}</div>
+          <div class="text-sm text-gray-300">Guides</div>
         </div>
         <div class="bg-white/10 p-4 backdrop-blur-sm">
-          <div class="text-3xl font-bold text-accent">95%</div>
-          <div class="text-sm text-gray-300">User Satisfaction</div>
+          <div class="text-3xl font-bold text-accent">{pricingPosts.length}</div>
+          <div class="text-sm text-gray-300">Pricing</div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Featured Posts Section -->
+  <!-- Featured Reviews Section -->
   <main id="main-content" data-layout="index" class="bg-background">
     {
-      featuredPosts.length > 0 && (
+      reviewPosts.length > 0 && (
         <section class="mx-auto w-full max-w-5xl px-4 py-12">
           <div class="mb-8 flex items-center justify-between">
             <h2 class="text-2xl font-bold text-foreground">Featured Reviews</h2>
-            <a href="/posts" class="text-accent hover:underline">View All</a>
+            <a href="/reviews" class="text-accent hover:underline">View All</a>
           </div>
           
           <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {featuredPosts.map(data => (
+            {reviewPosts.slice(0, 3).map(post => (
               <article class="group overflow-hidden rounded-lg border border-border bg-card-bg p-6 shadow-sm transition-all hover:shadow-lg">
                 <div class="mb-4 flex items-center gap-2 list-none">
-                  {data.data.tags.map(tag => (
+                  {post.data.tags.slice(0, 2).map(tag => (
                     <span 
                       class="rounded-full bg-accent/10 px-3 py-1 text-xs font-medium text-accent"
                     >
@@ -91,13 +92,13 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
                   ))}
                 </div>
                 <h3 class="mb-2 text-xl font-bold text-foreground group-hover:text-accent transition-colors">
-                  {data.data.title}
+                  {post.data.title}
                 </h3>
                 <p class="mb-4 text-sm text-muted-foreground line-clamp-2">
-                  {data.data.description}
+                  {post.data.description}
                 </p>
                 <a 
-                  href={getPath(data.id, data.filePath, true, data.data.category)} 
+                  href={getPath(post.id, post.filePath, true, post.data.category)} 
                   class="inline-flex items-center gap-2 text-accent hover:gap-3 transition-all"
                 >
                   Read Review
@@ -110,63 +111,109 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
       )
     }
 
-    <!-- Recent Posts Section -->
+    <!-- Categories Section -->
+    <section class="bg-muted/50 py-12">
+      <div class="mx-auto w-full max-w-5xl px-4">
+        <h2 class="mb-8 text-2xl font-bold text-foreground">Explore Categories</h2>
+        
+        <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          <a 
+            href="/reviews"
+            class="group flex flex-col items-center justify-center rounded-lg border border-border bg-card-bg p-6 text-center transition-all hover:border-accent hover:shadow-md"
+          >
+            <div class="mb-3 flex h-12 w-12 items-center justify-center rounded-full bg-accent/10 text-2xl font-bold text-accent">
+              📊
+            </div>
+            <span class="font-medium text-foreground group-hover:text-accent transition-colors">
+              深度评测
+            </span>
+            <span class="mt-1 text-xs text-muted-foreground">
+              {reviewPosts.length} 篇文章
+            </span>
+          </a>
+          
+          <a 
+            href="/compare"
+            class="group flex flex-col items-center justify-center rounded-lg border border-border bg-card-bg p-6 text-center transition-all hover:border-accent hover:shadow-md"
+          >
+            <div class="mb-3 flex h-12 w-12 items-center justify-center rounded-full bg-accent/10 text-2xl font-bold text-accent">
+              ⚖️
+            </div>
+            <span class="font-medium text-foreground group-hover:text-accent transition-colors">
+              竞品对比
+            </span>
+            <span class="mt-1 text-xs text-muted-foreground">
+              {comparePosts.length} 篇文章
+            </span>
+          </a>
+          
+          <a 
+            href="/hvac-software"
+            class="group flex flex-col items-center justify-center rounded-lg border border-border bg-card-bg p-6 text-center transition-all hover:border-accent hover:shadow-md"
+          >
+            <div class="mb-3 flex h-12 w-12 items-center justify-center rounded-full bg-accent/10 text-2xl font-bold text-accent">
+              🔧
+            </div>
+            <span class="font-medium text-foreground group-hover:text-accent transition-colors">
+              工种指南
+            </span>
+            <span class="mt-1 text-xs text-muted-foreground">
+              {hubPosts.length} 篇文章
+            </span>
+          </a>
+          
+          <a 
+            href="/housecall-pro-pricing"
+            class="group flex flex-col items-center justify-center rounded-lg border border-border bg-card-bg p-6 text-center transition-all hover:border-accent hover:shadow-md"
+          >
+            <div class="mb-3 flex h-12 w-12 items-center justify-center rounded-full bg-accent/10 text-2xl font-bold text-accent">
+              💰
+            </div>
+            <span class="font-medium text-foreground group-hover:text-accent transition-colors">
+              定价分析
+            </span>
+            <span class="mt-1 text-xs text-muted-foreground">
+              {pricingPosts.length} 篇文章
+            </span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Recent Comparisons Section -->
     {
-      recentPosts.length > 0 && (
-        <section class="bg-muted/50 py-12">
-          <div class="mx-auto w-full max-w-5xl px-4">
-            <div class="mb-8 flex items-center justify-between">
-              <h2 class="text-2xl font-bold text-foreground">Recent Posts</h2>
-              <a href="/posts" class="text-accent hover:underline">View All</a>
-            </div>
-            
-            <div class="grid gap-4 sm:grid-cols-2">
-              {recentPosts.slice(0, 4).map(data => (
-                <article class="flex gap-4 rounded-lg border border-border bg-card-bg p-4 hover:border-accent/50 transition-colors">
-                  <div class="flex-1">
-                    <h3 class="mb-1 text-lg font-semibold text-foreground hover:text-accent transition-colors">
-                      {data.data.title}
-                    </h3>
-                    <p class="text-sm text-muted-foreground line-clamp-2">
-                      {data.data.description}
-                    </p>
-                  </div>
-                  <div class="flex flex-col items-end justify-between">
-                    <span class="rounded-full bg-accent/10 px-2 py-1 text-xs font-medium text-accent">
-                      {data.data.tags[0] || "Other"}
-                    </span>
-                    <time class="text-xs text-muted-foreground">
-                      {new Date(data.data.pubDatetime).toLocaleDateString("zh-CN")}
-                    </time>
-                  </div>
-                </article>
-              ))}
-            </div>
+      comparePosts.length > 0 && (
+        <section class="mx-auto w-full max-w-5xl px-4 py-12">
+          <div class="mb-8 flex items-center justify-between">
+            <h2 class="text-2xl font-bold text-foreground">Recent Comparisons</h2>
+            <a href="/compare" class="text-accent hover:underline">View All</a>
+          </div>
+          
+          <div class="grid gap-4 sm:grid-cols-2">
+            {comparePosts.slice(0, 2).map(post => (
+              <article class="flex gap-4 rounded-lg border border-border bg-card-bg p-4 hover:border-accent/50 transition-colors">
+                <div class="flex-1">
+                  <h3 class="mb-1 text-lg font-semibold text-foreground hover:text-accent transition-colors">
+                    {post.data.title}
+                  </h3>
+                  <p class="text-sm text-muted-foreground line-clamp-2">
+                    {post.data.description}
+                  </p>
+                </div>
+                <div class="flex flex-col items-end justify-between">
+                  <span class="rounded-full bg-accent/10 px-2 py-1 text-xs font-medium text-accent">
+                    {post.data.tags[0] || "Compare"}
+                  </span>
+                  <time class="text-xs text-muted-foreground">
+                    {new Date(post.data.pubDatetime).toLocaleDateString("zh-CN")}
+                  </time>
+                </div>
+              </article>
+            ))}
           </div>
         </section>
       )
     }
-
-    <!-- Categories Section -->
-    <section class="mx-auto w-full max-w-5xl px-4 py-12">
-      <h2 class="mb-8 text-2xl font-bold text-foreground">Popular Categories</h2>
-      
-      <div class="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-6">
-        {["项目管理", "会计软件", "现场服务", "CRM", "估算工具", "调度系统"].map((category, index) => (
-          <a 
-            href={`/tags/${category}`}
-            class="group flex flex-col items-center justify-center rounded-lg border border-border bg-card-bg p-6 text-center transition-all hover:border-accent hover:shadow-md"
-          >
-            <div class="mb-3 flex h-12 w-12 items-center justify-center rounded-full bg-accent/10 text-2xl font-bold text-accent">
-              {index + 1}
-            </div>
-            <span class="font-medium text-foreground group-hover:text-accent transition-colors">
-              {category}
-            </span>
-          </a>
-        ))}
-      </div>
-    </section>
 
     <!-- CTA Section -->
     <section class="bg-accent-dark py-16">
@@ -180,7 +227,7 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
         </p>
         <div class="mt-8 flex flex-col gap-4 sm:flex-row justify-center">
           <a 
-            href="/posts" 
+            href="/reviews" 
             class="inline-flex items-center justify-center gap-2 bg-accent px-6 py-3 font-semibold text-white hover:bg-accent-light transition-colors"
           >
             Start Exploring
