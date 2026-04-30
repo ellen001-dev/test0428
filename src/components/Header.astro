@@ -105,17 +105,6 @@ const isActive = (path: string) => {
             定价分析
           </a>
         </li>
-        <li>
-          <a 
-            href="/posts" 
-            class:list={[
-              "px-3 py-2 font-medium text-white hover:text-accent transition-colors",
-              { "text-accent": isActive("/posts") }
-            ]}
-          >
-            全部文章
-          </a>
-        </li>
         {
           SITE.showArchives && (
             <li>
@@ -196,22 +185,6 @@ const isActive = (path: string) => {
           class="block px-4 py-3 font-medium text-white hover:bg-accent/10 rounded-lg"
         >
           定价分析
-        </a>
-      </li>
-      <li>
-        <a 
-          href="/posts" 
-          class="block px-4 py-3 font-medium text-white hover:bg-accent/10 rounded-lg"
-        >
-          全部文章
-        </a>
-      </li>
-      <li>
-        <a 
-          href="/tags" 
-          class="block px-4 py-3 font-medium text-white hover:bg-accent/10 rounded-lg"
-        >
-          标签
         </a>
       </li>
       <li>

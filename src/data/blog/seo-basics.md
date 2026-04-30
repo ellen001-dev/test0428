@@ -5,6 +5,7 @@ title: SEO基础知识完全指南
 slug: seo-basics-guide
 featured: true
 draft: false
+category: compare
 tags:
   - SEO
   - 教程
