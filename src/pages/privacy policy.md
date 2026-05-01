@@ -1,3 +1,8 @@
+---
+layout: ../layouts/Main.astro
+title: "Privacy Policy"
+---
+
 # Privacy Policy
 
 **Last Updated: May 1, 2026**
