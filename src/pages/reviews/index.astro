@@ -9,7 +9,7 @@ const posts = await getCollection("blog", ({ data }) => !data.draft);
 const reviewPosts = posts.filter(({ data }) => data.category === "reviews");
 ---
 
-<Layout title="Contractor Software Reviews - Real Costs & Honest Ratings | ServiceToolBase">
+<Layout title="Contractor Software Reviews - Real Costs & Honest Ratings | ServiceToolBase" description="In-depth reviews of field service management software. Real pricing, real pros & cons, and user ratings from actual contractors.">
   <Header />
   
   <main id="main-content" class="mx-auto w-full max-w-5xl px-4 py-8">

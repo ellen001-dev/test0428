@@ -9,7 +9,7 @@ const posts = await getCollection("blog", ({ data }) => !data.draft);
 const pricingPosts = posts.filter(({ data }) => data.category === "pricing");
 ---
 
-<Layout title="Contractor Software Pricing Analysis - Hidden Costs Exposed | ServiceToolBase">
+<Layout title="Contractor Software Pricing Analysis - Hidden Costs Exposed | ServiceToolBase" description="Transparent pricing breakdowns of field service software. Learn what vendors don't show you and avoid unexpected costs.">
   <Header />
   
   <main id="main-content" class="mx-auto w-full max-w-5xl px-4 py-8">
