@@ -69,6 +69,9 @@ const structuredData = {
     />
 
     <!-- General Meta Tags -->
+    {PUBLIC_GOOGLE_SITE_VERIFICATION && (
+      <meta name="google-site-verification" content={PUBLIC_GOOGLE_SITE_VERIFICATION} />
+    )}
     <title>{title}</title>
     <meta name="title" content={title} />
     <meta name="description" content={description} />
