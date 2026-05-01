@@ -1,6 +1,7 @@
 ---
 layout: ../layouts/AboutLayout.astro
-title: "About ServiceToolBase"
+title: "About ServiceToolBase - Real Reviews from Someone Who's Been There"
+description: "Founder Grant Reed spent years helping contractors evaluate software. Here's why ServiceToolBase exists and how we differ from other review sites."
 ---
 
 ![Mechanic on phone in garage](/mechanic_phone_garage.webp)

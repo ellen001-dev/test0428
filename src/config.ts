@@ -1,9 +1,9 @@
 export const SITE = {
-  website: "https://servicetoolbase.com/", // replace this with your deployed domain
+  website: "https://servicetoolbase.com/",
   author: "ServiceToolBase",
   profile: "https://servicetoolbase.com/",
-  desc: "Independent reviews of contractor software. Written by contractors, for contractors.",
-  title: "ServiceToolBase",
+  desc: "Real reviews of HVAC, plumbing & electrical software. Real costs, real user feedback. Find the best tool for your service business without vendor bias.",
+  title: "ServiceToolBase - Honest Contractor Software Reviews & Comparisons",
   ogImage: "astropaper-og.jpg",
   lightAndDarkMode: true,
   postPerIndex: 4,

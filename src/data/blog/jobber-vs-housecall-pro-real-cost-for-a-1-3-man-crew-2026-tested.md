@@ -7,7 +7,7 @@ tags:
   - Housecall Pro
   - Price Comparison
   - Field Service
-description: "Jobber vs. Housecall Pro: A Real-World Cost Breakdown for 1–3 Person Contractor Teams"
+description: "Which software actually makes sense for a small crew? We break down real costs, user limits, and what to expect when you scale from 1 to 3 techs."
 ---
 
 # Jobber vs Housecall Pro: Real Cost for a 1-3 Man Crew (2026 Tested)

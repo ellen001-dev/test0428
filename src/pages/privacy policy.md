@@ -1,6 +1,7 @@
 ---
 layout: ../layouts/AboutLayout.astro
-title: "Privacy Policy"
+title: "Privacy Policy - ServiceToolBase"
+description: "Learn how ServiceToolBase collects, uses, and protects your information. Includes our affiliate disclosure and FTC compliance details."
 ---
 
 # Privacy Policy
