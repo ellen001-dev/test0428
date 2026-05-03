@@ -6,7 +6,7 @@ draft: true
 tags:
   - HVAC software
   - comparison
-  - 2026
+  - "2026"
 description: "Explore the best HVAC software options for 2026, comparing features, pricing, and user reviews to find the perfect fit for your needs."
 ---
 
