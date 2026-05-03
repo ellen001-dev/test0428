@@ -1,0 +1,22 @@
+{
+  "scores": {
+    "authenticity": 15,
+    "audience_fit": 16,
+    "argument_coherence": 18,
+    "information_delta": 12,
+    "cta_quality": 9
+  },
+  "total_score": 70,
+  "passed": false,
+  "feedback": {
+    "authenticity": "The article provides a good overview of the software options but lacks verifiable data points or direct quotes from sources. It would benefit from including links to user reviews, official pricing pages, or case studies from real businesses.",
+    "audience_fit": "The article speaks to blue-collar owner-operators but occasionally uses corporate jargon and abstract advice. It would be more effective if it included more realistic scenarios and avoided terms like 'optimize your workflow' and 'analyze your marketing ROI'.",
+    "argument_coherence": "The article maintains a clear structure and delivers on its promise to compare top HVAC software solutions. However, it could be more opinionated in its verdicts, providing clearer guidance on who each software is best suited for and who it might not be ideal for.",
+    "information_delta": "The article provides a standard comparison of features and pricing but does not offer much unique information beyond what is typically found in generic top 5 Google results. It would benefit from exposing hidden fees, specific feature limitations, or operational gotchas.",
+    "cta_quality": "The call to action is somewhat generic and could be more specific and actionable. For example, suggesting a particular feature to test or a specific metric to compare would make the next steps clearer and more helpful."
+  },
+  "critical_issues": [
+    "Lack of verifiable data points or direct quotes from sources",
+    "Occasional use of corporate jargon and abstract advice"
+  ]
+}

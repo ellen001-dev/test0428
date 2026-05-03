@@ -1,0 +1,22 @@
+{
+  "scores": {
+    "authenticity": 20,
+    "audience_fit": 18,
+    "argument_coherence": 19,
+    "information_delta": 16,
+    "cta_quality": 12
+  },
+  "total_score": 85,
+  "passed": true,
+  "feedback": {
+    "authenticity": "The article provides clear and detailed pricing information, but it lacks verifiable data points or direct quotes with sources. The case studies and testimonials are helpful but could be more credible if linked to specific reviews or interviews.",
+    "audience_fit": "The article speaks directly to blue-collar owner-operators and includes realistic scenarios such as managing trucks and job sites. However, it uses some corporate jargon like 'optimize your operations' and 'scalability,' which can be off-putting for the target audience.",
+    "argument_coherence": "The article maintains a clear focus on Jobber's pricing and its impact on different types of businesses. It delivers on the promise of its title and provides a coherent, opinionated verdict on who the software is for and who it's not for.",
+    "information_delta": "The article provides useful information beyond generic top 5 Google results, including details on additional costs and specific features of each plan. However, it could benefit from exposing more hidden fees or operational gotchas.",
+    "cta_quality": "The call to action is specific and actionable, encouraging readers to test the free trial and contact support. However, it could be more detailed, such as providing a step-by-step guide on how to sign up for the trial or what questions to ask when contacting support."
+  },
+  "critical_issues": [
+    "Lack of verifiable data points or direct quotes with sources",
+    "Use of some corporate jargon that may not resonate well with blue-collar owner-operators"
+  ]
+}
