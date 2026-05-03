@@ -1,0 +1,22 @@
+{
+  "scores": {
+    "authenticity": 20,
+    "audience_fit": 18,
+    "argument_coherence": 19,
+    "information_delta": 16,
+    "cta_quality": 12
+  },
+  "total_score": 85,
+  "passed": true,
+  "feedback": {
+    "authenticity": "The article provides a good overview of each software with specific features and real-world testing scenarios. However, it lacks direct quotes or verifiable data points from external sources like Reddit, G2, or official pricing pages. Adding these would enhance the authenticity score.",
+    "audience_fit": "The article speaks directly to blue-collar owner-operators and includes realistic scenarios such as managing multiple jobs, emergency repairs, and routine maintenance. However, it occasionally uses corporate jargon like 'streamline your operations' and 'customizable workflows,' which can be replaced with more straightforward, practical language.",
+    "argument_coherence": "The article maintains a clear and consistent focus on evaluating HVAC software for small contractors. Each section delivers on the promise of the title and provides a clear verdict on who the software is best suited for. The core thesis is well-maintained throughout.",
+    "information_delta": "The article provides useful information about each software's features and usability, but it could benefit from exposing hidden fees, specific feature limitations, or operational gotchas that are not typically found in generic top 5 Google results.",
+    "cta_quality": "The call to action is specific and actionable, encouraging readers to try out the software options with free trials or demos. However, it could be more detailed, such as providing specific steps to sign up for a trial or links to the demo pages."
+  },
+  "critical_issues": [
+    "Lack of direct quotes or verifiable data points from external sources",
+    "Occasional use of corporate jargon that may not resonate with the target audience"
+  ]
+}

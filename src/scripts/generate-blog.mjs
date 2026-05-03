@@ -15,7 +15,7 @@ const client = new OpenAI({
 });
 
 const TOPICS = [
-  "housecall pro vs freshbooks",
+  "Best HVAC Software for Small Contractors (2026): Tested on Real Jobs)",
 ];
 
 const CATEGORIES = ["reviews", "compare", "hub", "pricing"];
