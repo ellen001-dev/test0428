@@ -1,0 +1,22 @@
+{
+  "scores": {
+    "authenticity": 17,
+    "audience_fit": 16,
+    "argument_coherence": 18,
+    "information_delta": 15,
+    "cta_quality": 12
+  },
+  "total_score": 78,
+  "passed": true,
+  "feedback": {
+    "authenticity": "The article provides a good overview of both platforms but lacks verifiable data points or direct quotes. It would benefit from including specific user testimonials or links to official pricing pages and feature lists.",
+    "audience_fit": "The article speaks directly to blue-collar owner-operators and avoids excessive corporate jargon. However, it could be more specific about realistic scenarios and challenges faced by contractors in the field.",
+    "argument_coherence": "The article maintains a clear thesis and delivers on its promise to compare Housecall Pro and Freshbooks. It provides a balanced view and a clear verdict based on the specific needs of contractors.",
+    "information_delta": "The article provides useful information but does not go into depth about hidden fees, specific feature limitations, or operational gotchas. Adding more detailed insights would enhance its value.",
+    "cta_quality": "The call to action is clear and actionable, but it could be more specific. For example, suggesting a particular feature to test or a specific scenario to consider would make it stronger."
+  },
+  "critical_issues": [
+    "Lack of verifiable data points or direct quotes",
+    "Limited depth in exposing hidden fees or specific feature limitations"
+  ]
+}

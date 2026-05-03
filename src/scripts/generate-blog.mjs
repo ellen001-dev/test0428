@@ -15,9 +15,7 @@ const client = new OpenAI({
 });
 
 const TOPICS = [
-  "Workiz review",
-  "Jobber pricing",
-  "HVAC software comparison",
+  "housecall pro vs freshbooks",
 ];
 
 const CATEGORIES = ["reviews", "compare", "hub", "pricing"];
