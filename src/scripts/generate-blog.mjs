@@ -73,7 +73,8 @@ Output exactly this JSON structure, no other text:
 
     return parseJSON(response.choices[0].message.content);
   } catch (error) {
-    if (!usingBackup && (error.message.includes("timeout") || error.message.includes("ECONNREFUSED") || error.status === 429 || error.status >= 500)) {
+    const errorMsg = error.message.toLowerCase();
+    if (!usingBackup && (errorMsg.includes("timeout") || errorMsg.includes("timed out") || errorMsg.includes("econnrefused") || error.status === 429 || error.status >= 500)) {
       switchToBackup();
       return generateTopicMetadata(keyword);
     }
@@ -122,7 +123,8 @@ Make sure the article is helpful, specific, and provides real value to readers w
 
     return response.choices[0].message.content;
   } catch (error) {
-    if (!usingBackup && (error.message.includes("timeout") || error.message.includes("ECONNREFUSED") || error.status === 429 || error.status >= 500)) {
+    const errorMsg = error.message.toLowerCase();
+    if (!usingBackup && (errorMsg.includes("timeout") || errorMsg.includes("timed out") || errorMsg.includes("econnrefused") || error.status === 429 || error.status >= 500)) {
       switchToBackup();
       return generateArticle(metadata, keyword);
     }
@@ -204,7 +206,8 @@ You MUST return ONLY a valid JSON object with the following structure:
 
     return parseJSON(response.choices[0].message.content);
   } catch (error) {
-    if (!usingBackup && (error.message.includes("timeout") || error.message.includes("ECONNREFUSED") || error.status === 429 || error.status >= 500)) {
+    const errorMsg = error.message.toLowerCase();
+    if (!usingBackup && (errorMsg.includes("timeout") || errorMsg.includes("timed out") || errorMsg.includes("econnrefused") || error.status === 429 || error.status >= 500)) {
       switchToBackup();
       return reviewArticle(articleContent, keyword);
     }
