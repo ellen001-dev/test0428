@@ -25,14 +25,15 @@ jobs:
       - name: Build website
         run: npm run build
 
-      - name: Deploy to Hostinger via FTP
-        uses: SamKirkland/FTP-Deploy-Action@4.3.0
+      - name: 📂 Sync files via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.0
         with:
           server: ${{ secrets.FTP_HOST }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           protocol: ftps
           port: 21
-          local-dir: ./dist/
-          server-dir: 
-          log-level: verbose
+          # 关键点 1：必须指定 Astro 的构建输出目录，并确保末尾带有斜杠
+          local-dir: dist/
+          # 关键点 2：指定 FTP 账号登录后的根目录，必须带斜杠
+          server-dir: /
