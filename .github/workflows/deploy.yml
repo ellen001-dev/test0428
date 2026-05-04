@@ -25,13 +25,14 @@ jobs:
       - name: Build website
         run: npm run build
 
-      - name: 📂 Sync files via SFTP
-        uses: appleboy/scp-action@v0.1.7
+      - name: 📂 Sync files via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.0
         with:
-          host: ${{ secrets.FTP_HOST }}
+          server: ${{ secrets.FTP_HOST }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          source: "dist/"
-          target: "/"
-          rm: true
-          debug: true
+          protocol: ftps
+          port: 21
+          local-dir: dist/
+          server-dir: /
+          timeout: 120000
