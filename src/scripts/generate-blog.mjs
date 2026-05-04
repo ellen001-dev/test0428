@@ -7,14 +7,34 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const BLOG_PATH = path.join(__dirname, "../data/blog");
 const REVIEW_PATH = path.join(__dirname, "../data/reviews");
 
-const client = new OpenAI({
+const chatgptClient = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
-  timeout: 300000,
-  maxRetries: 3,
+  timeout: 180000,
+  maxRetries: 2,
 });
 
+const siliconFlowClient = new OpenAI({
+  apiKey: process.env.SILICONFLOW_API_KEY || "sk-demamdawlghvidlnlsktlknnxmrrbesvnkrjgamlacoosfdx",
+  baseURL: "https://api.siliconflow.cn/v1",
+  timeout: 180000,
+  maxRetries: 2,
+});
+
+let currentClient = chatgptClient;
+let currentModel = "gpt-4o";
+let usingBackup = false;
+
+function switchToBackup() {
+  if (!usingBackup) {
+    console.log("  ⚠️  Switching to SiliconFlow API (backup)...");
+    currentClient = siliconFlowClient;
+    currentModel = "Qwen/Qwen2.5-72B-Instruct";
+    usingBackup = true;
+  }
+}
+
 const TOPICS = [
-  "Best HVAC Software for Small Contractors (2026): Tested on Real Jobs)",
+  "Best Software for a New Plumbing Business (Starting From Zero)",
 ];
 
 const CATEGORIES = ["reviews", "compare", "hub", "pricing"];
@@ -28,12 +48,13 @@ function parseJSON(str) {
 }
 
 async function generateTopicMetadata(keyword) {
-  const response = await client.chat.completions.create({
-    model: "Qwen/Qwen2.5-72B-Instruct",
-    messages: [
-      {
-        role: "system",
-        content: `You are a blog strategist. Based on the keyword, generate article metadata in JSON format only.
+  try {
+    const response = await currentClient.chat.completions.create({
+      model: currentModel,
+      messages: [
+        {
+          role: "system",
+          content: `You are a blog strategist. Based on the keyword, generate article metadata in JSON format only.
 Output exactly this JSON structure, no other text:
 {
   "title": "SEO-friendly English title with year 2026",
@@ -41,25 +62,33 @@ Output exactly this JSON structure, no other text:
   "tags": ["tag1", "tag2", "tag3"],
   "description": "Under 160 characters description"
 }`,
-      },
-      {
-        role: "user",
-        content: `Generate metadata for an article about: ${keyword}`,
-      },
-    ],
-    temperature: 0.7,
-  });
+        },
+        {
+          role: "user",
+          content: `Generate metadata for an article about: ${keyword}`,
+        },
+      ],
+      temperature: 0.7,
+    });
 
-  return parseJSON(response.choices[0].message.content);
+    return parseJSON(response.choices[0].message.content);
+  } catch (error) {
+    if (!usingBackup && (error.message.includes("timeout") || error.message.includes("ECONNREFUSED") || error.status === 429 || error.status >= 500)) {
+      switchToBackup();
+      return generateTopicMetadata(keyword);
+    }
+    throw error;
+  }
 }
 
 async function generateArticle(metadata, keyword) {
-  const response = await client.chat.completions.create({
-    model: "Qwen/Qwen2.5-72B-Instruct",
-    messages: [
-      {
-        role: "system",
-        content: `You are a professional technical writer for field service industry blogs. Generate markdown content following this exact format:
+  try {
+    const response = await currentClient.chat.completions.create({
+      model: currentModel,
+      messages: [
+        {
+          role: "system",
+          content: `You are a professional technical writer for field service industry blogs. Generate markdown content following this exact format:
 
 ---
 title: "Article Title"
@@ -75,10 +104,10 @@ description: "A brief description under 160 characters"
 # Article Title
 
 [Article body in English, 1000-1500 words, professional but accessible tone, no tables, pure paragraphs]`,
-      },
-      {
-        role: "user",
-        content: `Write a comprehensive article about: ${keyword}
+        },
+        {
+          role: "user",
+          content: `Write a comprehensive article about: ${keyword}
 
 Title: ${metadata.title}
 Category: ${metadata.category}
@@ -86,21 +115,29 @@ Tags: ${metadata.tags.join(", ")}
 Description: ${metadata.description}
 
 Make sure the article is helpful, specific, and provides real value to readers who are small HVAC, plumbing, or electrical contractors.`,
-      },
-    ],
-    temperature: 0.7,
-  });
+        },
+      ],
+      temperature: 0.7,
+    });
 
-  return response.choices[0].message.content;
+    return response.choices[0].message.content;
+  } catch (error) {
+    if (!usingBackup && (error.message.includes("timeout") || error.message.includes("ECONNREFUSED") || error.status === 429 || error.status >= 500)) {
+      switchToBackup();
+      return generateArticle(metadata, keyword);
+    }
+    throw error;
+  }
 }
 
 async function reviewArticle(articleContent, keyword) {
-  const response = await client.chat.completions.create({
-    model: "Qwen/Qwen2.5-72B-Instruct",
-    messages: [
-      {
-        role: "system",
-        content: `You are an expert content evaluator for ServiceToolBase, a site dedicated to providing honest, BS-free software reviews for US-based blue-collar service businesses (HVAC, plumbing, electrical, 1-10 person crews).
+  try {
+    const response = await currentClient.chat.completions.create({
+      model: currentModel,
+      messages: [
+        {
+          role: "system",
+          content: `You are an expert content evaluator for ServiceToolBase, a site dedicated to providing honest, BS-free software reviews for US-based blue-collar service businesses (HVAC, plumbing, electrical, 1-10 person crews).
 
 Your task is to evaluate the provided article based on 5 strict criteria. You must output a JSON object containing the scores and feedback.
 
@@ -156,16 +193,23 @@ You MUST return ONLY a valid JSON object with the following structure:
 },
 "critical_issues": ["<string>", "<string>"]
 }`,
-      },
-      {
-        role: "user",
-        content: `Review this article about ${keyword}:\n\n${articleContent}`,
-      },
-    ],
-    temperature: 0.3,
-  });
+        },
+        {
+          role: "user",
+          content: `Review this article about ${keyword}:\n\n${articleContent}`,
+        },
+      ],
+      temperature: 0.3,
+    });
 
-  return parseJSON(response.choices[0].message.content);
+    return parseJSON(response.choices[0].message.content);
+  } catch (error) {
+    if (!usingBackup && (error.message.includes("timeout") || error.message.includes("ECONNREFUSED") || error.status === 429 || error.status >= 500)) {
+      switchToBackup();
+      return reviewArticle(articleContent, keyword);
+    }
+    throw error;
+  }
 }
 
 function saveArticle(content, filename) {
