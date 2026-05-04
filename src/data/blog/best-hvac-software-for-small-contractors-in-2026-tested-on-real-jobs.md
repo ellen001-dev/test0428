@@ -1,6 +1,6 @@
 ---
 title: "Best HVAC Software for Small Contractors in 2026: Tested on Real Jobs"
-pubDatetime: 2026-01-15T10:00:00Z
+pubDatetime: 2026-05-04T10:00:00Z
 category: reviews
 draft: false
 tags:
