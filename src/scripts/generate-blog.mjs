@@ -9,8 +9,7 @@ const REVIEW_PATH = path.join(__dirname, "../data/reviews");
 
 const client = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
-  baseURL: "https://api.siliconflow.cn/v1",
-  timeout: 120000,
+  timeout: 300000,
   maxRetries: 3,
 });
 
