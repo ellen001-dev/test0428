@@ -9,7 +9,9 @@ import { slugifyStr } from "@/utils/slugify";
 
 const posts = await getCollection("blog", ({ data }) => !data.draft);
 
-const reviewPosts = posts.filter(({ data }) => data.category === "reviews");
+const reviewPosts = posts
+  .filter(({ data }) => data.category === "reviews")
+  .sort((a, b) => b.data.pubDatetime.getTime() - a.data.pubDatetime.getTime());
 const comparePosts = posts.filter(({ data }) => data.category === "compare");
 
 // 获取所有标签并统计使用次数
