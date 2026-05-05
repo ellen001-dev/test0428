@@ -1,0 +1,19 @@
+{
+  "scores": {
+    "authenticity": 23,
+    "audience_fit": 18,
+    "argument_coherence": 19,
+    "information_delta": 17,
+    "cta_quality": 14
+  },
+  "total_score": 91,
+  "passed": true,
+  "feedback": {
+    "authenticity": "The article provides specific, verifiable data points and real-world examples that are plausible and relatable. It avoids vague or unverifiable cases, which adds to its authenticity. However, it could benefit from linking to external sources for the data points to further enhance credibility.",
+    "audience_fit": "The article speaks directly to blue-collar owner-operators, using realistic scenarios and language that resonates with their daily challenges. It avoids corporate jargon and focuses on practical, tangible issues. However, it could be even more effective by including more specific, industry-relevant anecdotes or quotes from actual business owners.",
+    "argument_coherence": "The article maintains a clear and consistent thesis throughout, effectively breaking down the hidden costs of bad scheduling software. It delivers on the promise of its title and provides a strong, opinionated verdict on the importance of upgrading. The structure is logical and easy to follow.",
+    "information_delta": "The article provides valuable, specific information that goes beyond generic top 5 Google results. It includes detailed cost breakdowns and real-world examples, which are not commonly found in other reviews. However, it could be enhanced by exposing more hidden fees or specific feature limitations of popular scheduling software.",
+    "cta_quality": "The call to action is specific and actionable, guiding the reader to track their scheduling inefficiencies and research software options. It provides clear, verifiable steps, but it could be more detailed in suggesting specific tools or platforms to consider."
+  },
+  "critical_issues": []
+}

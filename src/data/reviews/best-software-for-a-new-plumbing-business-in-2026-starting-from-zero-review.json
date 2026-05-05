@@ -1,0 +1,22 @@
+{
+  "scores": {
+    "authenticity": 15,
+    "audience_fit": 16,
+    "argument_coherence": 18,
+    "information_delta": 12,
+    "cta_quality": 10
+  },
+  "total_score": 71,
+  "passed": false,
+  "feedback": {
+    "authenticity": "The article lacks verifiable data points or direct quotes with sources. While the software options are real, there are no links to official pricing pages, user reviews, or specific case studies that can be verified. This reduces the authenticity score.",
+    "audience_fit": "The article generally speaks to a blue-collar owner-operator, but it occasionally uses corporate jargon and abstract advice, such as 'optimize your workflow' and 'comprehensive marketing and sales platform.' It would benefit from more realistic scenarios and less formal language.",
+    "argument_coherence": "The article maintains its core thesis of guiding new plumbing business owners through software selection. However, it could be more opinionated in its verdicts, specifying who each software is best suited for and who it might not be ideal for.",
+    "information_delta": "The article provides a good overview of software options but does not delve into hidden fees, specific feature limitations, or operational gotchas. This information is crucial for new business owners and would significantly enhance the value of the article.",
+    "cta_quality": "The call to action is somewhat generic, suggesting to consider specific business needs and test free trials. While this is actionable, it could be more specific and verifiable, such as providing a checklist of features to test or a step-by-step guide for setting up a trial account."
+  },
+  "critical_issues": [
+    "Lack of verifiable data points or direct quotes with sources.",
+    "Insufficient detail on hidden fees, specific feature limitations, or operational gotchas."
+  ]
+}
