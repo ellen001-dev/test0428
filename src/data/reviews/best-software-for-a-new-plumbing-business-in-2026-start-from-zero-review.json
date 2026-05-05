@@ -1,0 +1,22 @@
+{
+  "scores": {
+    "authenticity": 25,
+    "audience_fit": 19,
+    "argument_coherence": 18,
+    "information_delta": 19,
+    "cta_quality": 14
+  },
+  "total_score": 95,
+  "passed": true,
+  "feedback": {
+    "authenticity": "The article provides verifiable data points and direct quotes with sources, such as G2 reviews, Reddit posts, and Capterra. There are no vague or obviously fake cases, and the information is well-supported.",
+    "audience_fit": "The article speaks directly to blue-collar owner-operators, using realistic scenarios and avoiding corporate jargon. However, there are a couple of instances where more specific, actionable advice could have been used instead of general statements.",
+    "argument_coherence": "The article maintains a clear and consistent thesis throughout, focusing on the practical aspects of software for new plumbing businesses. The verdict is clear and opinionated, but the transition between sections could be smoother to enhance flow.",
+    "information_delta": "The article provides valuable, detailed information not found in generic top 5 Google results, such as hidden fees, specific feature limitations, and operational gotchas. This adds significant value for readers.",
+    "cta_quality": "The call to action is specific and actionable, guiding readers through practical steps to test the software. However, the steps could be more detailed and include more verifiable action items to further enhance their quality."
+  },
+  "critical_issues": [
+    "The article could benefit from a smoother transition between sections to improve overall flow.",
+    "A few more specific, actionable tips could be added to the call to action to make it even more robust."
+  ]
+}

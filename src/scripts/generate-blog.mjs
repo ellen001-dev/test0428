@@ -7,11 +7,11 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const BLOG_PATH = path.join(__dirname, "../data/blog");
 const REVIEW_PATH = path.join(__dirname, "../data/reviews");
 
-const chatgptClient = new OpenAI({
+const chatgptClient = process.env.OPENAI_API_KEY ? new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
   timeout: 180000,
   maxRetries: 2,
-});
+}) : null;
 
 const siliconFlowClient = new OpenAI({
   apiKey: process.env.SILICONFLOW_API_KEY || "sk-demamdawlghvidlnlsktlknnxmrrbesvnkrjgamlacoosfdx",
@@ -20,9 +20,9 @@ const siliconFlowClient = new OpenAI({
   maxRetries: 2,
 });
 
-let currentClient = chatgptClient;
-let currentModel = "gpt-4o";
-let usingBackup = false;
+let currentClient = chatgptClient || siliconFlowClient;
+let currentModel = chatgptClient ? "gpt-4o" : "Qwen/Qwen2.5-72B-Instruct";
+let usingBackup = !chatgptClient;
 
 function switchToBackup() {
   if (!usingBackup) {
@@ -242,10 +242,35 @@ function slugify(text) {
 }
 
 async function main() {
-  if (!process.env.OPENAI_API_KEY) {
-    console.error("❌ Please set OPENAI_API_KEY environment variable");
-    console.log('   Run: export OPENAI_API_KEY="your-key-here"');
+  if (!process.env.OPENAI_API_KEY && !process.env.SILICONFLOW_API_KEY && !siliconFlowClient.apiKey) {
+    console.error("❌ Please set at least one API key environment variable");
+    console.log('   OpenAI: export OPENAI_API_KEY="your-key-here"');
+    console.log('   SiliconFlow: export SILICONFLOW_API_KEY="your-key-here"');
     process.exit(1);
+  }
+
+  const args = process.argv.slice(2);
+  if (args[0] === "--review-only" && args[1]) {
+    const filename = args[1];
+    const filePath = path.join(BLOG_PATH, filename);
+    if (!fs.existsSync(filePath)) {
+      console.error(`❌ File not found: ${filePath}`);
+      process.exit(1);
+    }
+    const articleContent = fs.readFileSync(filePath, "utf-8");
+    const keyword = filename.replace(".md", "").replace(/-/g, " ");
+    console.log(`🔍 Reviewing: ${filename}\n`);
+    const review = await reviewArticle(articleContent, keyword);
+    console.log(`\n📊 AI Review Results:`);
+    console.log(`   Total Score: ${review.total_score}/100`);
+    console.log(`   Passed: ${review.passed}`);
+    console.log(`   Scores: Authenticity=${review.scores.authenticity}/25, Audience=${review.scores.audience_fit}/20, Coherence=${review.scores.argument_coherence}/20, Delta=${review.scores.information_delta}/20, CTA=${review.scores.cta_quality}/15`);
+    if (review.critical_issues.length > 0) {
+      console.log(`   Critical issues: ${review.critical_issues.join(", ")}`);
+    }
+    fs.writeFileSync(path.join(REVIEW_PATH, `${filename.replace(".md", "")}-review.json`), JSON.stringify(review, null, 2));
+    console.log(`\n✅ Review saved to: ${filename.replace(".md", "")}-review.json`);
+    return;
   }
 
   console.log("🚀 Starting article generation with AI review...\n");
@@ -271,9 +296,10 @@ async function main() {
       console.log(`     Scores: Authenticity=${review.scores.authenticity}/25, Audience=${review.scores.audience_fit}/20, Coherence=${review.scores.argument_coherence}/20, Delta=${review.scores.information_delta}/20, CTA=${review.scores.cta_quality}/15`);
 
       const shouldPublish = review.passed === true;
+      const today = new Date().toISOString();
       const finalContent = shouldPublish
-        ? articleContent.replace("draft: true", "draft: false")
-        : articleContent;
+        ? articleContent.replace("draft: true", "draft: false").replace(/pubDatetime: \d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}Z/, `pubDatetime: ${today}`)
+        : articleContent.replace(/pubDatetime: \d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}Z/, `pubDatetime: ${today}`);
 
       if (shouldPublish) {
         console.log("     📢 Will auto-publish (passed all criteria)");
