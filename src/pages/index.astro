@@ -93,7 +93,7 @@ const popularTags = Object.entries(tagCountMap)
           </div>
           
           <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {reviewPosts.slice(0, 3).map(post => (
+            {reviewPosts.slice(0, 6).map(post => (
               <article class="group overflow-hidden rounded-lg border border-border bg-card-bg p-6 shadow-sm transition-all hover:shadow-lg">
                 <div class="mb-4 flex items-center gap-2 list-none">
                   {post.data.tags.slice(0, 2).map(tag => (
