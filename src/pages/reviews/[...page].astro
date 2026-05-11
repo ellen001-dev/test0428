@@ -1,26 +1,37 @@
 ---
+import type { GetStaticPaths } from "astro";
+import type { Page } from "astro";
+import type { CollectionEntry } from "astro:content";
 import Layout from "@/layouts/Layout.astro";
 import Header from "@/components/Header.astro";
 import Footer from "@/components/Footer.astro";
 import Card from "@/components/Card.astro";
+import Pagination from "@/components/Pagination.astro";
 import { getCollection } from "astro:content";
+import getSortedPosts from "@/utils/getSortedPosts";
 
-const posts = await getCollection("blog", ({ data }) => !data.draft);
-const reviewPosts = posts.filter(({ data }) => data.category === "reviews");
+export const getStaticPaths = (async ({ paginate }) => {
+  const posts = await getCollection("blog", ({ data }) => !data.draft);
+  const reviewPosts = posts.filter(({ data }) => data.category === "reviews");
+  return paginate(getSortedPosts(reviewPosts), { pageSize: 8 });
+}) satisfies GetStaticPaths;
+
+type Props = { page: Page<CollectionEntry<"blog">> };
+const { page } = Astro.props;
 ---
 
 <Layout title="Contractor Software Reviews - Real Costs & Honest Ratings | ServiceToolBase" description="In-depth reviews of field service management software. Real pricing, real pros & cons, and user ratings from actual contractors.">
   <Header />
-  
+
   <main id="main-content" class="mx-auto w-full max-w-5xl px-4 py-8">
     <div class="mb-8">
       <h1 class="text-3xl font-bold sm:text-4xl">Software Reviews</h1>
       <p class="mt-2 text-gray-500">In-depth analysis of field service software features, pricing, and user experience</p>
     </div>
-    
-    {reviewPosts.length > 0 ? (
+
+    {page.data.length > 0 ? (
       <ul>
-        {reviewPosts.map((post) => (
+        {page.data.map((post) => (
           <Card {...post} />
         ))}
       </ul>
@@ -30,6 +41,8 @@ const reviewPosts = posts.filter(({ data }) => data.category === "reviews");
       </div>
     )}
   </main>
-  
-  <Footer />
+
+  <Pagination {page} />
+
+  <Footer noMarginTop={page.lastPage > 1} />
 </Layout>

@@ -1,26 +1,37 @@
 ---
+import type { GetStaticPaths } from "astro";
+import type { Page } from "astro";
+import type { CollectionEntry } from "astro:content";
 import Layout from "@/layouts/Layout.astro";
 import Header from "@/components/Header.astro";
 import Footer from "@/components/Footer.astro";
 import Card from "@/components/Card.astro";
+import Pagination from "@/components/Pagination.astro";
 import { getCollection } from "astro:content";
+import getSortedPosts from "@/utils/getSortedPosts";
 
-const posts = await getCollection("blog", ({ data }) => !data.draft);
-const hubPosts = posts.filter(({ data }) => data.category === "hub");
+export const getStaticPaths = (async ({ paginate }) => {
+  const posts = await getCollection("blog", ({ data }) => !data.draft);
+  const hubPosts = posts.filter(({ data }) => data.category === "hub");
+  return paginate(getSortedPosts(hubPosts), { pageSize: 8 });
+}) satisfies GetStaticPaths;
+
+type Props = { page: Page<CollectionEntry<"blog">> };
+const { page } = Astro.props;
 ---
 
 <Layout title="Trade Software Guides - HVAC, Plumbing & Electrical | ServiceToolBase" description="Specialized software guides for HVAC, plumbing, and electrical contractors. Find the right tools for your specific trade.">
   <Header />
-  
+
   <main id="main-content" class="mx-auto w-full max-w-5xl px-4 py-8">
     <div class="mb-8">
       <h1 class="text-3xl font-bold sm:text-4xl">Trade Guides</h1>
       <p class="mt-2 text-gray-500">Specialized software guides for HVAC, plumbing, electrical, and more</p>
     </div>
-    
-    {hubPosts.length > 0 ? (
+
+    {page.data.length > 0 ? (
       <ul>
-        {hubPosts.map((post) => (
+        {page.data.map((post) => (
           <Card {...post} />
         ))}
       </ul>
@@ -30,6 +41,8 @@ const hubPosts = posts.filter(({ data }) => data.category === "hub");
       </div>
     )}
   </main>
-  
-  <Footer />
+
+  <Pagination {page} />
+
+  <Footer noMarginTop={page.lastPage > 1} />
 </Layout>

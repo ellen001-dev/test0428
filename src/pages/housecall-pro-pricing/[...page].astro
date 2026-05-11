@@ -1,26 +1,37 @@
 ---
+import type { GetStaticPaths } from "astro";
+import type { Page } from "astro";
+import type { CollectionEntry } from "astro:content";
 import Layout from "@/layouts/Layout.astro";
 import Header from "@/components/Header.astro";
 import Footer from "@/components/Footer.astro";
 import Card from "@/components/Card.astro";
+import Pagination from "@/components/Pagination.astro";
 import { getCollection } from "astro:content";
+import getSortedPosts from "@/utils/getSortedPosts";
 
-const posts = await getCollection("blog", ({ data }) => !data.draft);
-const pricingPosts = posts.filter(({ data }) => data.category === "pricing");
+export const getStaticPaths = (async ({ paginate }) => {
+  const posts = await getCollection("blog", ({ data }) => !data.draft);
+  const pricingPosts = posts.filter(({ data }) => data.category === "pricing");
+  return paginate(getSortedPosts(pricingPosts), { pageSize: 8 });
+}) satisfies GetStaticPaths;
+
+type Props = { page: Page<CollectionEntry<"blog">> };
+const { page } = Astro.props;
 ---
 
 <Layout title="Contractor Software Pricing Analysis - Hidden Costs Exposed | ServiceToolBase" description="Transparent pricing breakdowns of field service software. Learn what vendors don't show you and avoid unexpected costs.">
   <Header />
-  
+
   <main id="main-content" class="mx-auto w-full max-w-5xl px-4 py-8">
     <div class="mb-8">
       <h1 class="text-3xl font-bold sm:text-4xl">Pricing Breakdown</h1>
       <p class="mt-2 text-gray-500">Uncover pricing strategies and avoid hidden fees and traps</p>
     </div>
-    
-    {pricingPosts.length > 0 ? (
+
+    {page.data.length > 0 ? (
       <ul>
-        {pricingPosts.map((post) => (
+        {page.data.map((post) => (
           <Card {...post} />
         ))}
       </ul>
@@ -30,6 +41,8 @@ const pricingPosts = posts.filter(({ data }) => data.category === "pricing");
       </div>
     )}
   </main>
-  
-  <Footer />
+
+  <Pagination {page} />
+
+  <Footer noMarginTop={page.lastPage > 1} />
 </Layout>

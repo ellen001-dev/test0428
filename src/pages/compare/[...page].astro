@@ -1,26 +1,37 @@
 ---
+import type { GetStaticPaths } from "astro";
+import type { Page } from "astro";
+import type { CollectionEntry } from "astro:content";
 import Layout from "@/layouts/Layout.astro";
 import Header from "@/components/Header.astro";
 import Footer from "@/components/Footer.astro";
 import Card from "@/components/Card.astro";
+import Pagination from "@/components/Pagination.astro";
 import { getCollection } from "astro:content";
+import getSortedPosts from "@/utils/getSortedPosts";
 
-const posts = await getCollection("blog", ({ data }) => !data.draft);
-const comparePosts = posts.filter(({ data }) => data.category === "compare");
+export const getStaticPaths = (async ({ paginate }) => {
+  const posts = await getCollection("blog", ({ data }) => !data.draft);
+  const comparePosts = posts.filter(({ data }) => data.category === "compare");
+  return paginate(getSortedPosts(comparePosts), { pageSize: 8 });
+}) satisfies GetStaticPaths;
+
+type Props = { page: Page<CollectionEntry<"blog">> };
+const { page } = Astro.props;
 ---
 
 <Layout title="Software Comparisons for HVAC, Plumbing & Electrical | ServiceToolBase" description="Side-by-side comparisons of contractor software. See features, pricing, and user feedback side-by-side to make confident decisions.">
   <Header />
-  
+
   <main id="main-content" class="mx-auto w-full max-w-5xl px-4 py-8">
     <div class="mb-8">
       <h1 class="text-3xl font-bold sm:text-4xl">Comparisons</h1>
       <p class="mt-2 text-gray-500">Side-by-side comparisons to help you make smart choices</p>
     </div>
-    
-    {comparePosts.length > 0 ? (
+
+    {page.data.length > 0 ? (
       <ul>
-        {comparePosts.map((post) => (
+        {page.data.map((post) => (
           <Card {...post} />
         ))}
       </ul>
@@ -30,6 +41,8 @@ const comparePosts = posts.filter(({ data }) => data.category === "compare");
       </div>
     )}
   </main>
-  
-  <Footer />
+
+  <Pagination {page} />
+
+  <Footer noMarginTop={page.lastPage > 1} />
 </Layout>
