@@ -1,5 +1,6 @@
 import { BLOG_PATH } from "@/content.config";
 import { slugifyStr } from "./slugify";
+import { SITE } from "@/config";
 
 /**
  * Get full path of a blog post
@@ -7,13 +8,15 @@ import { slugifyStr } from "./slugify";
  * @param filePath - the blog post full file location
  * @param includeBase - whether to include `/posts` in return value
  * @param category - the post category for routing
+ * @param fullUrl - whether to return full URL with domain
  * @returns blog post path
  */
 export function getPath(
   id: string,
   filePath: string | undefined,
   includeBase = true,
-  category?: string
+  category?: string,
+  fullUrl = true
 ) {
   const pathSegments = filePath
     ?.replace(BLOG_PATH, "")
@@ -36,8 +39,10 @@ export function getPath(
 
   // If not inside the sub-dir, simply return the file path
   if (!pathSegments || pathSegments.length < 1) {
-    return [basePath, slug].join("/");
+    const path = `${[basePath, slug].join("/")}/`;
+    return fullUrl ? `${SITE.website.replace(/\/$/, "")}${path}` : path;
   }
 
-  return [basePath, ...pathSegments, slug].join("/");
+  const path = `${[basePath, ...pathSegments, slug].join("/")}/`;
+  return fullUrl ? `${SITE.website.replace(/\/$/, "")}${path}` : path;
 }
