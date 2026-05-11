@@ -1,0 +1,22 @@
+{
+  "scores": {
+    "authenticity": 15,
+    "audience_fit": 17,
+    "argument_coherence": 18,
+    "information_delta": 13,
+    "cta_quality": 8
+  },
+  "total_score": 71,
+  "passed": false,
+  "feedback": {
+    "authenticity": "The article lacks verifiable data points or direct quotes from sources. It provides a general overview of features without specific examples or user testimonials. Deducting 10 points for the absence of verifiable data and quotes.",
+    "audience_fit": "The article speaks directly to blue-collar owner-operators and includes realistic scenarios such as scheduling appointments and managing inventory. However, it uses some corporate jargon and abstract advice, which detracts from the audience fit. Deducting 3 points for the use of corporate jargon.",
+    "argument_coherence": "The article delivers on its promise and maintains a clear focus on the core features and benefits of the software options. It provides a balanced view of each software, making it useful for decision-making. However, it could be more opinionated in its verdict. Deducting 2 points for a lack of clear, opinionated verdicts.",
+    "information_delta": "The article provides a good overview of the software options but does not offer much information beyond what is found in generic top 5 Google results. It lacks exposure of hidden fees, specific feature limitations, or operational gotchas. Deducting 7 points for the lack of unique information.",
+    "cta_quality": "The call to action is somewhat generic and does not provide specific, actionable steps. It could be improved by suggesting specific actions, such as testing a demo or comparing specific features. Deducting 7 points for a lack of specific, verifiable action steps."
+  },
+  "critical_issues": [
+    "Lack of verifiable data points or direct quotes from sources.",
+    "Lack of unique information beyond generic top 5 Google results."
+  ]
+}

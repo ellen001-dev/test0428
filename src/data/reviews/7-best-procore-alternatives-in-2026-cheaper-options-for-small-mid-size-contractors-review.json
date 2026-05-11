@@ -1,0 +1,22 @@
+{
+  "scores": {
+    "authenticity": 17,
+    "audience_fit": 16,
+    "argument_coherence": 18,
+    "information_delta": 12,
+    "cta_quality": 9
+  },
+  "total_score": 72,
+  "passed": false,
+  "feedback": {
+    "authenticity": "The article provides a good overview of the software options but lacks verifiable data points or direct quotes. It would benefit from including specific user testimonials, case studies, or links to official pricing pages.",
+    "audience_fit": "The article speaks directly to blue-collar owner-operators and includes realistic scenarios. However, it occasionally uses corporate jargon such as 'comprehensive solution' and 'robust features', which can be off-putting for the target audience.",
+    "argument_coherence": "The article maintains its core thesis of providing cheaper alternatives to Procore and delivers on the promise of its title. Each software is clearly described, and the article makes a coherent argument for each option.",
+    "information_delta": "The article provides a general overview of each software but does not delve into specific hidden fees, feature limitations, or operational gotchas. Including more detailed information would significantly enhance its value.",
+    "cta_quality": "The conclusion is somewhat generic and does not provide specific, actionable next steps. A more specific call to action, such as 'Sign up for a free trial of CoConstruct and test its project management features with your next job', would be more effective."
+  },
+  "critical_issues": [
+    "Lack of verifiable data points or direct quotes",
+    "Generic call to action without specific, actionable steps"
+  ]
+}

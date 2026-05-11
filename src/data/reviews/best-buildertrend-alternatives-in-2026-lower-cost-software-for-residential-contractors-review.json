@@ -1,0 +1,22 @@
+{
+  "scores": {
+    "authenticity": 17,
+    "audience_fit": 16,
+    "argument_coherence": 18,
+    "information_delta": 15,
+    "cta_quality": 9
+  },
+  "total_score": 75,
+  "passed": true,
+  "feedback": {
+    "authenticity": "The article provides clear and detailed information about each software, but it lacks verifiable data points or direct quotes from sources. Adding links to official pricing pages, user reviews, or case studies would significantly enhance the authenticity.",
+    "audience_fit": "The article speaks directly to blue-collar owner-operators and includes realistic scenarios. However, it occasionally uses corporate jargon and abstract advice, which can be confusing. Simplifying the language and focusing more on practical, day-to-day scenarios would improve the fit.",
+    "argument_coherence": "The article maintains a clear focus on providing lower-cost alternatives to Buildertrend and delivers on its promise. Each software is evaluated consistently, and the core thesis is well-maintained throughout.",
+    "information_delta": "The article provides useful information about each software, including pricing and key features. However, it could benefit from exposing more hidden fees, specific feature limitations, or operational gotchas that are not commonly found in generic top 5 Google results.",
+    "cta_quality": "The conclusion is clear and actionable, but it could be more specific. For example, suggesting a particular software to test based on the reader's specific needs or providing a step-by-step guide on how to evaluate each option would make the call to action more robust."
+  },
+  "critical_issues": [
+    "Lack of verifiable data points or direct quotes from sources.",
+    "Occasional use of corporate jargon and abstract advice."
+  ]
+}

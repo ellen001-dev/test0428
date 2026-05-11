@@ -1,0 +1,22 @@
+{
+  "scores": {
+    "authenticity": 17,
+    "audience_fit": 17,
+    "argument_coherence": 18,
+    "information_delta": 15,
+    "cta_quality": 8
+  },
+  "total_score": 75,
+  "passed": true,
+  "feedback": {
+    "authenticity": "The article lacks verifiable data points and direct quotes from credible sources. It mentions software like Jobber and ServiceTitan but does not provide links or references to support claims. This affects its authenticity score.",
+    "audience_fit": "The article generally speaks to blue-collar business owners, mentioning realistic scenarios like team size and budget constraints. However, it occasionally drifts into more generic advice, which slightly detracts from its fit.",
+    "argument_coherence": "The article maintains a clear focus on choosing software by team size and provides specific recommendations for different team sizes, maintaining coherence throughout.",
+    "information_delta": "The article provides some insights into software features and considerations for different team sizes, which may not be immediately obvious in generic search results. However, it lacks detailed hidden fees or operational gotchas.",
+    "cta_quality": "The call to action is somewhat generic, advising to evaluate features and use free trials. It lacks specific, actionable steps that could guide the reader more effectively."
+  },
+  "critical_issues": [
+    "Lack of verifiable data points and sources.",
+    "Generic call to action without specific steps."
+  ]
+}

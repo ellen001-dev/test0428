@@ -1,0 +1,22 @@
+{
+  "scores": {
+    "authenticity": 15,
+    "audience_fit": 17,
+    "argument_coherence": 18,
+    "information_delta": 12,
+    "cta_quality": 8
+  },
+  "total_score": 70,
+  "passed": true,
+  "feedback": {
+    "authenticity": "The article lacks verifiable data points or direct quotes from sources. It does not provide links to external references or specific user testimonials, which would have strengthened its authenticity. Deducted 10 points for the absence of these elements.",
+    "audience_fit": "The article speaks directly to blue-collar owner-operators and includes realistic scenarios such as managing trucks, job sites, and busy seasons. However, it could benefit from more specific examples and less abstract advice. Deducted 3 points for a few instances of slightly abstract advice.",
+    "argument_coherence": "The article delivers on the promise of its title and maintains a clear focus on essential features for HVAC contractors. It provides a structured and coherent list of features, but it could be more opinionated in its verdict. Deducted 2 points for a lack of clear, opinionated statements about who the software is for and who it is not for.",
+    "information_delta": "The article provides a comprehensive list of features but does not delve into hidden fees, specific feature limitations, or operational gotchas. It mostly covers information that can be found in generic top 5 Google results. Deducted 8 points for the lack of unique, in-depth information.",
+    "cta_quality": "The conclusion provides a general call to action but lacks specific, actionable steps. For example, it could suggest steps like 'Research and compare software options using the features listed in this article' or 'Schedule a demo with a top-rated HVAC software provider to see if it meets your needs.' Deducted 7 points for the lack of specific action steps."
+  },
+  "critical_issues": [
+    "Lack of verifiable data points or direct quotes from sources.",
+    "Lack of unique, in-depth information such as hidden fees or specific feature limitations."
+  ]
+}

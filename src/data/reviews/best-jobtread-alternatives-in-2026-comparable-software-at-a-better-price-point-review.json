@@ -1,0 +1,22 @@
+{
+  "scores": {
+    "authenticity": 17,
+    "audience_fit": 16,
+    "argument_coherence": 18,
+    "information_delta": 12,
+    "cta_quality": 10
+  },
+  "total_score": 73,
+  "passed": true,
+  "feedback": {
+    "authenticity": "The article provides a good overview of the alternatives but lacks verifiable data points or direct quotes from sources. It would benefit from including specific user testimonials or case studies from real businesses.",
+    "audience_fit": "The article speaks directly to blue-collar owner-operators and includes realistic scenarios. However, it occasionally uses corporate jargon such as 'project management' and 'quality control,' which can be off-putting. Simplifying these terms could improve the score.",
+    "argument_coherence": "The article maintains a clear thesis and delivers on its promise of comparing JobTread alternatives. It provides a balanced view of each software, highlighting their strengths and why they might be chosen. However, it could be more opinionated in its verdicts to stand out.",
+    "information_delta": "The article provides a good comparison of features and pricing but does not delve into hidden fees, specific feature limitations, or operational gotchas that are not commonly found in generic top 5 Google results. Adding these details would significantly enhance the score.",
+    "cta_quality": "The call to action is specific and actionable, encouraging readers to take advantage of free trials and demos. However, it could be more detailed, such as suggesting specific steps to evaluate each software's mobile app or customer support."
+  },
+  "critical_issues": [
+    "Lack of verifiable data points or direct quotes from sources.",
+    "Limited information on hidden fees, specific feature limitations, or operational gotchas."
+  ]
+}

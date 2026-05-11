@@ -1,0 +1,22 @@
+{
+  "scores": {
+    "authenticity": 17,
+    "audience_fit": 16,
+    "argument_coherence": 18,
+    "information_delta": 12,
+    "cta_quality": 8
+  },
+  "total_score": 71,
+  "passed": false,
+  "feedback": {
+    "authenticity": "The article provides a detailed overview of the software solutions but lacks verifiable data points or direct quotes from users. It does not provide links to official pricing pages, user reviews, or case studies, which would enhance its credibility.",
+    "audience_fit": "The article speaks to roofing contractors, but it uses some corporate jargon and abstract advice, such as 'data-driven decision-making' and 'optimizing processes.' It could benefit from more realistic scenarios and language that resonates with blue-collar business owners.",
+    "argument_coherence": "The article maintains a clear structure and delivers on its promise of guiding readers through the top roofing contractor management software solutions. However, it could be more opinionated in its verdict, providing clearer guidance on who each software is best suited for and who it might not be ideal for.",
+    "information_delta": "While the article covers key features and provides a good overview of each software, it does not offer much information beyond what is found in generic top 5 Google results. It could benefit from exposing hidden fees, specific feature limitations, or operational gotchas.",
+    "cta_quality": "The call to action is somewhat generic and could be more specific and actionable. For example, suggesting readers to 'test the free trial of RoofingMaster and compare its lead management tools with Jobber' would provide a clearer next step."
+  },
+  "critical_issues": [
+    "Lack of verifiable data points or direct quotes from users.",
+    "Use of corporate jargon and abstract advice that may not resonate with the target audience."
+  ]
+}

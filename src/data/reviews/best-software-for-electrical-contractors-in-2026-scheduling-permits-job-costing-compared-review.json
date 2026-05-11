@@ -1,0 +1,22 @@
+{
+  "scores": {
+    "authenticity": 20,
+    "audience_fit": 17,
+    "argument_coherence": 18,
+    "information_delta": 15,
+    "cta_quality": 12
+  },
+  "total_score": 82,
+  "passed": true,
+  "feedback": {
+    "authenticity": "The article provides a detailed comparison of software features without any obviously fake or vague cases. However, it lacks direct quotes or verifiable data points from user reviews or official sources. Adding specific user testimonials or links to official pricing pages would enhance the authenticity.",
+    "audience_fit": "The article speaks directly to electrical contractors and addresses their specific challenges. However, it occasionally uses corporate jargon such as 'AI optimization' and 'integrated workflow system.' Simplifying these terms or providing more concrete examples would better resonate with the target audience.",
+    "argument_coherence": "The article maintains a clear focus on the comparison of scheduling, permits, and job costing features. It delivers on the promise of its title and provides a coherent conclusion. However, it could benefit from a more opinionated verdict, such as specific recommendations for different types of contractors (e.g., small vs. large teams).",
+    "information_delta": "The article provides a good overview of the features of each software, but it does not delve into hidden fees, specific feature limitations, or operational gotchas. Including this information would make the review more valuable and unique.",
+    "cta_quality": "The conclusion offers a general recommendation for each software, but the next steps are not highly specific or actionable. Providing more detailed action steps, such as 'Test the scheduling feature with a sample project' or 'Check the permit form library for your local area,' would improve the call to action quality."
+  },
+  "critical_issues": [
+    "Lack of verifiable data points or direct quotes from user reviews or official sources.",
+    "Occasional use of corporate jargon that may not resonate with blue-collar owner-operators."
+  ]
+}

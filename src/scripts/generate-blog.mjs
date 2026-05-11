@@ -34,7 +34,11 @@ function switchToBackup() {
 }
 
 const TOPICS = [
-  "Best Software for a New Plumbing Business (Starting From Zero)",
+
+  "7 Best Procore Alternatives in 2026: Cheaper Options for Small & Mid-Size Contractors",
+  "Best Buildertrend Alternatives in 2026: Lower-Cost Software for Residential Contractors",
+  "Best JobTread Alternatives in 2026: Comparable Software at a Better Price Point",
+
 ];
 
 const CATEGORIES = ["reviews", "compare", "hub", "pricing"];
