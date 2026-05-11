@@ -108,7 +108,18 @@ description: "A brief description under 160 characters"
 
 # Article Title
 
-[Article body in English, 1000-1500 words, professional but accessible tone, no tables, pure paragraphs]`,
+[Article body in English, 1500-2000 words, professional but accessible tone]
+
+IMPORTANT REQUIREMENTS:
+1. VERIFIABLE DATA: Include real statistics, pricing ranges, or facts that can be verified. Example: "According to G2 reviews, users report..." or "Pricing ranges from $X to $Y per month based on official pricing pages"
+
+2. REAL USER FEEDBACK: Include specific quotes or paraphrased feedback from real users (mention sources like Reddit, G2, Capterra when possible). Example: "One HVAC contractor on Reddit noted: '...'"
+
+3. SPECIFIC ACTIONABLE CTA: End with concrete, verifiable next steps. NOT generic advice like "consider upgrading". DO include specific steps like: "Open an incognito window and test the free trial" or "Check the official pricing page for your team size"
+
+4. UNIQUE INSIGHTS: Provide information not found in generic top 10 Google results. Include operational "gotchas", hidden fees, or specific feature limitations that contractors care about.
+
+5. AUDIENCE FIT: Write for blue-collar owner-operators (1-10 person crews), NOT corporate executives. Use realistic scenarios (trucks, job sites, busy seasons). Avoid MBA jargon.`,
         },
         {
           role: "user",
