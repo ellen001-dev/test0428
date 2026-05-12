@@ -9,6 +9,7 @@ import Card from "@/components/Card.astro";
 import Pagination from "@/components/Pagination.astro";
 import { getCollection } from "astro:content";
 import getSortedPosts from "@/utils/getSortedPosts";
+import HousecallProPricingImage from "@/assets/images/housecall-pro-pricing.jpg";
 
 export const getStaticPaths = (async ({ paginate }) => {
   const posts = await getCollection("blog", ({ data }) => !data.draft);
@@ -25,7 +26,7 @@ const { page } = Astro.props;
 
   <main id="main-content" class="mx-auto w-full max-w-5xl px-4 py-8">
     <div class="mb-8">
-      <img src="/src/assets/images/housecall-pro-pricing.jpg" alt="Housecall Pro Pricing" class="w-full h-48 object-cover rounded-lg mb-6">
+      <img src={HousecallProPricingImage.src} alt="Housecall Pro Pricing" class="w-full h-48 object-cover rounded-lg mb-6">
       <h1 class="text-3xl font-bold sm:text-4xl">Pricing Breakdown</h1>
       <p class="mt-2 text-gray-500">Uncover pricing strategies and avoid hidden fees and traps</p>
     </div>
