@@ -5,6 +5,7 @@ export const SITE = {
   desc: "Real reviews of HVAC, plumbing & electrical software. Real costs, real user feedback. Find the best tool for your service business without vendor bias.",
   title: "ServiceToolBase - Honest Contractor Software Reviews & Comparisons",
   ogImage: "astropaper-og.jpg",
+  gaTrackingId: "G-5DL0W4GMQL",
   lightAndDarkMode: true,
   postPerIndex: 4,
   postPerPage: 4,
