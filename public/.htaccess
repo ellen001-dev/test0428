@@ -1,0 +1,11 @@
+# Force HTTPS and www
+RewriteEngine On
+
+# Redirect non-www to www with HTTPS
+RewriteCond %{HTTP_HOST} ^servicetoolbase\.com$ [NC]
+RewriteRule ^(.*)$ https://www.servicetoolbase.com/$1 [L,R=301]
+
+# Force HTTPS for www
+RewriteCond %{HTTPS} off
+RewriteCond %{HTTP_HOST} ^www\.servicetoolbase\.com$ [NC]
+RewriteRule ^(.*)$ https://www.servicetoolbase.com/$1 [L,R=301]
