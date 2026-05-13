@@ -1,6 +1,6 @@
 ---
 title: "Jobber vs Odoo (2026): Which Is Better for Service Contractors?"
-pubDatetime: 2026-05-13T19:00:00Z
+pubDatetime: 2026-05-12T19:00:00Z
 category: compare
 tags:
   - Jobber
