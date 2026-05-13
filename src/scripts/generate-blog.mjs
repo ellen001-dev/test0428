@@ -41,7 +41,7 @@ const TOPICS = [
 
 ];
 
-const CATEGORIES = ["reviews", "compare", "hub", "pricing"];
+
 
 function parseJSON(str) {
   let cleaned = str.trim();
