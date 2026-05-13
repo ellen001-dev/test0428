@@ -27,7 +27,8 @@ const getUniqueTags = (posts: CollectionEntry<"blog">[]) => {
   filteredPosts.forEach(post => {
     post.data.tags.forEach(tag => {
       const slugifiedTag = slugifyStr(tag);
-      if (!seenTags.has(slugifiedTag) && tagCountMap.get(slugifiedTag) >= MIN_POSTS_PER_TAG) {
+      const count = tagCountMap.get(slugifiedTag) ?? 0;
+      if (!seenTags.has(slugifiedTag) && count >= MIN_POSTS_PER_TAG) {
         seenTags.add(slugifiedTag);
         tags.push({ tag: slugifiedTag, tagName: tag });
       }
