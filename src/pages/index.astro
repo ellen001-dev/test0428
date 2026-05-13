@@ -15,6 +15,9 @@ const reviewPosts = posts
   .sort((a, b) => b.data.pubDatetime.getTime() - a.data.pubDatetime.getTime());
 const comparePosts = posts.filter(({ data }) => data.category === "compare");
 
+// 获取所有标签
+const allTags = posts.flatMap(post => post.data.tags || []);
+
 // 获取标签统计并过滤有效标签（>= 5篇文章）
 const tagCountMap = getTagCountMap(posts);
 
