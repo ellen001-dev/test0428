@@ -39,5 +39,5 @@ jobs:
           port: 21
           local-dir: dist/
           server-dir: /
-          dangerous-clean-slate: true
-          timeout: 120000
+          dangerous-clean-slate: false
+          timeout: 300000
