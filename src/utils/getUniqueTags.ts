@@ -7,17 +7,34 @@ interface Tag {
   tagName: string;
 }
 
+const MIN_POSTS_PER_TAG = 5;
+
 const getUniqueTags = (posts: CollectionEntry<"blog">[]) => {
-  const tags: Tag[] = posts
-    .filter(postFilter)
-    .flatMap(post => post.data.tags)
-    .map(tag => ({ tag: slugifyStr(tag), tagName: tag }))
-    .filter(
-      (value, index, self) =>
-        self.findIndex(tag => tag.tag === value.tag) === index
-    )
-    .sort((tagA, tagB) => tagA.tag.localeCompare(tagB.tag));
-  return tags;
+  const filteredPosts = posts.filter(postFilter);
+  
+  const tagCountMap = new Map<string, number>();
+  
+  filteredPosts.forEach(post => {
+    post.data.tags.forEach(tag => {
+      const slugifiedTag = slugifyStr(tag);
+      tagCountMap.set(slugifiedTag, (tagCountMap.get(slugifiedTag) || 0) + 1);
+    });
+  });
+  
+  const tags: Tag[] = [];
+  const seenTags = new Set<string>();
+  
+  filteredPosts.forEach(post => {
+    post.data.tags.forEach(tag => {
+      const slugifiedTag = slugifyStr(tag);
+      if (!seenTags.has(slugifiedTag) && tagCountMap.get(slugifiedTag) >= MIN_POSTS_PER_TAG) {
+        seenTags.add(slugifiedTag);
+        tags.push({ tag: slugifiedTag, tagName: tag });
+      }
+    });
+  });
+  
+  return tags.sort((tagA, tagB) => tagA.tag.localeCompare(tagB.tag));
 };
 
 export default getUniqueTags;
