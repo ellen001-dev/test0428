@@ -1,7 +1,7 @@
 export const SITE = {
-  website: "https://servicetoolbase.com/",
+  website: "https://www.servicetoolbase.com/",
   author: "ServiceToolBase",
-  profile: "https://servicetoolbase.com/",
+  profile: "https://www.servicetoolbase.com/",
   desc: "Real reviews of HVAC, plumbing & electrical software. Real costs, real user feedback. Find the best tool for your service business without vendor bias.",
   title: "ServiceToolBase - Honest Contractor Software Reviews & Comparisons",
   ogImage: "astropaper-og.jpg",
