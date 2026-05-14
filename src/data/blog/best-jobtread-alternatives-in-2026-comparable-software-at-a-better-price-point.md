@@ -154,6 +154,8 @@ ServiceTitan offers a tiered pricing model, with plans starting at $49 per user 
 - **Marketing Tools:** Advanced marketing tools to help attract and retain customers.
 - **Robust Mobile App:** Ensures seamless communication and job management on the go.
 
+If you're interested in trying ServiceTitan, you can sign up through our referral link: [join.servicetitan.com/mzTFCBr](https://join.servicetitan.com/mzTFCBr).
+
 ## 7. Fieldwire
 
 ### Overview

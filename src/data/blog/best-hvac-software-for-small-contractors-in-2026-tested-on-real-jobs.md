@@ -38,7 +38,7 @@ We tested ServiceTitan on a variety of HVAC jobs, including routine maintenance,
 - **Learning Curve:** While the interface is user-friendly, there is a learning curve associated with using all the features effectively.
 
 ### Conclusion
-ServiceTitan is an excellent choice for small HVAC contractors who need a comprehensive solution to manage all aspects of their business. Its robust features and mobile app make it a powerful tool for improving efficiency and customer satisfaction. However, the cost may be a significant factor for some businesses.
+ServiceTitan is an excellent choice for small HVAC contractors who need a comprehensive solution to manage all aspects of their business. Its robust features and mobile app make it a powerful tool for improving efficiency and customer satisfaction. However, the cost may be a significant factor for some businesses. If you're interested in trying ServiceTitan for your HVAC business, you can sign up through our referral link: [join.servicetitan.com/mzTFCBr](https://join.servicetitan.com/mzTFCBr).
 
 ## 2. **Jobber**
 

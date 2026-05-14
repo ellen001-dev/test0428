@@ -67,7 +67,7 @@ If you are currently evaluating software and feeling overwhelmed by ServiceTitan
 
 **Day 1-2:** Calculate your true budget. Write down exactly what you can afford per month, and whether you have $10,000 in cash for an implementation fee.
 **Day 3-4:** Identify your "must-have" features versus "nice-to-have" features. Do you really need AI-powered route optimization, or do you just need solid dispatching and mobile quoting?
-**Day 5-6:** Test drive a more affordable alternative. Sign up for Housecall Pro's 14-day free trial. It scales beautifully for teams under 20 techs and has transparent pricing.
+**Day 5-6:** Test drive a more affordable alternative. Sign up for Housecall Pro's 14-day free trial. It scales beautifully for teams under 20 techs and has transparent pricing. If you're ready to explore ServiceTitan, you can get started with our referral link: [join.servicetitan.com/mzTFCBr](https://join.servicetitan.com/mzTFCBr).
 **Day 7:** Compare to ROI. If a $150/month platform handles your dispatching, quoting, and invoicing perfectly, there is no reason to pay $3,000/month for enterprise software.
 
 Protect your profit margins. Choose software that works for your business size today, not the enterprise you might become ten years from now.

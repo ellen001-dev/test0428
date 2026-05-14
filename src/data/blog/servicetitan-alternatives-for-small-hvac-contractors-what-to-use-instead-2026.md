@@ -137,4 +137,4 @@ When evaluating ServiceTitan alternatives, ask yourself these questions:
 
 Remember, the best software is the one your team will actually use. Don't overcomplicate things—start with what you need now and upgrade later if necessary. Most platforms offer free trials, so test a few before making a decision.
 
-Ready to make the switch? Start by signing up for free trials of Jobber and Housecall Pro—they're the most popular alternatives among small HVAC contractors. Compare them side by side, involve your team in the decision, and choose the one that feels like the best fit for your business.
+Ready to make the switch? Start by signing up for free trials of Jobber and Housecall Pro—they're the most popular alternatives among small HVAC contractors. Compare them side by side, involve your team in the decision, and choose the one that feels like the best fit for your business. If you're still considering ServiceTitan for your growing business, you can get started with our referral link: [join.servicetitan.com/mzTFCBr](https://join.servicetitan.com/mzTFCBr).
