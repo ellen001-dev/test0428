@@ -13,7 +13,7 @@ const posts = await getCollection("blog", ({ data }) => !data.draft);
 const reviewPosts = posts
   .filter(({ data }) => data.category === "reviews")
   .sort((a, b) => b.data.pubDatetime.getTime() - a.data.pubDatetime.getTime());
-const comparePosts = posts.filter(({ data }) => data.category === "compare");
+const comparePosts = posts.filter(({ data }) => data.category === "compare").sort((a, b) => b.data.pubDatetime.getTime() - a.data.pubDatetime.getTime());
 
 // 获取所有标签
 const allTags = posts.flatMap(post => post.data.tags || []);
