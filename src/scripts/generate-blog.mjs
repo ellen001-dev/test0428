@@ -184,7 +184,7 @@ async function main() {
   console.log("🚀 Starting article generation with AI review...\n");
   
   const topics = [
-    "housecall pro alternatives",
+    "Best Pipe Freeze Kits for Plumbers 2026",
   ];
   
   console.log(`📋 Topics: ${topics.length}\n`);
