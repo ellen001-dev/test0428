@@ -66,7 +66,16 @@ const structuredData = {
 
     <!-- Facebook SDK -->
     <div id="fb-root"></div>
-    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v18.0"></script>
+    <script is:inline>
+      window.fbAsyncInit = function() {
+        FB.init({
+          appId      : '1234567890',
+          xfbml      : true,
+          version    : 'v18.0'
+        });
+      };
+    </script>
+    <script is:inline async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
 
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
