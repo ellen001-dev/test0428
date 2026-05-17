@@ -1,7 +1,7 @@
 ---
 title: "Best Pipe Freeze Kit for Plumbers 2026: I Tested 7 Kits So You Don't Waste Money"
 pubDatetime: 2026-05-17T08:00:00Z
-category: review
+category: reviews
 draft: false
 tags:
   - pipe freeze kit
