@@ -130,7 +130,3 @@ Let me ask you this: How much is your time worth? If you're like most plumbers, 
 **[BUY_LINK: Premium CO2 Pipe Freeze Kit - Start Saving Today]**
 
 **Day 7:** Use it on your next job. I guarantee you'll wonder how you ever worked without it.
-
----
-
-*Have questions about pipe freeze kits or want to share your experience? Drop a comment below—I read every one.*

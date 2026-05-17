@@ -9,6 +9,7 @@ import EditPost from "@/components/EditPost.astro";
 import ShareLinks from "@/components/ShareLinks.astro";
 import BackButton from "@/components/BackButton.astro";
 import BackToTopButton from "@/components/BackToTopButton.astro";
+import FacebookComments from "@/components/FacebookComments.astro";
 import { getPath } from "@/utils/getPath";
 import { slugifyStr } from "@/utils/slugify";
 import { getTagCountMap, isTagValid } from "@/utils/getUniqueTags";
@@ -133,6 +134,12 @@ const nextPost =
     <ShareLinks />
 
     <hr class="my-6 border-dashed" />
+
+    <!-- Facebook Comments Section -->
+    <section class="my-8">
+      <h3 class="mb-4 text-xl font-semibold">Comments</h3>
+      <FacebookComments />
+    </section>
 
     <!-- Previous/Next Post Buttons -->
     <div data-pagefind-ignore class="grid grid-cols-1 gap-6 sm:grid-cols-2">
