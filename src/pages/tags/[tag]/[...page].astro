@@ -7,9 +7,11 @@ import Header from "@/components/Header.astro";
 import Footer from "@/components/Footer.astro";
 import Card from "@/components/Card.astro";
 import Pagination from "@/components/Pagination.astro";
-import getUniqueTags from "@/utils/getUniqueTags";
+import getUniqueTags, { getTagCountMap, isTagValid } from "@/utils/getUniqueTags";
 import getPostsByTag from "@/utils/getPostsByTag";
 import { SITE } from "@/config";
+
+export const prerender = false;
 
 export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {
   const posts = await getCollection("blog");
@@ -26,9 +28,31 @@ export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {
   });
 }
 
+const posts = await getCollection("blog");
 const params = Astro.params;
 const { tag } = params;
-const { page, tagName } = Astro.props;
+
+const tagCountMap = getTagCountMap(posts);
+const validTags = getUniqueTags(posts);
+const tagInfo = validTags.find(t => t.tag === tag);
+const tagName = tagInfo?.tagName || tag;
+
+if (!tagInfo || !isTagValid(tagCountMap, tagName)) {
+  return new Response(null, { status: 404 });
+}
+
+const tagPosts = getPostsByTag(posts, tag);
+const pageSize = SITE.postPerPage;
+const totalPages = Math.ceil(tagPosts.length / pageSize);
+const pageNum = parseInt(Astro.params.page?.[0] || "1");
+
+const page = {
+  data: tagPosts.slice((pageNum - 1) * pageSize, pageNum * pageSize),
+  total: tagPosts.length,
+  currentPage: pageNum,
+  lastPage: totalPages,
+  url: (num: number) => num === 1 ? `/tags/${tag}/` : `/tags/${tag}/${num}/`,
+};
 ---
 
 <Layout title={`Tag: ${tagName} | ${SITE.title}`}>
