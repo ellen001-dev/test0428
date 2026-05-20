@@ -93,6 +93,34 @@ FieldPulse bridges the gap between simple scheduling software and complex constr
 
 While Jobber excels at quick, one-off service calls, FieldPulse offers robust job costing, maintenance agreements, and custom workflows. Their pricing starts around $89/month per technician, making it a premium option, but the depth of features justifies the cost for specialized trades like commercial HVAC or complex electrical work.
 
+## 按团队规模推荐：找到最适合你的方案
+
+选择正确的工具取决于你的具体情况。以下是根据不同团队规模的场景化推荐：
+
+### 单人团队/初创公司（1-2人）
+
+如果你刚起步，预算有限但需要专业形象，**Housecall Pro Basic** 是最佳选择。$59/month 就能获得完整的调度、报价和发票功能，足够支撑你从0到稳定运营。相比之下，Jobber的基础版限制太多，很快就会遇到瓶颈。
+
+### 成长型团队（3-5人）
+
+这是大多数服务企业的黄金规模。**Housecall Pro Essentials** ($149/month) 包含最多5个用户，支持QuickBooks同步、GPS追踪和邮件营销。这个阶段你需要的不是更多功能，而是让现有流程更顺畅——Housecall Pro在这方面比Jobber更专注。
+
+### 中型团队（6-10人）
+
+当你需要更强大的报告和客户支持时，**Housecall Pro MAX** ($299/month) 或 **Service Fusion** 值得考虑。MAX提供专属客服和高级报表，而Service Fusion的无限用户定价对快速扩张的团队更友好。
+
+### 大型团队/季节性业务（10人以上）
+
+如果你有大量季节性工人或高人员流动率，**Service Fusion** 的固定价格模式能帮你大幅节省成本。不必为每个临时工单独付费，这在旺季尤为重要。
+
+### 电话驱动型业务
+
+无论团队大小，如果你的业务依赖大量来电（如 locksmith、车库门维修），**Workiz** 是独一无二的选择。内置电话系统和营销归因功能能帮你追踪每通电话的来源，优化广告投入。
+
+### 项目型业务
+
+如果你的工作需要多日项目跟踪和复杂工作流程（如商业HVAC、大型电气项目），**FieldPulse** 的深度项目管理功能会让你事半功倍。
+
 ## Your 7-Day Action Plan
 
 Switching software feels daunting, but staying on a platform that drains your profits is worse. Here is how to make the transition smoothly:
