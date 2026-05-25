@@ -6,7 +6,8 @@ export async function getStaticPaths() {
   const posts = await getCollection("blog", ({ data }) => !data.draft);
   return posts.map(post => {
     const category = post.data.category || "posts";
-    const slug = post.id.split("/").pop() || post.id;
+    // Use slug from frontmatter if defined, otherwise use file name from id
+    const slug = post.data.slug || post.id.split("/").pop() || post.id;
     return {
       params: { category, slug },
       props: { post },

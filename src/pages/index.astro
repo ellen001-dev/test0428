@@ -115,8 +115,8 @@ const popularTags = posts
                 <p class="mb-4 text-sm text-muted-foreground line-clamp-2">
                   {post.data.description}
                 </p>
-                <a 
-                  href={getPath(post.id, post.filePath, true, post.data.category)} 
+                <a
+                  href={getPath(post.id, post.filePath, true, post.data.category, true, post.data.slug)}
                   class="inline-flex items-center gap-2 text-accent hover:gap-3 transition-all"
                 >
                   Read Review
@@ -137,7 +137,7 @@ const popularTags = posts
         <div class="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6">
           {popularTags.map((tag, index) => (
             <a 
-              href={`/tags/${slugifyStr(tag)}`}
+              href={`/tags/${slugifyStr(tag)}/`}
               class="group flex flex-col items-center justify-center rounded-lg border border-border bg-card-bg p-4 text-center transition-all hover:border-accent hover:shadow-md"
             >
               <div class="mb-2 h-8 w-8 shrink-0 flex items-center justify-center rounded-full bg-accent/10 text-sm font-bold text-accent">

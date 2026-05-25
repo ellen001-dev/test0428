@@ -9,6 +9,7 @@ import { SITE } from "@/config";
  * @param includeBase - whether to include `/posts` in return value
  * @param category - the post category for routing
  * @param fullUrl - whether to return full URL with domain
+ * @param customSlug - optional custom slug from frontmatter
  * @returns blog post path
  */
 export function getPath(
@@ -16,7 +17,8 @@ export function getPath(
   filePath: string | undefined,
   includeBase = true,
   category?: string,
-  fullUrl = true
+  fullUrl = true,
+  customSlug?: string
 ) {
   const pathSegments = filePath
     ?.replace(BLOG_PATH, "")
@@ -33,9 +35,11 @@ export function getPath(
       : "/posts" 
     : "";
 
-  // Making sure `id` does not contain the directory
-  const blogId = id.split("/");
-  const slug = blogId.length > 0 ? blogId.slice(-1) : blogId;
+  // Use custom slug from frontmatter if provided, otherwise derive from id
+  const slug = customSlug || (() => {
+    const blogId = id.split("/");
+    return blogId.length > 0 ? blogId.slice(-1)[0] : blogId[0];
+  })();
 
   // If not inside the sub-dir, simply return the file path
   if (!pathSegments || pathSegments.length < 1) {
