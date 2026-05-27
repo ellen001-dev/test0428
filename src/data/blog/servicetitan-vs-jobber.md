@@ -1,6 +1,6 @@
 ---
 title: "ServiceTitan vs Jobber (2026): When Does 'Simple' Cost You Millions?"
-pubDatetime: 2026-05-27T08:00:00Z
+pubDatetime: 2026-05-27T06:00:00Z
 category: compare
 draft: false
 tags:

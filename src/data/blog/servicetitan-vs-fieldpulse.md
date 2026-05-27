@@ -1,6 +1,6 @@
 ---
 title: "ServiceTitan vs FieldPulse: Can a Growing Shop Afford a $1,000/Month Bill?"
-pubDatetime: 2026-05-27T18:00:00Z
+pubDatetime: 2026-05-27T06:00:00Z
 category: compare
 draft: false
 tags:

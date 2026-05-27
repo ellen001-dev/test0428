@@ -1,6 +1,6 @@
 ---
 title: "ServiceTitan vs JobNimbus: The Best Choice for Roofing Contractors"
-pubDatetime: 2026-05-27T16:00:00Z
+pubDatetime: 2026-05-27T06:00:00Z
 category: compare
 draft: false
 tags:

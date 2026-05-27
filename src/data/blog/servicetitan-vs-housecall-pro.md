@@ -1,6 +1,6 @@
 ---
 title: "ServiceTitan vs Housecall Pro: The Battle for Residential Dominance"
-pubDatetime: 2026-05-27T10:00:00Z
+pubDatetime: 2026-05-27T06:00:00Z
 category: compare
 draft: false
 tags:

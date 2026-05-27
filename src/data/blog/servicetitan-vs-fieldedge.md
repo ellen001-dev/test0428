@@ -1,6 +1,6 @@
 ---
 title: "ServiceTitan vs FieldEdge: Which Actually Keeps Your Bookkeeper Sane?"
-pubDatetime: 2026-05-27T12:00:00Z
+pubDatetime: 2026-05-27T06:00:00Z
 category: compare
 draft: false
 tags:

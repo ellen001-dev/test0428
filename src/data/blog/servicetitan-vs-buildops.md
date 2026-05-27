@@ -1,6 +1,6 @@
 ---
 title: "ServiceTitan vs BuildOps: Stop Using Residential Software for Commercial Jobs"
-pubDatetime: 2026-05-27T14:00:00Z
+pubDatetime: 2026-05-27T06:00:00Z
 category: compare
 draft: false
 tags:
