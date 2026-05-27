@@ -7,11 +7,12 @@ on:
 
 concurrency:
   group: deploy
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+    timeout-minutes: 30
 
     steps:
       - name: Checkout code
@@ -39,3 +40,6 @@ jobs:
           local_path: ./dist/
           remote_path: /
           sftp_only: true
+          ssh_options: "-o ConnectTimeout=30 -o ServerAliveInterval=60"
+          args: "-avz --delete"
+          retries: 3
