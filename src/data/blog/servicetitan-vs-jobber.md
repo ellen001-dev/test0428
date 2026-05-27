@@ -2,6 +2,7 @@
 title: "ServiceTitan vs Jobber (2026): When Does 'Simple' Cost You Millions?"
 pubDatetime: 2026-05-27T08:00:00Z
 category: compare
+draft: false
 tags:
   - ServiceTitan
   - Jobber
@@ -17,7 +18,7 @@ description: "A comprehensive comparison of ServiceTitan vs Jobber for home serv
 
 It was a Tuesday morning when Mike, owner of Ohio-based **All Seasons Plumbing**, realized he'd made a $47,000 mistake.
 
-Three years prior, Mike had started with 2 trucks and 1 part-time secretary. Jobber was perfect—simple, affordable, and intuitive. But as his business grew to 8 trucks and $1.2M in annual revenue, cracks began to show:
+Three years prior, Mike had started with 2 trucks and 1 part-time secretary. Jobber was perfect-simple, affordable, and intuitive. But as his business grew to 8 trucks and $1.2M in annual revenue, cracks began to show:
 
 - Dispatch errors caused 12 missed appointments in one week
 - QuickBooks sync failed, leaving $23,000 in unpaid invoices unaccounted for
@@ -74,17 +75,17 @@ A plumbing emergency comes in. The dispatcher opens Jobber, sees the calendar, *
 
 ## 4. Why Contractors Rage on Reddit: The Ugly Truth
 
-Let's cut to the chase—no software is perfect. Here's what real contractors say:
+Let's cut to the chase-no software is perfect. Here's what real contractors say:
 
 ### Jobber Complaints:
-> "The inventory system is a joke. I still use Excel to track parts because Jobber's stock alerts are always wrong." — u/HVAC_Rick
+> "The inventory system is a joke. I still use Excel to track parts because Jobber's stock alerts are always wrong." - u/HVAC_Rick
 
-> "QuickBooks sync is one-way. I spend 10 hours a week fixing double entries." — u/PlumbingPro2024
+> "QuickBooks sync is one-way. I spend 10 hours a week fixing double entries." - u/PlumbingPro2024
 
 ### ServiceTitan Complaints:
-> "Their sales team sold us a dream, but implementation took 3 months and cost $8k extra. The contract is so one-sided it's laughable." — u/ElectricianMike
+> "Their sales team sold us a dream, but implementation took 3 months and cost $8k extra. The contract is so one-sided it's laughable." - u/ElectricianMike
 
-> "Support takes 24 hours to respond. When your dispatch is broken, that's an eternity." — u/RoofingBoss
+> "Support takes 24 hours to respond. When your dispatch is broken, that's an eternity." - u/RoofingBoss
 
 **Our Take:** Both have flaws. The question is which flaws you can live with.
 
@@ -130,7 +131,7 @@ If you're ready to take the leap, [schedule a free demo with ServiceTitan](https
 
 ServiceTitan isn't for everyone. If you're a small operation happy with Jobber's simplicity, **stay put**. The extra features won't justify the cost.
 
-But if you're staring at growth ceilings, losing sleep over operational chaos, or leaving money on the table due to inefficiency—**ServiceTitan is your answer**.
+But if you're staring at growth ceilings, losing sleep over operational chaos, or leaving money on the table due to inefficiency-**ServiceTitan is your answer**.
 
 Mike from All Seasons Plumbing says it best: "I spent $57k on ServiceTitan in the first year. I made back $200k in avoided mistakes and new business. It's not cheap, but it's the best investment I ever made."
 

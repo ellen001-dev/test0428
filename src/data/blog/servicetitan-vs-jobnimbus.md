@@ -2,6 +2,7 @@
 title: "ServiceTitan vs JobNimbus: The Best Choice for Roofing Contractors"
 pubDatetime: 2026-05-27T16:00:00Z
 category: compare
+draft: false
 tags:
   - ServiceTitan
   - JobNimbus
@@ -15,7 +16,7 @@ description: "A head-to-head comparison of ServiceTitan vs JobNimbus for roofing
 
 ## 1. The 3D Measurement Race
 
-In roofing, speed kills. Not literally—**speed wins**.
+In roofing, speed kills. Not literally-**speed wins**.
 
 The contractor who can provide an accurate quote first gets the job. And in 2026, accuracy means 3D measurements.
 

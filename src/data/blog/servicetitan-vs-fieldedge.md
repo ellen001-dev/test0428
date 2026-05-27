@@ -2,6 +2,7 @@
 title: "ServiceTitan vs FieldEdge: Which Actually Keeps Your Bookkeeper Sane?"
 pubDatetime: 2026-05-27T12:00:00Z
 category: compare
+draft: false
 tags:
   - ServiceTitan
   - FieldEdge
@@ -28,7 +29,7 @@ Meet Lisa, a bookkeeper for **Precision Plumbing** in Chicago. She spent 40 hour
 
 "I was ready to quit," Lisa says. "Every month was a new nightmare. We finally switched to ServiceTitan, and my first month-end close took 8 hours instead of 40."
 
-This is the reality of financial integration: **it's not just about features—it's about whether your bookkeeper can actually do their job without crying.**
+This is the reality of financial integration: **it's not just about features-it's about whether your bookkeeper can actually do their job without crying.**
 
 ---
 
@@ -89,18 +90,18 @@ ServiceTitan's mobile app is powerful but **more complex**:
 Let's hear from real users about their pain points:
 
 ### FIELDEDGE COMPLAINTS:
-> "The mobile app loses signatures when there's bad cell service. We've had customers say they never signed, and we have no proof." — u/PlumbingPro2024
+> "The mobile app loses signatures when there's bad cell service. We've had customers say they never signed, and we have no proof." - u/PlumbingPro2024
 
-> "Support takes 2-3 days to respond. When your sync is broken, that's an eternity." — u/HVAC_Lisa
+> "Support takes 2-3 days to respond. When your sync is broken, that's an eternity." - u/HVAC_Lisa
 
-> "Their pricing is all over the place. We were quoted $800/month, then it turned out we needed add-ons that doubled the cost." — u/ElectricianMike
+> "Their pricing is all over the place. We were quoted $800/month, then it turned out we needed add-ons that doubled the cost." - u/ElectricianMike
 
 ### SERVICETITAN COMPLAINTS:
-> "Implementation took 4 months. We were basically running two systems during that time—total chaos." — u/RoofingBoss
+> "Implementation took 4 months. We were basically running two systems during that time-total chaos." - u/RoofingBoss
 
-> "The learning curve is brutal. My office manager quit because she couldn't handle the complexity." — u/HandymanHarry
+> "The learning curve is brutal. My office manager quit because she couldn't handle the complexity." - u/HandymanHarry
 
-> "They nickel-and-dime you for everything. Want GPS tracking? That's extra. Want custom reports? Also extra." — u/PaintingPro
+> "They nickel-and-dime you for everything. Want GPS tracking? That's extra. Want custom reports? Also extra." - u/PaintingPro
 
 **Our Take:** Both platforms have significant drawbacks. The question is which ones you're willing to live with.
 
@@ -155,9 +156,9 @@ If that describes your situation, [schedule a free consultation with ServiceTita
 
 FieldEdge is the safe choice for businesses deeply embedded in the QuickBooks ecosystem. It's reliable, familiar, and gets the job done for straightforward operations.
 
-ServiceTitan is for businesses ready to **level up their financial operations**. Yes, the implementation is longer and the learning curve is steeper—but the payoff is a unified system that eliminates reconciliation headaches and scales with your growth.
+ServiceTitan is for businesses ready to **level up their financial operations**. Yes, the implementation is longer and the learning curve is steeper-but the payoff is a unified system that eliminates reconciliation headaches and scales with your growth.
 
-Lisa, the bookkeeper from Precision Plumbing, says it best: "I used to hate month-end. Now it's just another day. ServiceTitan didn't just save me time—it saved my sanity."
+Lisa, the bookkeeper from Precision Plumbing, says it best: "I used to hate month-end. Now it's just another day. ServiceTitan didn't just save me time-it saved my sanity."
 
 Ready to make your bookkeeper happy? [Book a free personalized demo today](https://join.servicetitan.com/mzTFCBr).
 
