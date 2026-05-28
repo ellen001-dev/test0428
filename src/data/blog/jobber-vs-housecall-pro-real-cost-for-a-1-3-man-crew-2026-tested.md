@@ -28,7 +28,7 @@ Let's break down the real-world scenarios for a small crew.
 
 ### Scenario 1: The Solo Operator (1 User)
 
-If you are a true one-man show—doing the quoting, the work, and the invoicing yourself—Jobber looks incredibly attractive on paper.
+If you are a true one-man show--doing the quoting, the work, and the invoicing yourself--Jobber looks incredibly attractive on paper.
 
 Jobber's entry-level "Core" plan starts at just $29/month (billed annually) for your first year [1]. It gives you the essentials: scheduling, quoting, invoicing, and online booking. Housecall Pro's entry-level "Basic" plan starts at $59/month [2].
 

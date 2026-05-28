@@ -25,7 +25,7 @@ But here is what most comparison articles won't tell you: the price you see on O
 
 Let's break down exactly why, based on real-world testing and pricing data for 2026.
 
-👉 **[Try Jobber free for 14 days — no credit card required.](#)**
+👉 **[Try Jobber free for 14 days -- no credit card required.](#)**
 
 ---
 
@@ -59,7 +59,7 @@ Pricing is where the comparison gets tricky, because the two companies charge in
 
 *Note: Odoo recently increased its Custom/Enterprise pricing to $76.20 USD per user per month starting in January 2026.* [3]
 
-**Translation:** A 5-person HVAC company choosing Odoo over Jobber could easily spend $8,000-$20,000 in the first year—before making a single dollar from the software.
+**Translation:** A 5-person HVAC company choosing Odoo over Jobber could easily spend $8,000-$20,000 in the first year--before making a single dollar from the software.
 
 ### The Hidden Costs of Odoo
 Odoo advertises a "One App Free" plan, which sounds great. But as a contractor, you cannot run your business on just the Field Service app. You need invoicing, CRM, and scheduling. Once you need multiple apps, you move to the Standard or Custom plans. 
@@ -105,7 +105,7 @@ Stop agonizing over feature lists and take action. Here is what you should do th
 
 **Day 2:** If all 3 are field-service problems, go to getjobber.com and start the free trial today.
 
-👉 **[Start Jobber's Free Trial Here](#)** — takes 2 minutes to set up.
+👉 **[Start Jobber's Free Trial Here](#)** -- takes 2 minutes to set up.
 
 **Day 3-4:** Create a fake customer, schedule a job, and download the app on your phone. See how it feels in your hand.
 

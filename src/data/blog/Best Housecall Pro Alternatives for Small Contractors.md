@@ -48,7 +48,7 @@ Jobber is not cheaper. Their 2026 pricing starts at $39/month for a solo operato
 
 ## 2. Projul: The Best Upgrade for Project-Based Contractors
 
-If you are leaving Housecall Pro because you are taking on bigger jobs—remodels, installations, or multi-day projects—you do not need another dispatching tool. You need construction management software.
+If you are leaving Housecall Pro because you are taking on bigger jobs--remodels, installations, or multi-day projects--you do not need another dispatching tool. You need construction management software.
 
 ### Why It Beats Housecall Pro
 Housecall Pro was built for the workflow of "get a call, send a tech, complete the job, send an invoice." It cannot handle multi-phase construction schedules, crew assignments across job sites, or detailed estimating [3].
@@ -87,7 +87,7 @@ Do not cancel Housecall Pro today. Software migrations are painful.
 2. Sign up for their free trial or book a demo this week.
 3. Run one single, low-stakes job through the new system from estimate to invoice.
 
-If it feels smoother than Housecall Pro, then—and only then—start planning your data migration.
+If it feels smoother than Housecall Pro, then--and only then--start planning your data migration.
 
 ---
 

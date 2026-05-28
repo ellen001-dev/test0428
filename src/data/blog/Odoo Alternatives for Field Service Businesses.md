@@ -7,14 +7,14 @@ tags:
   - ServiceTitan
   - Software Comparisons
   - Field Service
-description: "An in-depth look at why field service businesses leave Odoo — and the purpose-built alternatives they switch to"
+description: "An in-depth look at why field service businesses leave Odoo -- and the purpose-built alternatives they switch to"
 ---
 
 # Odoo Alternatives for Field Service Businesses: Why Contractors Leave (And Where They Go)
 
 "Odoo is a mile wide but an inch deep. It demos like a dream, but the moment you scratch the surface, you're customizing." [1]
 
-When a mid-sized HVAC or plumbing contractor asks me to audit their software stack, and I see Odoo on the list, I already know what the conversation is going to sound like. They usually bought into the dream of "one system for everything"—CRM, accounting, inventory, and field service all living under one roof.
+When a mid-sized HVAC or plumbing contractor asks me to audit their software stack, and I see Odoo on the list, I already know what the conversation is going to sound like. They usually bought into the dream of "one system for everything"--CRM, accounting, inventory, and field service all living under one roof.
 
 It sounds perfect in the sales pitch. But for a trades business, the reality of running Odoo in the field is often a nightmare of expensive customizations, broken reports, and frustrated technicians.
 

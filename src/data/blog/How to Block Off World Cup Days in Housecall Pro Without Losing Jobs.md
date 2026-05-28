@@ -79,7 +79,7 @@ If you use Housecall Pro's VoIP phone system or a connected tool like ServiceTit
 
 When a text comes in during the match, do not ignore it. Send this exact script:
 
-> *"Hey — we're currently on a job site and fully booked for the rest of the afternoon. We have an emergency slot open tomorrow at 8 AM. Grab it before it fills up: [Insert Housecall Pro Online Booking Link]. See you Saturday."*
+> *"Hey -- we're currently on a job site and fully booked for the rest of the afternoon. We have an emergency slot open tomorrow at 8 AM. Grab it before it fills up: [Insert Housecall Pro Online Booking Link]. See you Saturday."*
 
 This script works because it uses social proof ("fully booked") and scarcity ("before it fills up") to drive them to your booking link. You send one text, put the phone back in your pocket, and let Housecall Pro handle the rest.
 
@@ -91,7 +91,7 @@ Do not assume the setup worked. Verify it.
 
 Open an incognito browser window. Go to your Online Booking link. Try to book a job for Friday afternoon during the match window.
 
-If that time slot does not appear, you are set. If it does, go back and check that all your techs — not just yourself — are assigned to the Event. Housecall Pro only removes availability for employees who are explicitly assigned to the block [2].
+If that time slot does not appear, you are set. If it does, go back and check that all your techs -- not just yourself -- are assigned to the Event. Housecall Pro only removes availability for employees who are explicitly assigned to the block [2].
 
 This takes two minutes. Do it before the tournament starts, not during.
 

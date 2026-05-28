@@ -7,7 +7,7 @@ tags:
   - Pricing Analysis
   - Field Service
   - Software Reviews
-description: "An in-depth analysis of Workiz pricing — evaluating whether it's worth it for a 3-man crew, with hidden costs and real monthly fees revealed"
+description: "An in-depth analysis of Workiz pricing -- evaluating whether it's worth it for a 3-man crew, with hidden costs and real monthly fees revealed"
 ---
 
 # Workiz Pricing Review: Is It Worth It for a 3-Man Crew? (2026)
@@ -16,7 +16,7 @@ When a 3-man HVAC or plumbing crew asks me to audit their software stack, Workiz
 
 They usually signed up because of the built-in phone system. They wanted to track which Google Local Services ad generated a call, record the conversation, and dispatch a tech from the same screen. It sounds like the perfect setup. But when I look at their actual monthly software spend, the numbers rarely make sense for a crew of this size.
 
-In 2026, Workiz made a quiet but massive change to their pricing structure. The famous communication suite—the very reason most contractors choose Workiz—is no longer bundled into their base plans. It is now a paid add-on [1].
+In 2026, Workiz made a quiet but massive change to their pricing structure. The famous communication suite--the very reason most contractors choose Workiz--is no longer bundled into their base plans. It is now a paid add-on [1].
 
 If you are running an owner-operator setup with two technicians, you need to look at the hard math before committing to this platform. Here is the unfiltered breakdown of what Workiz actually costs a 3-man crew today, and why it might be the wrong tool for your specific trade.
 
@@ -35,7 +35,7 @@ Here is what your actual bill looks like on the Standard plan (billed annually):
 | QuickBooks Integration | $15/month | Sync invoices and expenses |
 | Total | $257/month | For a 3-man crew |
 
-The $257/month figure is what most 3-man crews actually pay after adding the communication suite—the feature they signed up for in the first place.
+The $257/month figure is what most 3-man crews actually pay after adding the communication suite--the feature they signed up for in the first place.
 
 ## What Changed in 2026
 

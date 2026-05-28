@@ -28,7 +28,7 @@ Before delving into specific software options, it's crucial to understand your t
 
 ## Small Teams (1-10 Employees)
 
-For small contractor teams, simplicity and cost-effectiveness are paramount. You need software that doesn’t overwhelm but instead enhances your day-to-day operations. Here are some features to look for:
+For small contractor teams, simplicity and cost-effectiveness are paramount. You need software that doesn't overwhelm but instead enhances your day-to-day operations. Here are some features to look for:
 
 - **User-Friendly Interface**: With limited resources, you need software that requires minimal training.
 - **Basic Scheduling and Dispatching**: Tools that allow easy job scheduling and real-time dispatch updates can significantly improve efficiency.
@@ -43,7 +43,7 @@ For small contractor teams, simplicity and cost-effectiveness are paramount. You
 
 ## Mid-Sized Teams (10-50 Employees)
 
-As your team grows, so do your needs. Mid-sized teams often deal with more complex scheduling and require better project management tools. Here’s what to consider:
+As your team grows, so do your needs. Mid-sized teams often deal with more complex scheduling and require better project management tools. Here's what to consider:
 
 - **Advanced Scheduling and Job Management**: Look for software that handles multiple jobs simultaneously and offers detailed job tracking.
 - **Integration Capabilities**: The ability to integrate with accounting software like QuickBooks can streamline financial operations.

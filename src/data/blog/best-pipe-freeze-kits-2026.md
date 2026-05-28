@@ -15,19 +15,19 @@ description: "As someone who's seen too many plumbers waste money on the wrong p
 # Best Pipe Freeze Kit for Plumbers 2026: I Tested 7 Kits So You Don't Waste Money
 
 ![plumber using CO2 pipe freeze kit on copper pipe in basement](/images/pipe_freeze_kit_hero.jpg)
-*A pipe freeze kit forming an ice plug on a 3/4" copper pipe — no need to drain the system.*
+*A pipe freeze kit forming an ice plug on a 3/4" copper pipe -- no need to drain the system.*
 
 ## The Story That Inspired This Guide
 
-Last month, my client Mike—owner of a 3-man plumbing crew in Chicago—called me in a panic. He had a commercial building job: a leaking valve that needed replacement. To do it the old way, he had to **drain the entire system**, which took 4 hours of labor at $150/hour. That's $600 down the drain—literally.
+Last month, my client Mike--owner of a 3-man plumbing crew in Chicago--called me in a panic. He had a commercial building job: a leaking valve that needed replacement. To do it the old way, he had to **drain the entire system**, which took 4 hours of labor at $150/hour. That's $600 down the drain--literally.
 
 If he'd had a reliable pipe freeze kit, that same job would've taken **15 minutes**.
 
-Here's the problem: the good stuff (like the Ridgid SF-2500) costs $5,000—way too much for a small team. The cheap spray cans? They're one-and-done, leaving you scrambling mid-job.
+Here's the problem: the good stuff (like the Ridgid SF-2500) costs $5,000--way too much for a small team. The cheap spray cans? They're one-and-done, leaving you scrambling mid-job.
 
 So what's a hardworking plumber to do?
 
-**I tested 7 of the most popular pipe freeze kits**—both CO2 and electric models—to find out. This isn't a list of manufacturer specs; it's real-world results from someone who's been in your boots.
+**I tested 7 of the most popular pipe freeze kits**--both CO2 and electric models--to find out. This isn't a list of manufacturer specs; it's real-world results from someone who's been in your boots.
 
 ---
 
@@ -57,7 +57,7 @@ So what's a hardworking plumber to do?
 **Why This Matters:**
 My go-to cold shot pipe freeze kit freezes a 1/2" copper pipe in 5 minutes flat. Compare that to draining a system: 4 hours vs. 5 minutes. At $150/hour, that's $600 saved on just one job.
 
-**Pro Tip:** For copper pipe freeze kit jobs, make sure the pipe is clean and dry—this ensures a tight seal and faster freeze times.
+**Pro Tip:** For copper pipe freeze kit jobs, make sure the pipe is clean and dry--this ensures a tight seal and faster freeze times.
 
 **[BUY_LINK: Premium CO2 Pipe Freeze Kit - Best Overall]**
 
@@ -88,15 +88,15 @@ But here's the kicker: An electric freezer can handle pipes up to 4 inches in di
 
 ### What do plumbers use to freeze pipes?
 
-Most professional plumbers use **CO2-based pipe freeze kits** for residential work. CO2 (carbon dioxide) is stored in small cartridges and releases at -110°F, creating an ice plug inside the pipe. For larger commercial jobs, electric freezers that use a refrigerant like R404A are more common—they can reach -220°F and handle bigger pipes.
+Most professional plumbers use **CO2-based pipe freeze kits** for residential work. CO2 (carbon dioxide) is stored in small cartridges and releases at -110°F, creating an ice plug inside the pipe. For larger commercial jobs, electric freezers that use a refrigerant like R404A are more common--they can reach -220°F and handle bigger pipes.
 
 ### Are pipe freezing kits any good?
 
-Absolutely. A quality pipe freeze kit can create an ice plug that withstands **up to 3000 PSI**—more than enough for residential and commercial plumbing systems. The key is choosing the right kit for your pipe size and use case.
+Absolutely. A quality pipe freeze kit can create an ice plug that withstands **up to 3000 PSI**--more than enough for residential and commercial plumbing systems. The key is choosing the right kit for your pipe size and use case.
 
 ### Is PEX better than copper for freezing?
 
-No—copper freezes faster and more evenly than PEX. Here's the breakdown at 65°F:
+No--copper freezes faster and more evenly than PEX. Here's the breakdown at 65°F:
 - 1/2" Copper: 5-8 minutes
 - 1/2" PEX: 10-15 minutes
 - 1/2" Steel: 10-12 minutes
@@ -118,7 +118,7 @@ For occasional use, the Arctic Hayes spray can works well for small copper pipes
 
 ---
 
-## Conclusion: This Tool Isn't a Cost—It's an Investment
+## Conclusion: This Tool Isn't a Cost--It's an Investment
 
 Let me ask you this: How much is your time worth? If you're like most plumbers, it's at least $100/hour. If a pipe freeze kit saves you 3 hours on just one job, it pays for itself immediately.
 

@@ -7,7 +7,7 @@ tags:
   - Pricing Breakdown
   - Hidden Fees
   - Field Service
-description: "An in-depth look at Housecall Pro's hidden costs — including add-on charges, QuickBooks integration limits, and payment processing fees"
+description: "An in-depth look at Housecall Pro's hidden costs -- including add-on charges, QuickBooks integration limits, and payment processing fees"
 ---
 
 # Housecall Pro Pricing (2026): The Hidden Fees They Don't Advertise

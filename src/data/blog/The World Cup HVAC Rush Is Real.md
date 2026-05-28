@@ -15,7 +15,7 @@ In June 2026, millions of Americans will host World Cup watch parties in their l
 
 And then, right in the middle of the match, the AC will fail.
 
-According to fleet data from Samsara — drawn from 65 million HVAC service trips across the United States — service calls can spike by 20% to 40% during extreme summer heat [1]. When you combine that with the sudden indoor heat load of World Cup watch parties, you get a demand surge that does not care about your current workflow.
+According to fleet data from Samsara -- drawn from 65 million HVAC service trips across the United States -- service calls can spike by 20% to 40% during extreme summer heat [1]. When you combine that with the sudden indoor heat load of World Cup watch parties, you get a demand surge that does not care about your current workflow.
 
 For HVAC contractors, this is not just a busy season. It is a stress test for your entire operation.
 
@@ -41,7 +41,7 @@ You bought QuickBooks for accounting. You added Gmail because everyone uses Gmai
 
 When call volume is low, this works. When the World Cup rush hits and your call volume spikes by 40%, here is what your day actually looks like:
 
-Your dispatcher gets an emergency call at 9 AM. She opens three different tabs to find the customer's history — the scheduling app, Gmail, and a shared Google Sheet. She calls your lead tech to ask where he is. He does not pick up because he is on a roof. She texts him. He texts back 20 minutes later. By then, the customer has already called a competitor.
+Your dispatcher gets an emergency call at 9 AM. She opens three different tabs to find the customer's history -- the scheduling app, Gmail, and a shared Google Sheet. She calls your lead tech to ask where he is. He does not pick up because he is on a roof. She texts him. He texts back 20 minutes later. By then, the customer has already called a competitor.
 
 Meanwhile, you sent out four quotes yesterday. You have no idea which ones the customers have opened. You will remember to follow up on two of them. The other two will go cold.
 
@@ -57,7 +57,7 @@ A resilient software stack is not about having the most tools. It is about havin
 
 For a 1-to-5 truck HVAC operation, the stack has three non-negotiable layers.
 
-### Layer 1: The Hub — Field Service Management
+### Layer 1: The Hub -- Field Service Management
 
 You need one system where every job lives from the first call to final payment. For small to mid-sized teams, **Housecall Pro** or **Jobber** are the two platforms that consistently come up in contractor forums [3].
 
@@ -65,13 +65,13 @@ You need one system where every job lives from the first call to final payment. 
 
 Jobber's automated quote follow-up means that while your tech is running his fifth call of the day, Jobber is automatically texting the three customers who have not responded to their morning quotes. You close more jobs without doing more work.
 
-### Layer 2: The Financial Anchor — QuickBooks Online
+### Layer 2: The Financial Anchor -- QuickBooks Online
 
-Your FSM must integrate natively with your accounting software. **QuickBooks Online** is the industry standard, and the integration with both Housecall Pro and Jobber is native — meaning payments collected in the field sync automatically [3].
+Your FSM must integrate natively with your accounting software. **QuickBooks Online** is the industry standard, and the integration with both Housecall Pro and Jobber is native -- meaning payments collected in the field sync automatically [3].
 
 **Why this matters specifically for the World Cup rush:** When your techs are running five calls a day and collecting payment on-site, you cannot afford to reconcile invoices manually every night. If the sync is broken, you will spend July figuring out who paid you in June.
 
-### Layer 3: The Frontline Defense — Automated Intake
+### Layer 3: The Frontline Defense -- Automated Intake
 
 When your phone rings off the hook during the rush, you will miss calls. Every missed call during peak season is a $300-to-$1,500 job walking out the door.
 
@@ -85,7 +85,7 @@ Smart contractors are adding automated booking links to their Google Business Pr
 
 Here is the thing most "software stack" articles will not tell you.
 
-The stack itself is not the hard part. The hard part is the moment you realize your current system is the bottleneck — not your team, not your market, not your pricing.
+The stack itself is not the hard part. The hard part is the moment you realize your current system is the bottleneck -- not your team, not your market, not your pricing.
 
 That HVAC owner on Reddit who was working 11-14 hour days? The top comment on his post was: *"Implement a dispatch software so the office manager has the tools to dispatch jobs. That will allow you to focus on the things only you can do."*
 

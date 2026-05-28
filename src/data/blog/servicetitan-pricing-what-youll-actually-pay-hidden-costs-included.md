@@ -7,7 +7,7 @@ tags:
   - ServiceTitan
   - Field Service
   - Software Reviews
-description: "An in-depth breakdown of ServiceTitan's true pricing — including hidden fees and onboarding costs — so contractors can make the right call"
+description: "An in-depth breakdown of ServiceTitan's true pricing -- including hidden fees and onboarding costs -- so contractors can make the right call"
 ---
 
 # ServiceTitan Pricing: What You'll Actually Pay (Hidden Costs Included)
@@ -40,7 +40,7 @@ ServiceTitan charges a mandatory, one-time implementation fee that covers data m
 Furthermore, this implementation process is not fast. It typically takes 3 to 6 months for small teams, and up to a year for larger operations. Multiple BBB complaints describe contractors being charged their full monthly subscription fee while still waiting to be fully onboarded [2].
 
 ### 2. The "Pro" Add-On Trap
-ServiceTitan's most powerful features—the ones they highlight in their marketing—are often paid add-ons. If you want to maximize the platform, you will need to open your wallet again.
+ServiceTitan's most powerful features--the ones they highlight in their marketing--are often paid add-ons. If you want to maximize the platform, you will need to open your wallet again.
 
 *   **Marketing Pro:** $500–$1,500/month (Tracks ad spend to booked revenue)
 *   **Phones Pro:** $300–$800/month (Call tracking and recording)

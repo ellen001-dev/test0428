@@ -102,7 +102,7 @@ FieldPulse's route optimization is functional but not as sophisticated as Jobber
 
 ## ServiceTitan: Only If You're Ready to Scale
 
-ServiceTitan is the industry standard for larger HVAC/plumbing companies. But it's overkill—and expensive—for new businesses.
+ServiceTitan is the industry standard for larger HVAC/plumbing companies. But it's overkill--and expensive--for new businesses.
 
 ### Real Pricing (From Sales Calls, Not Marketing)
 
