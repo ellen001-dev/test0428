@@ -42,9 +42,9 @@ Furthermore, this implementation process is not fast. It typically takes 3 to 6 
 ### 2. The "Pro" Add-On Trap
 ServiceTitan's most powerful features--the ones they highlight in their marketing--are often paid add-ons. If you want to maximize the platform, you will need to open your wallet again.
 
-*   **Marketing Pro:** $500–$1,500/month (Tracks ad spend to booked revenue)
-*   **Phones Pro:** $300–$800/month (Call tracking and recording)
-*   **Pricebook Pro:** $200–$500/month (AI-powered flat-rate pricing)
+*   **Marketing Pro:** $500-$1,500/month (Tracks ad spend to booked revenue)
+*   **Phones Pro:** $300-$800/month (Call tracking and recording)
+*   **Pricebook Pro:** $200-$500/month (AI-powered flat-rate pricing)
 
 Adding just Marketing Pro and Phones Pro can increase your monthly bill by 40% to 60% beyond your base subscription [2].
 

@@ -2,6 +2,7 @@ import OpenAI from "openai";
 import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
+import { autoFixEncoding } from "./utils/encoding.js";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const BLOG_PATH = path.join(__dirname, "../data/blog");
@@ -164,18 +165,40 @@ description: "${metadata.description}"
   return frontmatter + article;
 }
 
+/**
+ * 自动检查并修复编码问题
+ * @param {string} content - 内容
+ */
+function processEncoding(content) {
+  console.log("  🔤 Checking encoding...");
+  const result = autoFixEncoding(content);
+  
+  if (result.changed) {
+    console.log(`    ⚠️  Found ${result.changes} encoding issue(s), auto-fixed`);
+  } else {
+    console.log("    ✅ No encoding issues found");
+  }
+  
+  return result.content;
+}
+
 async function processTopic(topic) {
   const slug = slugify(topic);
   const metadata = await generateTopicMetadata(topic);
   const article = await generateArticle(topic, metadata);
   const review = await reviewArticle(article, topic);
   
-  const markdownContent = formatMarkdown(article, metadata);
+  let markdownContent = formatMarkdown(article, metadata);
+  
+  // 自动检查并修复编码问题
+  markdownContent = processEncoding(markdownContent, `${slug}.md`);
+  
   const blogPath = path.join(BLOG_PATH, `${slug}.md`);
   const reviewPath = path.join(REVIEW_PATH, `${slug}-review.json`);
   
-  fs.writeFileSync(blogPath, markdownContent);
-  fs.writeFileSync(reviewPath, JSON.stringify(review, null, 2));
+  // 使用 UTF-8 编码写入文件
+  fs.writeFileSync(blogPath, markdownContent, { encoding: "utf8" });
+  fs.writeFileSync(reviewPath, JSON.stringify(review, null, 2), { encoding: "utf8" });
   
   return { slug, review };
 }
