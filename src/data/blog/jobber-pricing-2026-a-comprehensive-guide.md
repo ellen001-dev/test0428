@@ -1,6 +1,6 @@
 ---
 title: "Jobber Pricing 2026: A Comprehensive Guide"
-pubDatetime: 2026-10-15T12:00:00Z
+pubDatetime: 2026-05-28T12:00:00Z
 category: pricing
 draft: false
 tags:
