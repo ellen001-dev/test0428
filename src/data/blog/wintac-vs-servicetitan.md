@@ -16,7 +16,7 @@ description: "Should you migrate from Wintac to ServiceTitan? Learn about the hi
 
 ## 1. The Day the Server Died: Losing 10 Years of Data
 
-John owned **Buckeye Plumbing** in Ohio for 12 years. His entire business ran on Wintac—installed on a 2015 Dell desktop in his office. Then came the storm.
+John owned **Buckeye Plumbing** in Ohio for 12 years. His entire business ran on Wintac--installed on a 2015 Dell desktop in his office. Then came the storm.
 
 A lightning strike fried his server. The backup was 3 months old. He lost:
 - All work orders from the busy summer season
@@ -25,7 +25,7 @@ A lightning strike fried his server. The backup was 3 months old. He lost:
 
 "I had my team calling 200+ customers to confirm appointments," John recalls. "We lost $12k in revenue that week. That's when I knew: Wintac was a ticking time bomb."
 
-Wintac was once the gold standard. But today, clinging to this outdated desktop software is like driving a 1998 minivan on the Autobahn—it might work, but one wrong move could be catastrophic.
+Wintac was once the gold standard. But today, clinging to this outdated desktop software is like driving a 1998 minivan on the Autobahn--it might work, but one wrong move could be catastrophic.
 
 ---
 
@@ -50,10 +50,10 @@ Wintac was once the gold standard. But today, clinging to this outdated desktop 
 Moving from Wintac to ServiceTitan isn't "plug and play." Here are the three most common disasters:
 
 ### Nightmare #1: Lost Work Order History
-Wintac stores notes in proprietary fields that don't map to ServiceTitan. One contractor lost **5 years of equipment maintenance history**—techs couldn't see what parts were previously replaced.
+Wintac stores notes in proprietary fields that don't map to ServiceTitan. One contractor lost **5 years of equipment maintenance history**--techs couldn't see what parts were previously replaced.
 
 ### Nightmare #2: QuickBooks Sync Chaos
-If you don't clean Wintac first, you'll import "zombie customers"—inactive accounts that create duplicate QuickBooks entries. One company had to spend **120 hours** fixing 3,000+ duplicate invoices.
+If you don't clean Wintac first, you'll import "zombie customers"--inactive accounts that create duplicate QuickBooks entries. One company had to spend **120 hours** fixing 3,000+ duplicate invoices.
 
 ### Nightmare #3: Employee Rebellion
 Wintac's clunky gray interface is "comfortable" for long-time users. When ServiceTitan's modern dashboard arrives, expect **pushback** from staff who don't want to learn new software.
@@ -117,9 +117,9 @@ Let's be clear: Migrating to ServiceTitan costs **$50k-$150k** when you include 
 
 ## Final Verdict
 
-Wintac served contractors well for 20 years. But in 2026, it's a liability. The question isn't *if* you should migrate—it's *when*.
+Wintac served contractors well for 20 years. But in 2026, it's a liability. The question isn't *if* you should migrate--it's *when*.
 
-John from Buckeye Plumbing? He migrated to ServiceTitan last year. "We had some bumps, but now I sleep at night knowing my data is safe. And we just hit $2M in revenue—something Wintac could never handle."
+John from Buckeye Plumbing? He migrated to ServiceTitan last year. "We had some bumps, but now I sleep at night knowing my data is safe. And we just hit $2M in revenue--something Wintac could never handle."
 
 Ready to leave the desktop behind? [Start your ServiceTitan migration journey today](https://join.servicetitan.com/mzTFCBr).
 

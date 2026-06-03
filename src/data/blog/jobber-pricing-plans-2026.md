@@ -16,7 +16,7 @@ description: "Uncover Jobber's hidden fees in 2026. Learn about Core plan limita
 
 ## 1. The $49/month Trap: Why My Bill Was $350
 
-Leo started **GreenView Lawn Care** with a pickup truck and a dream. Jobber's website promised "$49/month"—perfect for a one-man operation.
+Leo started **GreenView Lawn Care** with a pickup truck and a dream. Jobber's website promised "$49/month"--perfect for a one-man operation.
 
 But then reality hit:
 - He hired a second technician: +$29/month
@@ -27,7 +27,7 @@ By month three, Leo's "affordable" $49 software was costing him **$350/month**.
 
 "The low price got me in the door," Leo admits. "But the hidden fees and feature restrictions almost put me out of business."
 
-Jobber's pricing model is brilliant marketing—but dangerous for unsuspecting contractors.
+Jobber's pricing model is brilliant marketing--but dangerous for unsuspecting contractors.
 
 ---
 

@@ -20,7 +20,7 @@ It was a sweltering July afternoon when Mark, owner of **Texan Electrical Soluti
 
 Three months prior, Mark had 4 trucks and big growth ambitions. ServiceTitan's sales team had promised him "seamless implementation" and "instant ROI." But 90 days later, his team still hadn't processed a single work order through the system. Meanwhile, $6,000 in monthly fees had already hit his bank account.
 
-"When I asked for a refund," Mark recalls, "they showed me the contract—said I owed 100% of the remaining 33 months if I canceled. That's $132,000 for software I've never used."
+"When I asked for a refund," Mark recalls, "they showed me the contract--said I owed 100% of the remaining 33 months if I canceled. That's $132,000 for software I've never used."
 
 ServiceTitan is undeniably the industry gold standard. But its "black box pricing" is quietly destroying the cash flow of countless growing contractors.
 
@@ -62,7 +62,7 @@ And here's the kicker: **you pay monthly fees during implementation**, even if t
 
 **Step 2:** Add this clause: *"If ServiceTitan causes implementation delays exceeding 90 days, all monthly fees during delay period are waived."*
 
-**Step 3:** Negotiate a "Go-Live Guarantee"—if the system isn't fully operational by X date, you get 3 months free.
+**Step 3:** Negotiate a "Go-Live Guarantee"--if the system isn't fully operational by X date, you get 3 months free.
 
 ---
 
@@ -97,7 +97,7 @@ Let's compare total cost of ownership for real-world scenarios:
 - [ ] Commercial contracts requiring detailed reporting
 - [ ] Ready to invest in operational transformation
 
-**The Math Doesn't Lie:** ServiceTitan customers report **30% higher average ticket prices** thanks to PriceBook Pro and upsell automation. At $2M revenue, that's $600,000 extra per year—easily covering the software cost.
+**The Math Doesn't Lie:** ServiceTitan customers report **30% higher average ticket prices** thanks to PriceBook Pro and upsell automation. At $2M revenue, that's $600,000 extra per year--easily covering the software cost.
 
 ---
 
@@ -115,7 +115,7 @@ Let's compare total cost of ownership for real-world scenarios:
 
 ## Final Verdict
 
-ServiceTitan isn't just software—it's a **business transformation investment**. For the right company (>$1.5M revenue, 8+ techs), it's the best money you'll spend. For everyone else, it's a financial albatross.
+ServiceTitan isn't just software--it's a **business transformation investment**. For the right company (>$1.5M revenue, 8+ techs), it's the best money you'll spend. For everyone else, it's a financial albatross.
 
 Mark from Texan Electrical? He eventually got the system live... after 6 months. Today, with 12 trucks, he admits: *"It was painful, but now I couldn't run without it. Just wish someone told me the real cost upfront."*
 

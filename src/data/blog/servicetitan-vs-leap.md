@@ -23,7 +23,7 @@ Dave runs **Summit HVAC** in Denver. On a Tuesday morning, he sent two salesmen 
 
 **Salesman B (ServiceTitan):** Used his iPad to generate three tiered proposals in 3 minutes. Showed photos of the equipment, explained financing options, and helped the customer apply for a $180/month loan on the spot. **Customer signed before leaving.**
 
-This isn't just about convenience—it's about **closing power**. In the world of $10,000+ jobs, your software isn't just a tool; it's your sales weapon.
+This isn't just about convenience--it's about **closing power**. In the world of $10,000+ jobs, your software isn't just a tool; it's your sales weapon.
 
 ---
 
@@ -108,9 +108,9 @@ If financing/follow-up is your issue → Continue to Day 7
 
 ## Final Verdict
 
-Leap is the **measurement specialist**—perfect for exterior contractors who live or die by accurate takeoffs.
+Leap is the **measurement specialist**--perfect for exterior contractors who live or die by accurate takeoffs.
 
-ServiceTitan is the **closing machine**—ideal for HVAC and plumbing contractors who need to turn high-ticket quotes into signed contracts.
+ServiceTitan is the **closing machine**--ideal for HVAC and plumbing contractors who need to turn high-ticket quotes into signed contracts.
 
 Dave from Summit HVAC? He's now rolling out ServiceTitan to all his sales teams. "That $15k job that Salesman B closed? It paid for the software in one month."
 

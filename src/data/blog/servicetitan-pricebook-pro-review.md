@@ -78,7 +78,7 @@ Initial configuration takes **40+ hours**. You need to:
 The AI doesn't always get it right. One Florida contractor found the recommended prices were **20% higher** than local competitors, costing him jobs.
 
 ### Pain Point #3: Cost
-At $150/tech/month for 5 techs, that's **$750/month**—$9,000/year.
+At $150/tech/month for 5 techs, that's **$750/month**--$9,000/year.
 
 ---
 
