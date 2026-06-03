@@ -1,7 +1,7 @@
 ---
 title: "ServiceTitan Pricing 2026: What Nobody Tells You (About the Onboarding Trap)"
 pubDatetime: 2026-06-03T06:00:00Z
-category: blog
+category: pricing
 draft: false
 tags:
   - ServiceTitan

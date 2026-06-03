@@ -1,7 +1,7 @@
 ---
 title: "Jobber Pricing Plans 2026: The Real Cost After Hidden Fees"
 pubDatetime: 2026-06-06T06:00:00Z
-category: blog
+category: pricing
 draft: false
 tags:
   - Jobber

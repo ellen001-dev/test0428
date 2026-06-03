@@ -1,7 +1,7 @@
 ---
 title: "ServiceTitan PriceBook Pro Review 2026: Is It Worth the Extra Cost?"
 pubDatetime: 2026-06-07T06:00:00Z
-category: blog
+category: reviews
 draft: false
 tags:
   - ServiceTitan
