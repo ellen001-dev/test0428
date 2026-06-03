@@ -106,6 +106,17 @@ const isActive = (path: string) => {
           </a>
         </li>
         <li>
+          <a
+            href="/crew-tools/"
+            class:list={[
+              "px-3 py-2 font-medium text-white hover:text-accent transition-colors",
+              { "text-accent": isActive("/crew-tools") }
+            ]}
+          >
+            Crew Tools
+          </a>
+        </li>
+        <li>
           <LinkButton
             href="/search/"
             class="focus-outline p-2 hover:text-accent transition-colors"
@@ -155,6 +166,14 @@ const isActive = (path: string) => {
           class="block px-4 py-3 font-medium text-white hover:bg-accent/10 rounded-lg"
         >
           Pricing Breakdown
+        </a>
+      </li>
+      <li>
+        <a
+          href="/crew-tools/"
+          class="block px-4 py-3 font-medium text-white hover:bg-accent/10 rounded-lg"
+        >
+          Crew Tools
         </a>
       </li>
       <li>

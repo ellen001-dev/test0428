@@ -1,0 +1,46 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Header from "@/components/Header.astro";
+import Footer from "@/components/Footer.astro";
+
+export const title = "Invoicing Tools - Crew Tools | ServiceToolBase";
+export const description = "Create professional invoices and get paid faster.";
+---
+
+<Layout title={title} description={description}>
+  <Header />
+
+  <main id="main-content" class="mx-auto w-full max-w-5xl px-4 py-8">
+    <div class="mb-8">
+      <a href="/crew-tools/" class="inline-flex items-center text-sm text-gray-500 hover:text-accent mb-4">
+        <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+        </svg>
+        Back to Crew Tools
+      </a>
+      <h1 class="text-3xl font-bold sm:text-4xl">Invoicing Tools</h1>
+      <p class="mt-2 text-gray-500">Create professional invoices and get paid faster.</p>
+    </div>
+
+    <div class="bg-white rounded-xl border border-gray-200 p-8">
+      <div class="text-center py-12">
+        <div class="w-20 h-20 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-6">
+          <svg class="w-10 h-10 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+          </svg>
+        </div>
+        <h2 class="text-xl font-semibold mb-2">Coming Soon</h2>
+        <p class="text-gray-500 max-w-md mx-auto">
+          We're working on this section. Check back soon for detailed information about invoicing tools.
+        </p>
+        <div class="mt-6">
+          <a href="/crew-tools/" class="inline-flex items-center px-4 py-2 bg-accent text-white rounded-lg hover:bg-accent/90 transition-colors">
+            Browse Other Tools
+          </a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <Footer />
+</Layout>
