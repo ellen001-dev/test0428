@@ -21,7 +21,7 @@ type Props = { page: Page<CollectionEntry<"blog">> };
 const { page } = Astro.props;
 ---
 
-<Layout title="Software Comparisons for HVAC, Plumbing & Electrical | ServiceToolBase" description="Side-by-side comparisons of contractor software. See features, pricing, and user feedback side-by-side to make confident decisions.">
+<Layout title="Software Comparisons for HVAC, Plumbing & Electrical | ServiceToolBase" description="In-depth comparisons of field service software including ServiceTitan vs Jobber, ServiceTitan vs Leap, Wintac vs ServiceTitan, and Housecall Pro vs Freshbooks. Real cost breakdowns, hidden fees exposed, and contractor-tested verdicts.">
   <Header />
 
   <main id="main-content" class="mx-auto w-full max-w-5xl px-4 py-8">
@@ -42,6 +42,18 @@ const { page } = Astro.props;
         <p class="text-gray-500">No comparison articles yet. Stay tuned!</p>
       </div>
     )}
+
+    <div class="mt-12 space-y-8">
+      <div class="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl p-6 border border-blue-100">
+        <h3 class="text-lg font-semibold text-gray-900 mb-2">ServiceTitan vs Leap</h3>
+        <p class="text-gray-600">Thinking about ServiceTitan vs Leap? Here's the short answer: if your team closes $10k+ jobs on-site and needs instant financing, ServiceTitan's GoodLeap integration wins. If you're in roofing and need 3D measurement imports, Leap has the edge. <a href="/compare/servicetitan-vs-leap/" class="text-blue-600 hover:text-blue-700 font-medium">Read our full ServiceTitan vs Leap breakdown →</a></p>
+      </div>
+
+      <div class="bg-gradient-to-r from-orange-50 to-amber-50 rounded-xl p-6 border border-orange-100">
+        <h3 class="text-lg font-semibold text-gray-900 mb-2">Wintac vs ServiceTitan Migration</h3>
+        <p class="text-gray-600">Migrating from Wintac to ServiceTitan? The biggest risk isn't the price — it's your historical job notes and QuickBooks sync. We've documented the 3 most common data migration disasters and how to avoid them. <a href="/compare/wintac-vs-servicetitan/" class="text-orange-600 hover:text-orange-700 font-medium">Read the full Wintac vs ServiceTitan migration guide →</a></p>
+      </div>
+    </div>
   </main>
 
   <Pagination {page} />
