@@ -29,13 +29,12 @@ jobs:
       - name: Build website
         run: npm run build
 
-      - name: 📂 Sync files via FTPS
-        uses: SamKirkland/FTP-Deploy-Action@4.3.0
+      - name: 📂 Sync files via SFTP
+        uses: wlixcc/SFTP-Deploy-Action@v1.2.4
         with:
-          server: ${{ secrets.FTP_HOST }}
+          host: ${{ secrets.FTP_HOST }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          protocol: ftps-legacy
-          port: 21
-          local-dir: dist/
-          server-dir: /
+          port: 22
+          localDir: dist
+          remoteDir: /
