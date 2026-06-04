@@ -27,11 +27,11 @@ const isActive = (path: string) => {
 </a>
 
 <header
-  class="relative z-40 w-full bg-accent-dark"
+  class="relative z-40 w-full bg-accent-dark shadow-lg"
 >
   <div
     id="top-nav-wrap"
-    class="mx-auto flex w-full max-w-5xl items-center justify-between px-4 py-4"
+    class="mx-auto flex w-full max-w-6xl items-center justify-between px-4 py-3 sm:py-4"
   >
     <a
       href="/"
@@ -40,12 +40,12 @@ const isActive = (path: string) => {
       <img 
         src={LogoImage.src}
         alt="ServiceToolBase Logo" 
-        class="h-14 sm:h-16 w-auto"
+        class="h-12 sm:h-14 w-auto"
       />
     </a>
     <nav
       id="nav-menu"
-      class="flex items-center justify-end gap-2 sm:gap-6"
+      class="flex items-center justify-end gap-3 sm:gap-8"
     >
       <button
         id="menu-btn"
@@ -59,58 +59,58 @@ const isActive = (path: string) => {
       </button>
       <ul
         id="menu-items"
-        class="hidden items-center gap-2 sm:flex sm:gap-4"
+        class="hidden items-center gap-1 sm:flex sm:gap-2"
       >
         <li>
           <a
             href="/reviews/"
             class:list={[
-              "px-3 py-2 font-medium text-white hover:text-accent transition-colors",
-              { "text-accent": isActive("/reviews") }
+              "px-3 py-2 text-sm font-medium text-white hover:text-accent transition-colors rounded-lg hover:bg-white/5",
+              { "text-accent bg-white/5": isActive("/reviews") }
             ]}
           >
-            Software Reviews
-            </a>
+            Reviews
+          </a>
         </li>
         <li>
           <a
             href="/compare/"
             class:list={[
-              "px-3 py-2 font-medium text-white hover:text-accent transition-colors",
-              { "text-accent": isActive("/compare") }
+              "px-3 py-2 text-sm font-medium text-white hover:text-accent transition-colors rounded-lg hover:bg-white/5",
+              { "text-accent bg-white/5": isActive("/compare") }
             ]}
           >
-            Comparisons
+            Compare
           </a>
         </li>
         <li>
           <a
             href="/hvac-software/"
             class:list={[
-              "px-3 py-2 font-medium text-white hover:text-accent transition-colors",
-              { "text-accent": isActive("/hvac-software") }
+              "px-3 py-2 text-sm font-medium text-white hover:text-accent transition-colors rounded-lg hover:bg-white/5",
+              { "text-accent bg-white/5": isActive("/hvac-software") }
             ]}
           >
-            Trade Guides
+            Guides
           </a>
         </li>
         <li>
           <a
             href="/housecall-pro-pricing/"
             class:list={[
-              "px-3 py-2 font-medium text-white hover:text-accent transition-colors",
-              { "text-accent": isActive("/housecall-pro-pricing") }
+              "px-3 py-2 text-sm font-medium text-white hover:text-accent transition-colors rounded-lg hover:bg-white/5",
+              { "text-accent bg-white/5": isActive("/housecall-pro-pricing") }
             ]}
           >
-            Pricing Breakdown
+            Pricing
           </a>
         </li>
         <li>
           <a
             href="/crew-tools/"
             class:list={[
-              "px-3 py-2 font-medium text-white hover:text-accent transition-colors",
-              { "text-accent": isActive("/crew-tools") }
+              "px-3 py-2 text-sm font-medium text-white hover:text-accent transition-colors rounded-lg hover:bg-white/5",
+              { "text-accent bg-white/5": isActive("/crew-tools") }
             ]}
           >
             Crew Tools
@@ -133,21 +133,21 @@ const isActive = (path: string) => {
   <!-- Mobile Menu -->
   <div
     id="mobile-menu"
-    class="hidden bg-accent-dark p-4 sm:hidden"
+    class="hidden bg-accent-dark/95 backdrop-blur-md p-4 sm:hidden"
   >
-    <ul class="flex flex-col gap-2">
+    <ul class="flex flex-col gap-1">
       <li>
         <a
           href="/reviews/"
-          class="block px-4 py-3 font-medium text-white hover:bg-accent/10 rounded-lg"
+          class="block px-4 py-2.5 text-sm font-medium text-white hover:bg-white/10 rounded-lg transition-colors"
         >
           Software Reviews
-          </a>
+        </a>
       </li>
       <li>
         <a
           href="/compare/"
-          class="block px-4 py-3 font-medium text-white hover:bg-accent/10 rounded-lg"
+          class="block px-4 py-2.5 text-sm font-medium text-white hover:bg-white/10 rounded-lg transition-colors"
         >
           Software Comparisons
         </a>
@@ -155,7 +155,7 @@ const isActive = (path: string) => {
       <li>
         <a
           href="/hvac-software/"
-          class="block px-4 py-3 font-medium text-white hover:bg-accent/10 rounded-lg"
+          class="block px-4 py-2.5 text-sm font-medium text-white hover:bg-white/10 rounded-lg transition-colors"
         >
           Trade Guides
         </a>
@@ -163,7 +163,7 @@ const isActive = (path: string) => {
       <li>
         <a
           href="/housecall-pro-pricing/"
-          class="block px-4 py-3 font-medium text-white hover:bg-accent/10 rounded-lg"
+          class="block px-4 py-2.5 text-sm font-medium text-white hover:bg-white/10 rounded-lg transition-colors"
         >
           Pricing Breakdown
         </a>
@@ -171,7 +171,7 @@ const isActive = (path: string) => {
       <li>
         <a
           href="/crew-tools/"
-          class="block px-4 py-3 font-medium text-white hover:bg-accent/10 rounded-lg"
+          class="block px-4 py-2.5 text-sm font-medium text-white hover:bg-white/10 rounded-lg transition-colors"
         >
           Crew Tools
         </a>
@@ -179,7 +179,7 @@ const isActive = (path: string) => {
       <li>
         <a
           href="/about/"
-          class="block px-4 py-3 font-medium text-white hover:bg-accent/10 rounded-lg"
+          class="block px-4 py-2.5 text-sm font-medium text-white hover:bg-white/10 rounded-lg transition-colors"
         >
           About
         </a>
