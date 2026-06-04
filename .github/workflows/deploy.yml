@@ -40,4 +40,4 @@ jobs:
           local-dir: dist/
           server-dir: /
           dangerous-clean-slate: false
-          timeout: 300000
+          timeout: 900000
