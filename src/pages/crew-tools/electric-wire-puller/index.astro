@@ -2,6 +2,8 @@
 import Layout from "@/layouts/Layout.astro";
 import Header from "@/components/Header.astro";
 import Footer from "@/components/Footer.astro";
+import WirePullerHero from "@/assets/images/electric-wire-puller-hero.png";
+import WirePullerScene from "@/assets/images/electric-wire-puller-scene.jpg";
 
 export const title = "Portable Electric Wire Puller - 1000 lbs Pulling Force | ServiceToolBase";
 export const description = "Professional electric wire puller tool for electricians. Pull wire effortlessly with 1000 lbs of force. Turns 3-man jobs into 1-man tasks. Save time and reduce back strain.";
@@ -55,21 +57,21 @@ export const description = "Professional electric wire puller tool for electrici
         <div class="relative">
           <div class="aspect-square rounded-xl overflow-hidden shadow-2xl">
             <img 
-              src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=electric%20wire%20puller%20machine%20pulling%20thick%20electrical%20wire%20through%20conduit%2C%20professional%20electrician%20working%2C%20jobsite%20lighting%2C%20industrial%20photography&image_size=landscape_16_9"
+              src={WirePullerHero.src}
               alt="Electric wire puller in action"
               class="w-full h-full object-cover"
             />
           </div>
           <div class="absolute -bottom-4 -right-4 bg-white rounded-xl shadow-lg p-4">
             <div class="flex items-center gap-3">
-              <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
-                <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center">
+                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
                 </svg>
               </div>
               <div>
-                <p class="font-semibold text-gray-900">1 Person Operation</p>
-                <p class="text-sm text-gray-500">Turns 3-man job into 1-man</p>
+                <p class="font-semibold text-gray-900">1-Man Operation</p>
+                <p class="text-sm text-gray-500">No helper needed</p>
               </div>
             </div>
           </div>
@@ -103,7 +105,7 @@ export const description = "Professional electric wire puller tool for electrici
             </tr>
             <tr class="bg-gray-50/50 hover:bg-gray-50">
               <td class="px-6 py-4 text-sm font-medium text-gray-900">Pulling Force</td>
-              <td class="px-6 py-4 text-sm text-center font-semibold text-blue-600">Up to 1,000 lbs</td>
+              <td class="px-6 py-4 text-sm text-center font-semibold text-green-600">Up to 1,000 lbs</td>
               <td class="px-6 py-4 text-sm text-center text-gray-600">Human limit (~150 lbs)</td>
               <td class="px-6 py-4 text-sm text-center text-gray-600">2,000 - 10,000 lbs</td>
             </tr>
@@ -115,9 +117,9 @@ export const description = "Professional electric wire puller tool for electrici
             </tr>
             <tr class="bg-gray-50/50 hover:bg-gray-50">
               <td class="px-6 py-4 text-sm font-medium text-gray-900">Best For</td>
-              <td class="px-6 py-4 text-sm text-center text-gray-600">Residential & Light Commercial</td>
-              <td class="px-6 py-4 text-sm text-center text-gray-600">Short, straight runs</td>
-              <td class="px-6 py-4 text-sm text-center text-gray-600">Heavy commercial feeders</td>
+              <td class="px-6 py-4 text-sm text-center">Residential & Light Commercial</td>
+              <td class="px-6 py-4 text-sm text-center">Short, straight runs</td>
+              <td class="px-6 py-4 text-sm text-center">Heavy commercial feeders</td>
             </tr>
             <tr class="hover:bg-gray-50">
               <td class="px-6 py-4 text-sm font-medium text-gray-900">Price</td>
@@ -139,7 +141,7 @@ export const description = "Professional electric wire puller tool for electrici
           <div class="relative">
             <div class="aspect-video rounded-xl overflow-hidden shadow-lg">
               <img 
-                src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=electrician%20using%20portable%20wire%20puller%20machine%20on%20residential%20electrical%20panel%2C%20copper%20wire%2C%20professional%20work%20scene&image_size=landscape_16_9"
+                src={WirePullerScene.src}
                 alt="Electrician using wire puller on panel"
                 class="w-full h-full object-cover"
               />
@@ -167,12 +169,12 @@ export const description = "Professional electric wire puller tool for electrici
             <div class="flex items-center gap-4 p-4 bg-blue-100 rounded-xl">
               <div class="text-center">
                 <p class="text-3xl font-bold text-blue-600">10 Minutes</p>
-                <p class="text-sm text-gray-600">Per 100ft Run</p>
+                <p class="text-sm text-gray-600">Time per 100ft Run</p>
               </div>
-              <div class="w-px h-12 bg-blue-300"></div>
+              <div class="w-px h-12 bg-blue-200"></div>
               <div class="text-center">
-                <p class="text-3xl font-bold text-green-600">66%</p>
-                <p class="text-sm text-gray-600">Labor Cost Saved</p>
+                <p class="text-3xl font-bold text-green-600">$320</p>
+                <p class="text-sm text-gray-600">Daily Labor Savings</p>
               </div>
             </div>
           </div>
@@ -194,7 +196,7 @@ export const description = "Professional electric wire puller tool for electrici
             </svg>
           </div>
           <h3 class="font-semibold text-gray-900 mb-2">Pulling Force</h3>
-          <p class="text-gray-600 text-sm">Continuous 600 lbs, peak 1,000 lbs pulling capacity</p>
+          <p class="text-gray-600 text-sm">Continuous 600 lbs, peak 1,000 lbs</p>
         </div>
         
         <div class="bg-white rounded-xl p-6 border border-gray-200 hover:border-blue-500 transition-colors">
@@ -204,7 +206,7 @@ export const description = "Professional electric wire puller tool for electrici
             </svg>
           </div>
           <h3 class="font-semibold text-gray-900 mb-2">Speed</h3>
-          <p class="text-gray-600 text-sm">Variable speed control, up to 25 feet per minute (unloaded)</p>
+          <p class="text-gray-600 text-sm">Variable speed, up to 25 ft/min</p>
         </div>
         
         <div class="bg-white rounded-xl p-6 border border-gray-200 hover:border-blue-500 transition-colors">
@@ -214,7 +216,7 @@ export const description = "Professional electric wire puller tool for electrici
             </svg>
           </div>
           <h3 class="font-semibold text-gray-900 mb-2">Motor</h3>
-          <p class="text-gray-600 text-sm">High-torque 120V AC motor (plugs into standard jobsite outlets)</p>
+          <p class="text-gray-600 text-sm">High-torque 120V AC motor</p>
         </div>
         
         <div class="bg-white rounded-xl p-6 border border-gray-200 hover:border-blue-500 transition-colors">
@@ -224,7 +226,7 @@ export const description = "Professional electric wire puller tool for electrici
             </svg>
           </div>
           <h3 class="font-semibold text-gray-900 mb-2">Weight</h3>
-          <p class="text-gray-600 text-sm">At just 35 lbs, easy to carry up ladders or into tight attics</p>
+          <p class="text-gray-600 text-sm">Only 35 lbs - easy to carry</p>
         </div>
       </div>
     </section>
@@ -242,11 +244,9 @@ export const description = "Professional electric wire puller tool for electrici
             </p>
             <p class="text-gray-300 leading-relaxed">
               But what if you are doing residential upgrades, light commercial build-outs, or long landscape lighting runs? 
-              You don't need a 100-lb machine that takes 30 minutes to set up.
-            </p>
-            <p class="text-gray-300 leading-relaxed">
-              Our portable electric wire puller tool is designed for the 80% of jobs where you just need an extra set of 
-              incredibly strong hands. It sets up in 2 minutes, anchors securely, and costs a fraction of the big industrial rigs.
+              You don't need a 100-lb machine that takes 30 minutes to set up. Our portable electric wire puller tool is 
+              designed for the 80% of jobs where you just need an extra set of incredibly strong hands. It sets up in 2 
+              minutes, anchors securely, and costs a fraction of the big industrial rigs.
             </p>
           </div>
           
@@ -265,7 +265,7 @@ export const description = "Professional electric wire puller tool for electrici
                 <span class="text-lg font-bold text-white">G</span>
               </div>
               <div class="text-white">
-                <p class="font-semibold">Greenlee Industrial</p>
+                <p class="font-semibold">Greenlee Tugger</p>
                 <p class="text-gray-400 font-bold text-xl">$2,500+</p>
               </div>
             </div>
@@ -392,7 +392,7 @@ export const description = "Professional electric wire puller tool for electrici
     <section id="pricing" class="mt-16">
       <div class="text-center mb-8">
         <h2 class="text-3xl font-bold text-gray-900">Get Your Portable Electric Wire Puller</h2>
-        <p class="mt-2 text-gray-500">Everything you need to start pulling wire like a pro</p>
+        <p class="mt-2 text-gray-500">Professional-grade wire pulling at a fraction of the industrial price</p>
       </div>
       
       <div class="max-w-3xl mx-auto">
@@ -409,7 +409,7 @@ export const description = "Professional electric wire puller tool for electrici
                 <svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                 </svg>
-                <span class="text-gray-700">High-torque 120V AC wire puller</span>
+                <span class="text-gray-700">1000-lbs capacity electric wire puller</span>
               </li>
               <li class="flex items-center gap-3">
                 <svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -421,13 +421,13 @@ export const description = "Professional electric wire puller tool for electrici
                 <svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                 </svg>
-                <span class="text-gray-700">Heavy-duty mounting bracket</span>
+                <span class="text-gray-700">Foot pedal speed control</span>
               </li>
               <li class="flex items-center gap-3">
                 <svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                 </svg>
-                <span class="text-gray-700">Foot pedal controller</span>
+                <span class="text-gray-700">Mounting bracket & hardware</span>
               </li>
               <li class="flex items-center gap-3">
                 <svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">

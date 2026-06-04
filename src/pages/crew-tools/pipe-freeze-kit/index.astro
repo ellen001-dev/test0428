@@ -2,6 +2,8 @@
 import Layout from "@/layouts/Layout.astro";
 import Header from "@/components/Header.astro";
 import Footer from "@/components/Footer.astro";
+import PipeFreezeHero from "@/assets/images/pipe-freeze-kit-hero.png";
+import PipeFreezeScene from "@/assets/images/pipe-freeze-kit-scene.png";
 
 export const title = "Pro CO2 Pipe Freeze Kit - Stop Draining, Start Fixing | ServiceToolBase";
 export const description = "Professional-grade CO2 pipe freeze kit for plumbers. Freeze pipes in 5 minutes without draining the system. Save time and money on every job.";
@@ -56,21 +58,21 @@ export const description = "Professional-grade CO2 pipe freeze kit for plumbers.
         <div class="relative">
           <div class="aspect-square rounded-xl overflow-hidden shadow-2xl">
             <img 
-              src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=professional%20plumber%20using%20orange%20pipe%20freeze%20jacket%20on%20frosted%20copper%20pipe%20in%20basement%2C%20industrial%20setting%2C%20realistic%20photography%2C%20professional%20lighting&image_size=landscape_16_9"
-              alt="Plumber using pipe freeze kit"
+              src={PipeFreezeHero.src}
+              alt="Professional pipe freeze kit"
               class="w-full h-full object-cover"
             />
           </div>
           <div class="absolute -bottom-4 -right-4 bg-white rounded-xl shadow-lg p-4">
             <div class="flex items-center gap-3">
-              <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
-                <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              <div class="w-12 h-12 bg-accent rounded-full flex items-center justify-center">
+                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
                 </svg>
               </div>
               <div>
-                <p class="font-semibold text-gray-900">Freeze in 5 Minutes</p>
-                <p class="text-sm text-gray-500">1/2" Copper Pipe</p>
+                <p class="font-semibold text-gray-900">5-Minute Freeze</p>
+                <p class="text-sm text-gray-500">No draining required</p>
               </div>
             </div>
           </div>
@@ -81,35 +83,23 @@ export const description = "Professional-grade CO2 pipe freeze kit for plumbers.
     <!-- Module 2: Quick Comparison Table -->
     <section class="mt-16">
       <div class="text-center mb-8">
-        <h2 class="text-3xl font-bold text-gray-900">Why Plumbers Are Switching to Our CO2 Kit</h2>
-        <p class="mt-2 text-gray-500">Compare against the market leaders and see the difference</p>
+        <h2 class="text-3xl font-bold text-gray-900">Why Draining is Killing Your Profit Margin</h2>
+        <p class="mt-2 text-gray-500">Compare our CO2 freeze kit to traditional methods</p>
       </div>
       
       <div class="overflow-x-auto rounded-xl border border-gray-200 shadow-lg">
         <table class="w-full">
           <thead>
             <tr class="bg-gray-50">
-              <th class="px-6 py-4 text-left text-sm font-semibold text-gray-700 border-b">Feature</th>
-              <th class="px-6 py-4 text-center text-sm font-semibold text-accent border-b bg-accent/5">Our Pro CO2 Kit</th>
-              <th class="px-6 py-4 text-center text-sm font-semibold text-gray-700 border-b">Ridgid SF-2500 (Electric)</th>
-              <th class="px-6 py-4 text-center text-sm font-semibold text-gray-700 border-b">Arctic Hayes (Disposable)</th>
+              <th class="px-6 py-4 text-left text-sm font-semibold text-gray-700 border-b">Method</th>
+              <th class="px-6 py-4 text-center text-sm font-semibold text-accent border-b bg-accent/50">Our CO2 Freeze Kit</th>
+              <th class="px-6 py-4 text-center text-sm font-semibold text-gray-700 border-b">Electric Freeze</th>
+              <th class="px-6 py-4 text-center text-sm font-semibold text-gray-700 border-b">Rental Compressor</th>
             </tr>
           </thead>
           <tbody>
             <tr class="hover:bg-gray-50">
-              <td class="px-6 py-4 text-sm font-medium text-gray-900">Best For</td>
-              <td class="px-6 py-4 text-sm text-center text-gray-600">Daily residential & light commercial</td>
-              <td class="px-6 py-4 text-sm text-center text-gray-600">Heavy commercial (hospitals)</td>
-              <td class="px-6 py-4 text-sm text-center text-gray-600">Single emergency use</td>
-            </tr>
-            <tr class="bg-gray-50/50 hover:bg-gray-50">
-              <td class="px-6 py-4 text-sm font-medium text-gray-900">Upfront Cost</td>
-              <td class="px-6 py-4 text-sm text-center font-semibold text-accent">$499</td>
-              <td class="px-6 py-4 text-sm text-center font-semibold text-red-500">$5,200+</td>
-              <td class="px-6 py-4 text-sm text-center text-gray-600">$45 (per can)</td>
-            </tr>
-            <tr class="hover:bg-gray-50">
-              <td class="px-6 py-4 text-sm font-medium text-gray-900">Freeze Time (1/2" Copper)</td>
+              <td class="px-6 py-4 text-sm font-medium text-gray-900">Time to Freeze (1/2" Copper)</td>
               <td class="px-6 py-4 text-sm text-center font-semibold text-green-600">5 Minutes</td>
               <td class="px-6 py-4 text-sm text-center text-gray-600">10 Minutes</td>
               <td class="px-6 py-4 text-sm text-center text-gray-600">15 Minutes</td>
@@ -140,14 +130,14 @@ export const description = "Professional-grade CO2 pipe freeze kit for plumbers.
     <!-- Module 3: Show Don't Tell Section -->
     <section class="mt-16">
       <div class="rounded-2xl bg-gradient-to-br from-gray-50 to-white p-8 md:p-12 border border-gray-200">
-        <h2 class="text-3xl font-bold text-gray-900">Built for the Real World: How It Saves You 3 Hours Per Job</h2>
+        <h2 class="text-3xl font-bold text-gray-900">See It in Action: A Real Jobsite Test</h2>
         
         <div class="mt-8 grid gap-8 lg:grid-cols-2 items-start">
           <div class="relative">
             <div class="aspect-video rounded-xl overflow-hidden shadow-lg">
               <img 
-                src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=master%20plumber%20working%20on%20copper%20pipe%20in%20apartment%20building%20basement%2C%20professional%20tools%2C%20industrial%20lighting%2C%20realistic%20work%20scene&image_size=landscape_16_9"
-                alt="Plumber working on pipe in basement"
+                src={PipeFreezeScene.src}
+                alt="Plumber using pipe freeze kit in basement"
                 class="w-full h-full object-cover"
               />
             </div>
@@ -175,12 +165,12 @@ export const description = "Professional-grade CO2 pipe freeze kit for plumbers.
             <div class="flex items-center gap-4 p-4 bg-accent/10 rounded-xl">
               <div class="text-center">
                 <p class="text-3xl font-bold text-accent">3 Hours</p>
-                <p class="text-sm text-gray-600">Saved Per Job</p>
+                <p class="text-sm text-gray-600">Time Saved per Job</p>
               </div>
-              <div class="w-px h-12 bg-gray-300"></div>
+              <div class="w-px h-12 bg-accent/30"></div>
               <div class="text-center">
-                <p class="text-3xl font-bold text-green-600">$450+</p>
-                <p class="text-sm text-gray-600">Average Savings</p>
+                <p class="text-3xl font-bold text-green-600">$240</p>
+                <p class="text-sm text-gray-600">Typical Savings</p>
               </div>
             </div>
           </div>
@@ -192,7 +182,6 @@ export const description = "Professional-grade CO2 pipe freeze kit for plumbers.
     <section class="mt-16">
       <div class="text-center mb-8">
         <h2 class="text-3xl font-bold text-gray-900">Will It Work on Your Next Job? (Specs & Compatibility)</h2>
-        <p class="mt-2 text-gray-500">Engineered to handle the most common materials found in US residential and commercial plumbing</p>
       </div>
       
       <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
@@ -217,23 +206,23 @@ export const description = "Professional-grade CO2 pipe freeze kit for plumbers.
         </div>
         
         <div class="bg-white rounded-xl p-6 border border-gray-200 hover:border-accent transition-colors">
-          <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
-            <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
-            </svg>
-          </div>
-          <h3 class="font-semibold text-gray-900 mb-2">Pressure Rating</h3>
-          <p class="text-gray-600 text-sm">Up to 3000 psi (well above standard 40-80 psi)</p>
-        </div>
-        
-        <div class="bg-white rounded-xl p-6 border border-gray-200 hover:border-accent transition-colors">
-          <div class="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-4">
-            <svg class="w-6 h-6 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <div class="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M12 12h.01"></path>
             </svg>
           </div>
+          <h3 class="font-semibold text-gray-900 mb-2">Pressure Rating</h3>
+          <p class="text-gray-600 text-sm">Ice plug safely holds up to 3000 psi</p>
+        </div>
+        
+        <div class="bg-white rounded-xl p-6 border border-gray-200 hover:border-accent transition-colors">
+          <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+            </svg>
+          </div>
           <h3 class="font-semibold text-gray-900 mb-2">Refrigerant</h3>
-          <p class="text-gray-600 text-sm">Standard liquid CO2 with dip tube</p>
+          <p class="text-gray-600 text-sm">Standard liquid CO2 (dip-tube cylinders)</p>
         </div>
       </div>
     </section>
@@ -246,13 +235,13 @@ export const description = "Professional-grade CO2 pipe freeze kit for plumbers.
         <div class="mt-8 grid gap-8 lg:grid-cols-2 items-center">
           <div class="space-y-4">
             <p class="text-gray-300 leading-relaxed">
-              If you've been searching for the cold shot pipe freeze kit, you know the General Wire CST-2 is the industry standard. We respect their tool, but we don't respect the markup.
+              If you've been searching for the cold shot pipe freeze kit, you know the General Wire CST-2 is the industry standard. 
+              We respect their tool, but we don't respect the markup.
             </p>
             <p class="text-gray-300 leading-relaxed">
-              Our kit uses the exact same thermodynamic principles—injecting <span class="text-accent-light font-semibold">-109°F (-78°C)</span> liquid CO2 into a confined jacket—but we manufacture it directly, cutting out the middleman.
-            </p>
-            <p class="text-gray-300 leading-relaxed">
-              You get the same freezing speed, the same durable brass fittings, and the same dual-jacket capability, but you keep <span class="text-green-400 font-bold">$200</span> in your pocket.
+              Our kit uses the exact same thermodynamic principles—injecting -109°F (-78°C) liquid CO2 into a confined jacket—but 
+              we manufacture it directly, cutting out the middleman. You get the same freezing speed, the same durable brass fittings, 
+              and the same dual-jacket capability, but you keep $200 in your pocket.
             </p>
           </div>
           
@@ -262,8 +251,8 @@ export const description = "Professional-grade CO2 pipe freeze kit for plumbers.
                 <span class="text-2xl font-bold text-white">Ours</span>
               </div>
               <div class="text-white">
-                <p class="font-semibold">Pro CO2 Pipe Freeze Kit</p>
-                <p class="text-accent-light font-bold text-xl">$499</p>
+                <p class="font-semibold">Pro CO2 Freeze Kit</p>
+                <p class="text-accent font-bold text-xl">$499</p>
               </div>
             </div>
             <div class="flex items-center gap-4 mb-4">
@@ -305,7 +294,8 @@ export const description = "Professional-grade CO2 pipe freeze kit for plumbers.
           </button>
           <div class="px-6 pb-4">
             <p class="text-gray-600">
-              Absolutely. PEX actually freezes slightly faster than copper because it doesn't conduct ambient heat as quickly. Just ensure you don't strike the frozen PEX with a hammer, as extreme cold makes plastic temporarily brittle.
+              Absolutely. PEX actually freezes slightly faster than copper because it doesn't conduct ambient heat as quickly. 
+              Just ensure you don't strike the frozen PEX with a hammer, as extreme cold makes plastic temporarily brittle.
             </p>
           </div>
         </div>
@@ -322,7 +312,8 @@ export const description = "Professional-grade CO2 pipe freeze kit for plumbers.
           </button>
           <div class="px-6 pb-4">
             <p class="text-gray-600">
-              As long as you keep injecting a short burst of CO2 every 2-3 minutes, the plug will last indefinitely. Once you stop, a 1/2" plug typically takes 15-20 minutes to thaw at room temperature.
+              As long as you keep injecting a short burst of CO2 every 2-3 minutes, the plug will last indefinitely. 
+              Once you stop, a 1/2" plug typically takes 15-20 minutes to thaw at room temperature.
             </p>
           </div>
         </div>
@@ -351,7 +342,8 @@ export const description = "Professional-grade CO2 pipe freeze kit for plumbers.
       <div class="rounded-2xl bg-gradient-to-br from-accent to-accent-dark p-8 md:p-12 text-center">
         <h2 class="text-3xl font-bold text-white">Stop Losing Money on Draining Systems</h2>
         <p class="mt-4 text-lg text-white/80 max-w-2xl mx-auto">
-          Every time you drain a system, you are losing billable hours. Add the Pro CO2 Pipe Freeze Kit to your truck today. If it doesn't save you its entire purchase price in labor hours on your very first valve swap, send it back for a full refund.
+          Every time you drain a system, you are losing billable hours. Add the Pro CO2 Pipe Freeze Kit to your truck today. 
+          If it doesn't save you its entire purchase price in labor hours on your very first valve swap, send it back for a full refund.
         </p>
         <div class="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
           <a 
@@ -393,7 +385,7 @@ export const description = "Professional-grade CO2 pipe freeze kit for plumbers.
     <!-- Pricing Section -->
     <section id="pricing" class="mt-16">
       <div class="text-center mb-8">
-        <h2 class="text-3xl font-bold text-gray-900">Get Your Pro CO2 Pipe Freeze Kit Today</h2>
+        <h2 class="text-3xl font-bold text-gray-900">Get Your Pro CO2 Pipe Freeze Kit</h2>
         <p class="mt-2 text-gray-500">Everything you need to start freezing pipes like a pro</p>
       </div>
       
@@ -411,25 +403,25 @@ export const description = "Professional-grade CO2 pipe freeze kit for plumbers.
                 <svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                 </svg>
-                <span class="text-gray-700">Pro CO2 regulator with pressure gauge</span>
+                <span class="text-gray-700">Dual-cavity freeze jacket (fits 1/8" - 2" pipes)</span>
               </li>
               <li class="flex items-center gap-3">
                 <svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                 </svg>
-                <span class="text-gray-700">4 freeze jackets (1/4" to 2" pipe capacity)</span>
+                <span class="text-gray-700">High-pressure CO2 regulator with gauge</span>
               </li>
               <li class="flex items-center gap-3">
                 <svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                 </svg>
-                <span class="text-gray-700">10' high-pressure CO2 hose</span>
+                <span class="text-gray-700">Brass quick-connect fittings</span>
               </li>
               <li class="flex items-center gap-3">
                 <svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                 </svg>
-                <span class="text-gray-700">CO2 adapter fittings (CGA-320)</span>
+                <span class="text-gray-700">Insulated hose assembly (6ft)</span>
               </li>
               <li class="flex items-center gap-3">
                 <svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -441,14 +433,14 @@ export const description = "Professional-grade CO2 pipe freeze kit for plumbers.
                 <svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                 </svg>
-                <span class="text-gray-700">5-Year warranty & 24/7 support</span>
+                <span class="text-gray-700">5-Year Pro Warranty</span>
               </li>
             </ul>
             <button class="w-full mt-6 py-4 bg-accent text-white font-semibold rounded-xl hover:bg-accent-dark transition-colors text-lg">
               Add to Cart - $499
             </button>
             <p class="text-center text-sm text-gray-500 mt-4">
-              30-Day Jobsite Guarantee - If it doesn't work for you, we'll refund every penny
+              30-Day Jobsite Guarantee - If it doesn't make your job easier, we'll refund you
             </p>
           </div>
         </div>

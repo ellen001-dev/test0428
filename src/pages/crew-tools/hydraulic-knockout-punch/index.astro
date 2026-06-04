@@ -2,6 +2,8 @@
 import Layout from "@/layouts/Layout.astro";
 import Header from "@/components/Header.astro";
 import Footer from "@/components/Footer.astro";
+import KnockoutHero from "@/assets/images/hydraulic-knockout-punch-hero.png";
+import KnockoutScene from "@/assets/images/hydraulic-knockout-punch-scene.png";
 
 export const title = "10-Ton Hydraulic Knockout Punch Set - Professional Hole Punching | ServiceToolBase";
 export const description = "Professional hydraulic knockout punch set for electricians. Punch perfect holes in 10-gauge steel without paying Greenlee prices. Get clean, burr-free holes in seconds.";
@@ -56,21 +58,21 @@ export const description = "Professional hydraulic knockout punch set for electr
         <div class="relative">
           <div class="aspect-square rounded-xl overflow-hidden shadow-2xl">
             <img 
-              src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=close%20up%20hydraulic%20knockout%20punch%20cleanly%20cutting%20steel%20electrical%20panel%2C%20metal%20shavings%2C%20industrial%20workshop%2C%20professional%20lighting%2C%20realistic%20photography&image_size=landscape_16_9"
+              src={KnockoutHero.src}
               alt="Hydraulic knockout punch cutting steel panel"
               class="w-full h-full object-cover"
             />
           </div>
           <div class="absolute -bottom-4 -right-4 bg-white rounded-xl shadow-lg p-4">
             <div class="flex items-center gap-3">
-              <div class="w-12 h-12 bg-amber-100 rounded-full flex items-center justify-center">
-                <svg class="w-6 h-6 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              <div class="w-12 h-12 bg-amber-500 rounded-full flex items-center justify-center">
+                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
                 </svg>
               </div>
               <div>
-                <p class="font-semibold text-gray-900">Perfect Hole in 15 Seconds</p>
-                <p class="text-sm text-gray-500">No Burrs, No Mess</p>
+                <p class="font-semibold text-gray-900">15-Second Holes</p>
+                <p class="text-sm text-gray-500">No burrs, no mess</p>
               </div>
             </div>
           </div>
@@ -82,7 +84,7 @@ export const description = "Professional hydraulic knockout punch set for electr
     <section class="mt-16">
       <div class="text-center mb-8">
         <h2 class="text-3xl font-bold text-gray-900">Stop Overpaying for Green Paint</h2>
-        <p class="mt-2 text-gray-500">Compare against the market leaders and see the difference</p>
+        <p class="mt-2 text-gray-500">A direct comparison targeting the dominant brand</p>
       </div>
       
       <div class="overflow-x-auto rounded-xl border border-gray-200 shadow-lg">
@@ -91,36 +93,34 @@ export const description = "Professional hydraulic knockout punch set for electr
             <tr class="bg-gray-50">
               <th class="px-6 py-4 text-left text-sm font-semibold text-gray-700 border-b">Feature</th>
               <th class="px-6 py-4 text-center text-sm font-semibold text-amber-600 border-b bg-amber-50">Our 10-Ton Knockout Set</th>
-              <th class="px-6 py-4 text-center text-sm font-semibold text-gray-700 border-b">Greenlee 767 (Manual)</th>
+              <th class="px-6 py-4 text-center text-sm font-semibold text-gray-700 border-b">Greenlee 767</th>
               <th class="px-6 py-4 text-center text-sm font-semibold text-gray-700 border-b">Harbor Freight</th>
             </tr>
           </thead>
           <tbody>
             <tr class="hover:bg-gray-50">
               <td class="px-6 py-4 text-sm font-medium text-gray-900">Punching Force</td>
-              <td class="px-6 py-4 text-sm text-center font-semibold text-amber-600">10 Tons</td>
+              <td class="px-6 py-4 text-sm text-center font-semibold text-green-600">10 Tons</td>
               <td class="px-6 py-4 text-sm text-center text-gray-600">11 Tons</td>
               <td class="px-6 py-4 text-sm text-center text-gray-600">10 Tons</td>
             </tr>
             <tr class="bg-gray-50/50 hover:bg-gray-50">
               <td class="px-6 py-4 text-sm font-medium text-gray-900">Max Capacity</td>
-              <td class="px-6 py-4 text-sm text-center text-gray-600">10-Gauge Mild Steel</td>
-              <td class="px-6 py-4 text-sm text-center text-gray-600">10-Gauge Mild Steel</td>
-              <td class="px-6 py-4 text-sm text-center text-gray-600">10-Gauge Mild Steel</td>
+              <td class="px-6 py-4 text-sm text-center">10-Gauge Mild Steel</td>
+              <td class="px-6 py-4 text-sm text-center">10-Gauge Mild Steel</td>
+              <td class="px-6 py-4 text-sm text-center">10-Gauge Mild Steel</td>
             </tr>
             <tr class="hover:bg-gray-50">
               <td class="px-6 py-4 text-sm font-medium text-gray-900">Included Dies</td>
-              <td class="px-6 py-4 text-sm text-center text-gray-600">1/2", 3/4", 1", 1-1/4", 1-1/2", 2"</td>
-              <td class="px-6 py-4 text-sm text-center text-gray-600">1/2" to 2"</td>
-              <td class="px-6 py-4 text-sm text-center text-gray-600">1/2" to 2"</td>
+              <td class="px-6 py-4 text-sm text-center">1/2", 3/4", 1", 1-1/4", 1-1/2", 2"</td>
+              <td class="px-6 py-4 text-sm text-center">1/2" to 2"</td>
+              <td class="px-6 py-4 text-sm text-center">1/2" to 2"</td>
             </tr>
             <tr class="bg-gray-50/50 hover:bg-gray-50">
               <td class="px-6 py-4 text-sm font-medium text-gray-900">Pump Design</td>
-              <td class="px-6 py-4 text-sm text-center">
-                <span class="inline-flex items-center px-3 py-1 bg-green-100 text-green-700 text-xs font-medium rounded-full">Ergonomic Hand Pump</span>
-              </td>
-              <td class="px-6 py-4 text-sm text-center text-gray-600">Hand Pump</td>
-              <td class="px-6 py-4 text-sm text-center text-gray-600">Basic Hand Pump</td>
+              <td class="px-6 py-4 text-sm text-center">Ergonomic Hand Pump</td>
+              <td class="px-6 py-4 text-sm text-center">Hand Pump</td>
+              <td class="px-6 py-4 text-sm text-center">Basic Hand Pump</td>
             </tr>
             <tr class="hover:bg-gray-50">
               <td class="px-6 py-4 text-sm font-medium text-gray-900">Price</td>
@@ -142,7 +142,7 @@ export const description = "Professional hydraulic knockout punch set for electr
           <div class="relative">
             <div class="aspect-video rounded-xl overflow-hidden shadow-lg">
               <img 
-                src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=electrician%20using%20hydraulic%20knockout%20punch%20on%20breaker%20box%20panel%2C%20workshop%20setting%2C%20professional%20tools%2C%20realistic%20photography&image_size=landscape_16_9"
+                src={KnockoutScene.src}
                 alt="Electrician using knockout punch on panel"
                 class="w-full h-full object-cover"
               />
@@ -167,15 +167,15 @@ export const description = "Professional hydraulic knockout punch set for electr
                 No burrs. No flying metal shards. Just clean conduit prep.
               </p>
             </div>
-            <div class="flex items-center gap-4 p-4 bg-amber-100 rounded-xl">
+            <div class="flex items-center gap-4 p-4 bg-amber-50 rounded-xl">
               <div class="text-center">
-                <p class="text-3xl font-bold text-amber-600">15 Seconds</p>
-                <p class="text-sm text-gray-600">Per Hole</p>
+                <p class="text-3xl font-bold text-amber-600">30 Minutes</p>
+                <p class="text-sm text-gray-600">Time Saved per Panel</p>
               </div>
-              <div class="w-px h-12 bg-amber-300"></div>
+              <div class="w-px h-12 bg-amber-200"></div>
               <div class="text-center">
-                <p class="text-3xl font-bold text-green-600">95%</p>
-                <p class="text-sm text-gray-600">Faster Than Hole Saws</p>
+                <p class="text-3xl font-bold text-green-600">$180</p>
+                <p class="text-sm text-gray-600">Typical Savings</p>
               </div>
             </div>
           </div>
@@ -191,43 +191,43 @@ export const description = "Professional hydraulic knockout punch set for electr
       
       <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
         <div class="bg-white rounded-xl p-6 border border-gray-200 hover:border-amber-500 transition-colors">
-          <div class="w-12 h-12 bg-amber-100 rounded-lg flex items-center justify-center mb-4">
-            <svg class="w-6 h-6 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
             </svg>
           </div>
           <h3 class="font-semibold text-gray-900 mb-2">Punching Capacity</h3>
-          <p class="text-gray-600 text-sm">Easily punches through 10-gauge (3.5mm) mild steel and 12-gauge (2.5mm) stainless steel</p>
-        </div>
-        
-        <div class="bg-white rounded-xl p-6 border border-gray-200 hover:border-amber-500 transition-colors">
-          <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
-            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-            </svg>
-          </div>
-          <h3 class="font-semibold text-gray-900 mb-2">Die Sizes</h3>
-          <p class="text-gray-600 text-sm">1/2", 3/4", 1", 1-1/4", 1-1/2", 2" conduit sizes</p>
-        </div>
-        
-        <div class="bg-white rounded-xl p-6 border border-gray-200 hover:border-amber-500 transition-colors">
-          <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
-            <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
-            </svg>
-          </div>
-          <h3 class="font-semibold text-gray-900 mb-2">Hydraulic Ram</h3>
-          <p class="text-gray-600 text-sm">10-ton capacity with 1-inch (25mm) stroke</p>
+          <p class="text-gray-600 text-sm">10-gauge (3.5mm) mild steel / 12-gauge (2.5mm) stainless</p>
         </div>
         
         <div class="bg-white rounded-xl p-6 border border-gray-200 hover:border-amber-500 transition-colors">
           <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
             <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+            </svg>
+          </div>
+          <h3 class="font-semibold text-gray-900 mb-2">Die Sizes</h3>
+          <p class="text-gray-600 text-sm">1/2", 3/4", 1", 1-1/4", 1-1/2", 2" conduit</p>
+        </div>
+        
+        <div class="bg-white rounded-xl p-6 border border-gray-200 hover:border-amber-500 transition-colors">
+          <div class="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M12 12h.01"></path>
             </svg>
           </div>
+          <h3 class="font-semibold text-gray-900 mb-2">Hydraulic Ram</h3>
+          <p class="text-gray-600 text-sm">10-ton capacity with 1" (25mm) stroke</p>
+        </div>
+        
+        <div class="bg-white rounded-xl p-6 border border-gray-200 hover:border-amber-500 transition-colors">
+          <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+            </svg>
+          </div>
           <h3 class="font-semibold text-gray-900 mb-2">Material</h3>
-          <p class="text-gray-600 text-sm">High-carbon forged steel dies designed for hundreds of punches</p>
+          <p class="text-gray-600 text-sm">High-carbon forged steel dies</p>
         </div>
       </div>
     </section>
@@ -245,12 +245,9 @@ export const description = "Professional hydraulic knockout punch set for electr
             </p>
             <p class="text-gray-300 leading-relaxed">
               Our hydraulic knockout punch kit uses the exact same mechanical advantage. The dies are machined to the same 
-              conduit tolerances. The hydraulic ram delivers the same effortless punching power.
-            </p>
-            <p class="text-gray-300 leading-relaxed">
-              If you are a union shop with an unlimited tool budget, buy the Greenlee. 
-              If you are an independent contractor who wants to keep your overhead low while doing professional-grade work, 
-              our <span class="text-amber-400 font-bold">$149</span> set is the smartest investment you can make.
+              conduit tolerances. The hydraulic ram delivers the same effortless punching power. If you are a union shop with 
+              an unlimited tool budget, buy the Greenlee. If you are an independent contractor who wants to keep your overhead 
+              low while doing professional-grade work, our $149 set is the smartest investment you can make.
             </p>
           </div>
           
@@ -322,8 +319,7 @@ export const description = "Professional hydraulic knockout punch set for electr
           </button>
           <div class="px-6 pb-4">
             <p class="text-gray-600">
-              Yes, our dies are rated for up to 12-gauge stainless steel. However, punching stainless will 
-              dull the dies faster than mild steel or aluminum.
+              Yes, our dies are rated for up to 12-gauge stainless steel. However, punching stainless will dull the dies faster than mild steel or aluminum.
             </p>
           </div>
         </div>
@@ -340,8 +336,7 @@ export const description = "Professional hydraulic knockout punch set for electr
           </button>
           <div class="px-6 pb-4">
             <p class="text-gray-600">
-              Our draw studs use standard threading (3/4"-16 and 3/8"-24), which makes them compatible 
-              with many standard replacement dies on the market.
+              Our draw studs use standard threading (3/4"-16 and 3/8"-24), which makes them compatible with many standard replacement dies on the market.
             </p>
           </div>
         </div>
@@ -397,7 +392,7 @@ export const description = "Professional hydraulic knockout punch set for electr
     <section id="pricing" class="mt-16">
       <div class="text-center mb-8">
         <h2 class="text-3xl font-bold text-gray-900">Get Your 10-Ton Hydraulic Knockout Punch Set</h2>
-        <p class="mt-2 text-gray-500">Everything you need to punch perfect holes every time</p>
+        <p class="mt-2 text-gray-500">Professional-grade hole punching at a fraction of the brand-name price</p>
       </div>
       
       <div class="max-w-3xl mx-auto">
@@ -420,13 +415,13 @@ export const description = "Professional hydraulic knockout punch set for electr
                 <svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                 </svg>
-                <span class="text-gray-700">6 precision-machined dies: 1/2", 3/4", 1", 1-1/4", 1-1/2", 2"</span>
+                <span class="text-gray-700">6 precision-machined dies: 1/2" to 2"</span>
               </li>
               <li class="flex items-center gap-3">
                 <svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                 </svg>
-                <span class="text-gray-700">Draw studs and backing plates for all sizes</span>
+                <span class="text-gray-700">Draw studs and wrench set</span>
               </li>
               <li class="flex items-center gap-3">
                 <svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -438,14 +433,14 @@ export const description = "Professional hydraulic knockout punch set for electr
                 <svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                 </svg>
-                <span class="text-gray-700">30-Day Money-Back Guarantee</span>
+                <span class="text-gray-700">1-Year Pro Warranty</span>
               </li>
             </ul>
             <button class="w-full mt-6 py-4 bg-amber-500 text-white font-semibold rounded-xl hover:bg-amber-600 transition-colors text-lg">
               Add to Cart - $149
             </button>
             <p class="text-center text-sm text-gray-500 mt-4">
-              Professional-grade quality at a fraction of the price
+              30-Day Money-Back Guarantee - If it doesn't make your job easier, we'll refund you
             </p>
           </div>
         </div>
