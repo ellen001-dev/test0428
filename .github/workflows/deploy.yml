@@ -29,12 +29,18 @@ jobs:
       - name: Build website
         run: npm run build
 
-      - name: 📂 Sync files via SFTP
-        uses: wlixcc/SFTP-Deploy-Action@v1.2.4
-        with:
-          server: ${{ secrets.FTP_HOST }}
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          port: 22
-          local_path: dist
-          remote_path: /
+      - name: 📂 Sync files via FTP
+        run: |
+          sudo apt-get update && sudo apt-get install -y lftp
+          lftp -u $FTP_USERNAME,$FTP_PASSWORD -p 21 $FTP_HOST << EOF
+          set ssl:verify-certificate no
+          set ftp:passive-mode true
+          set net:timeout 120
+          set net:max-retries 5
+          mirror -R dist/ /
+          bye
+          EOF
+        env:
+          FTP_HOST: ${{ secrets.FTP_HOST }}
+          FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
+          FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
