@@ -37,7 +37,7 @@ jobs:
           set ftp:passive-mode true
           set net:timeout 60
           set net:max-retries 3
-          mirror -R -e dist/ /
+          mirror -R dist/ /
           bye
           EOF
         env:
