@@ -29,20 +29,12 @@ jobs:
       - name: Build website
         run: npm run build
 
-      - name: 📂 Sync files via lftp
-        run: |
-          sudo apt-get update && sudo apt-get install -y lftp
-          lftp -u $FTP_USERNAME,$FTP_PASSWORD -p 21 $FTP_HOST << EOF
-          set ssl:verify-certificate no
-          set ftp:passive-mode true
-          set net:timeout 120
-          set net:max-retries 5
-          set net:reconnect-interval-base 5
-          set net:reconnect-interval-max 30
-          mirror -R --continue dist/ /
-          bye
-          EOF
-        env:
-          FTP_HOST: ${{ secrets.FTP_HOST }}
-          FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
-          FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+      - name: 📂 Sync files via SFTP
+        uses: SamKirkland/FTP-Deploy-Action@4.3.4
+        with:
+          server: ${{ secrets.FTP_HOST }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          protocol: sftp
+          local-dir: dist/
+          server-dir: /
