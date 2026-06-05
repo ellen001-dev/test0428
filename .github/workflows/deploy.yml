@@ -39,9 +39,7 @@ jobs:
           set net:max-retries 10
           set net:reconnect-interval-base 5
           set net:reconnect-interval-max 30
-          set ftp:timeout 300
-          set ftp:connect-timeout 60
-          mirror -R --continue --parallel=2 dist/ /
+          mirror -R --continue --parallel=4 --use-cache dist/ /
           bye
           EOF
         env:
