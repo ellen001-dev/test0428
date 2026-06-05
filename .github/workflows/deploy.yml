@@ -30,25 +30,31 @@ jobs:
         run: npm run build
 
       - name: 📂 Sync files via FTP
+        timeout-minutes: 10
         run: |
           sudo apt-get update && sudo apt-get install -y lftp
-          echo "Checking dist directory..."
-          ls -la dist/
-          echo "Starting FTP upload..."
-          lftp -u $FTP_USERNAME,$FTP_PASSWORD -p 21 $FTP_HOST << EOF
+          echo "[$(date)] Checking dist directory..."
+          ls -la dist/ | head -20
+          echo "[$(date)] Starting FTP upload..."
+          timeout --signal=TERM 300 lftp -u $FTP_USERNAME,$FTP_PASSWORD -p 21 $FTP_HOST << EOF
           set ssl:verify-certificate no
           set ftp:passive-mode true
-          set net:timeout 120
-          set net:max-retries 5
-          set net:reconnect-interval-base 5
-          set net:reconnect-interval-max 15
-          set log:show-time yes
-          set xfer:log yes
-          set xfer:log-file /tmp/lftp.log
-          mirror -R --verbose --dry-run dist/ /
+          set net:timeout 60
+          set net:max-retries 3
+          set net:reconnect-interval-base 3
+          set net:reconnect-interval-max 10
+          mirror -R --verbose dist/ /
           bye
           EOF
-          echo "FTP upload completed"
+          EXIT_CODE=$?
+          if [ $EXIT_CODE -eq 124 ]; then
+            echo "ERROR: FTP upload timed out after 5 minutes"
+            exit 1
+          elif [ $EXIT_CODE -ne 0 ]; then
+            echo "ERROR: FTP upload failed with exit code $EXIT_CODE"
+            exit $EXIT_CODE
+          fi
+          echo "[$(date)] FTP upload completed successfully"
         env:
           FTP_HOST: ${{ secrets.FTP_HOST }}
           FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
