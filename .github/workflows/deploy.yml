@@ -30,25 +30,25 @@ jobs:
         run: npm run build
 
       - name: 📂 Sync files via FTP
-        timeout-minutes: 10
+        timeout-minutes: 30
         run: |
           sudo apt-get update && sudo apt-get install -y lftp
           echo "[$(date)] Checking dist directory..."
-          ls -la dist/ | head -20
-          echo "[$(date)] Starting FTP upload..."
-          timeout --signal=TERM 300 lftp -u $FTP_USERNAME,$FTP_PASSWORD -p 21 $FTP_HOST << EOF
+          find dist/ -type f | wc -l
+          echo "[$(date)] Starting FTP upload (this may take 10-20 minutes)..."
+          timeout --signal=TERM 1200 lftp -u $FTP_USERNAME,$FTP_PASSWORD -p 21 $FTP_HOST << EOF
           set ssl:verify-certificate no
           set ftp:passive-mode true
-          set net:timeout 60
-          set net:max-retries 3
-          set net:reconnect-interval-base 3
-          set net:reconnect-interval-max 10
-          mirror -R --verbose dist/ /
+          set net:timeout 30
+          set net:max-retries 2
+          set net:reconnect-interval-base 2
+          set net:reconnect-interval-max 5
+          mirror -R --verbose --only-newer --parallel=4 dist/ /
           bye
           EOF
           EXIT_CODE=$?
           if [ $EXIT_CODE -eq 124 ]; then
-            echo "ERROR: FTP upload timed out after 5 minutes"
+            echo "ERROR: FTP upload timed out after 20 minutes"
             exit 1
           elif [ $EXIT_CODE -ne 0 ]; then
             echo "ERROR: FTP upload failed with exit code $EXIT_CODE"
