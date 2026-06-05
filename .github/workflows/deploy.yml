@@ -35,11 +35,9 @@ jobs:
           lftp -u $FTP_USERNAME,$FTP_PASSWORD -p 21 $FTP_HOST << EOF
           set ssl:verify-certificate no
           set ftp:passive-mode true
-          set net:timeout 300
-          set net:max-retries 10
-          set net:reconnect-interval-base 5
-          set net:reconnect-interval-max 30
-          mirror -R --continue --parallel=4 --use-cache dist/ /
+          set net:timeout 120
+          set net:max-retries 5
+          mirror -R dist/ /
           bye
           EOF
         env:
