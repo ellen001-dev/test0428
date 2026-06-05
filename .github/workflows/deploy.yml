@@ -32,14 +32,23 @@ jobs:
       - name: 📂 Sync files via FTP
         run: |
           sudo apt-get update && sudo apt-get install -y lftp
+          echo "Checking dist directory..."
+          ls -la dist/
+          echo "Starting FTP upload..."
           lftp -u $FTP_USERNAME,$FTP_PASSWORD -p 21 $FTP_HOST << EOF
           set ssl:verify-certificate no
           set ftp:passive-mode true
           set net:timeout 120
           set net:max-retries 5
-          mirror -R dist/ /
+          set net:reconnect-interval-base 5
+          set net:reconnect-interval-max 15
+          set log:show-time yes
+          set xfer:log yes
+          set xfer:log-file /tmp/lftp.log
+          mirror -R --verbose --dry-run dist/ /
           bye
           EOF
+          echo "FTP upload completed"
         env:
           FTP_HOST: ${{ secrets.FTP_HOST }}
           FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
